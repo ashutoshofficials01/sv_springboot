@@ -5,12 +5,16 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.time.LocalDateTime;
 import java.util.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.app.sv_springboot.dao.ResScoreRepo;
+import com.app.sv_springboot.dao.UserDataRepo;
 import com.app.sv_springboot.entities.Res_Score_Entity;
 import com.app.sv_springboot.services.ScoreService;
 
@@ -28,10 +32,21 @@ public class ScoreServiceImpl implements ScoreService {
 		System.out.println("UPLOAD DIR = " + resUploadDir);
 	}
 
+	@Autowired
+	ResScoreRepo resScoreRepo;
+
+	@Autowired
+	UserDataRepo userDataRepo;
+
 	@Override
 	public Map<String, Object> resumeUpload(MultipartFile file, String userId) {
 		Map<String, Object> response = new HashMap<>();
 //		Res_Score_Entity resExist = ResScoreRepo.findByUserId(userId);
+		Res_Score_Entity saveRes = new Res_Score_Entity();
+		String fileName = "";
+		Path filePath;
+		long atsScore = 0;
+		Path uploadPath;
 
 		try {
 
@@ -41,21 +56,34 @@ public class ScoreServiceImpl implements ScoreService {
 				return response;
 			}
 
+			long usrId = Long.parseLong(userId);
+
 			// Create upload directory if not exists
-			Path uploadPath = Paths.get(resUploadDir).toAbsolutePath().normalize();
+			uploadPath = Paths.get(resUploadDir).toAbsolutePath().normalize();
 			if (!Files.exists(uploadPath)) {
 				Files.createDirectories(uploadPath);
 			}
 
+			saveRes.setActiveStatus(1);
+			saveRes.setAtsScore(atsScore);
+			saveRes.setCreatedOn(LocalDateTime.now());
+			saveRes.setModifiedOn(LocalDateTime.now());
+			saveRes.setUserId(usrId);
+
+			Res_Score_Entity resStore = resScoreRepo.save(saveRes);
+
 			// Unique filename
-			String fileName = file.getOriginalFilename();
-			Path filePath = uploadPath.resolve(fileName);
+			fileName = file.getOriginalFilename();
+			fileName = resStore.getResUploadId() + "_" + fileName;
+			filePath = uploadPath.resolve(fileName);
 
 			// Save file
 			Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
 			// Calculate ATS score (your JSON logic)
-			long atsScore = calculateATSScore(fileName);
+			atsScore = calculateATSScore(fileName);
+
+			long rowsUpdated = resScoreRepo.updateFileNameByResUploadId(resStore.getResUploadId(), atsScore, fileName);
 
 			response.put("success", true);
 			response.put("filename", file.getOriginalFilename());
@@ -70,12 +98,10 @@ public class ScoreServiceImpl implements ScoreService {
 		}
 
 		System.out.println("RESPONSE : " + response);
-
-		// TODO Auto-generated method stub
 		return response;
 	}
 
-	// TODO: Load JSON rules & score file content
+	
 	private long calculateATSScore(String fileName) {
 		// Placeholder - parse saved file + apply JSON rules
 		// Load your ats_scoring_rules.json
