@@ -1,0 +1,65 @@
+{
+	"generalATSParameter": [
+		{
+			"atsGeneralId": 1,
+			"atsParamId": "ATS-001",
+			"logic_description": {
+				"type": "CORE_DEV_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine software developer profile",
+				"keywords": [
+					"java",
+					"javascript",
+					"typescript",
+					"python",
+					"c",
+					"c++",
+					"c#",
+					"go",
+					"kotlin",
+					"ruby",
+					"php",
+					"spring",
+					"spring boot",
+					"hibernate",
+					"react",
+					"angular",
+					"vue",
+					"node",
+					"express",
+					"django",
+					"flask",
+					"mysql",
+					"postgresql",
+					"oracle",
+					"mongodb",
+					"redis",
+					"sqlite",
+					"git",
+					"github",
+					"gitlab",
+					"docker",
+					"kubernetes",
+					"maven",
+					"gradle",
+					"jenkins",
+					"rest",
+					"rest api",
+					"soap",
+					"microservices",
+					"graphql",
+					"agile",
+					"scrum",
+					"ci/cd",
+					"unit testing",
+					"integration testing",
+					"code review"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 1,
+					"minimum_keyword_match_for_full_score": 8
+				}
+			}
+		}
+	]
+}
