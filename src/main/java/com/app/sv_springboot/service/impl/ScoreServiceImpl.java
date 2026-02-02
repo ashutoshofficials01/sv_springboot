@@ -21,6 +21,7 @@ import com.app.sv_springboot.dao.UserDataRepo;
 import com.app.sv_springboot.entities.ATS_General_Param_Entity;
 import com.app.sv_springboot.entities.Res_Score_Entity;
 import com.app.sv_springboot.services.ScoreService;
+import com.app.sv_springboot.util.GeneralATSUtil;
 
 import jakarta.annotation.PostConstruct;
 import tools.jackson.databind.ObjectMapper;
@@ -38,12 +39,6 @@ public class ScoreServiceImpl implements ScoreService {
 	}
 
 	@Autowired
-	private ObjectMapper objectMapper;
-
-	@Autowired
-	private ResourceLoader resourceLoader;
-
-	@Autowired
 	ResScoreRepo resScoreRepo;
 
 	@Autowired
@@ -52,50 +47,8 @@ public class ScoreServiceImpl implements ScoreService {
 	@Autowired
 	ATSGeneralParamRepo atsGeneralParamRepo;
 
-	private List<Map<String, Object>> generalATSParameterList;
-
-	private Map<String, Map<String, Object>> generalATSParameterMap;
-
-	@PostConstruct
-	public void loadGeneralATSParameters() {
-		try {
-
-			Resource resource = resourceLoader.getResource("classpath:generalATSParameters.json");
-
-			// Read JSON as Map
-			Map<String, Object> jsonData = objectMapper.readValue(resource.getInputStream(), Map.class);
-
-			// Extract array
-			generalATSParameterList = (List<Map<String, Object>>) jsonData.get("generalATSParameter");
-
-			// Create fast-lookup map
-			generalATSParameterMap = new HashMap<>();
-
-			for (Map<String, Object> param : generalATSParameterList) {
-				long atsGeneralId = (Long) param.get("atsGeneralId");
-				String atsParamId = (String) param.get("atsParamId");
-
-				String key = atsGeneralId + "_" + atsParamId;
-				generalATSParameterMap.put(key, param);
-			}
-
-			System.out.println("Loaded ATS Params Count: " + generalATSParameterMap.size());
-
-		} catch (Exception e) {
-			throw new RuntimeException("Failed to load generalATSParameters.json", e);
-		}
-	}
-
-	public List<Map<String, Object>> getAllGeneralATSParams() {
-		System.out.println("getAllGeneralATSParams() --> generalATSParameterList :: " + generalATSParameterList);
-		return generalATSParameterList;
-	}
-
-	public Map<String, Object> getGeneralATSParam(long atsGeneralId, String atsParamId) {
-		System.out.println("getGeneralATSParam(long " + atsGeneralId + ", String " + atsParamId
-				+ ") --> generalATSParameterMap :: " + generalATSParameterMap.get(atsGeneralId + "_" + atsParamId));
-		return generalATSParameterMap.get(atsGeneralId + "_" + atsParamId);
-	}
+	@Autowired
+	GeneralATSUtil genATSUtil;
 
 	@Override
 	public Map<String, Object> resumeUpload(MultipartFile file, String userId) {
@@ -140,7 +93,7 @@ public class ScoreServiceImpl implements ScoreService {
 			Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
 			// Calculate ATS score (your JSON logic)
-			atsScore = calculateATSScore(fileName);
+			atsScore = genATSUtil.calculateATSScore(fileName, file);
 
 			long rowsUpdated = resScoreRepo.updateFileNameByResUploadId(resStore.getResUploadId(), atsScore, fileName);
 
@@ -159,40 +112,4 @@ public class ScoreServiceImpl implements ScoreService {
 		System.out.println("RESPONSE : " + response);
 		return response;
 	}
-
-	private long calculateATSScore(String fileName) {
-
-		List<Map<String, Object>> generalAllATSParams = getAllGeneralATSParams();
-		List<ATS_General_Param_Entity> genATSParamAll = atsGeneralParamRepo.findAll();
-//		Map<String, Object> generalATSParam = getGeneralATSParam();
-
-		for (Map<String, Object> genATS : generalAllATSParams) {
-			for (ATS_General_Param_Entity agp : genATSParamAll) {
-
-				String atsParamId = String.valueOf(agp.getAtsParamId());
-				System.out.println("atsParamId :: " + atsParamId);
-
-				String genATSParamId = String.valueOf(genATS.get(atsParamId));
-				System.out.println("genATSParamId :: " + genATSParamId);
-
-				switch (atsParamId) {
-
-				case "ATS-001":
-					if (atsParamId == genATSParamId) {
-
-					}
-
-					break;
-
-				default:
-					System.out.println("Unhandled ATS Param: " + agp.getAtsParamId());
-				}
-			}
-		}
-
-		// Placeholder - parse saved file + apply JSON rules
-		// Load your ats_scoring_rules.json
-		return 85; // Mock for now
-	}
-
 }

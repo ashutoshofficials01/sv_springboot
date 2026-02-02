@@ -56,8 +56,212 @@
 				],
 				"matching_rules": {
 					"case_sensitive": false,
-					"minimum_keyword_match_for_partial_score": 1,
+					"minimum_keyword_match_for_partial_score": 2,
 					"minimum_keyword_match_for_full_score": 8
+				}
+			}
+		},
+		{
+			"atsGeneralId": 2,
+			"atsParamId": "ATS-002",
+			"logic_description": {
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Measure breadth of technical skills across frontend, backend, database, tools, and version control",
+				"skill_categories": {
+					"frontend": [
+						"react",
+						"angular",
+						"vue",
+						"html",
+						"css",
+						"javascript",
+						"typescript"
+					],
+					"backend": [
+						"java",
+						"spring",
+						"spring boot",
+						"node",
+						"express",
+						"django",
+						"flask"
+					],
+					"database": [
+						"mysql",
+						"postgresql",
+						"oracle",
+						"mongodb",
+						"redis"
+					],
+					"tools": [
+						"docker",
+						"kubernetes",
+						"jenkins",
+						"maven",
+						"gradle"
+					],
+					"version_control": [
+						"git",
+						"github",
+						"gitlab",
+						"bitbucket"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
+			}
+		},
+		{
+			"atsGeneralId": 3,
+			"atsParamId": "ATS-003",
+			"logic_description": {
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names and abbreviations for technologies",
+				"keyword_variations": {
+					"javascript": [
+						"javascript",
+						"js"
+					],
+					"typescript": [
+						"typescript",
+						"ts"
+					],
+					"spring": [
+						"spring",
+						"spring framework"
+					],
+					"spring_boot": [
+						"spring boot",
+						"springboot"
+					],
+					"nodejs": [
+						"nodejs",
+						"node"
+					],
+					"react": [
+						"react",
+						"reactjs"
+					],
+					"angular": [
+						"angular",
+						"angularjs"
+					],
+					"vue": [
+						"vue",
+						"vuejs"
+					],
+					"postgresql": [
+						"postgresql",
+						"postgres"
+					],
+					"mongodb": [
+						"mongodb",
+						"mongo"
+					],
+					"kubernetes": [
+						"kubernetes",
+						"k8s"
+					],
+					"continuous_integration": [
+						"continuous integration",
+						"ci/cd"
+					],
+					"rest_api": [
+						"rest api",
+						"rest"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
+			}
+		},
+		{
+			"atsGeneralId": 4,
+			"atsParamId": "ATS-004",
+			"logic_description": {
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
+			}
+		},
+		{
+			"atsGeneralId": 5,
+			"atsParamId": "ATS-005",
+			"logic_description": {
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____"
+					],
+					"column_indicators": [
+						"  ",
+						"\u00A0\u00A0",
+						"||"
+					],
+					"visual_separators": [
+						"•",
+						"▪",
+						"■"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
+			}
+		},
+		{
+			"atsGeneralId": 6,
+			"atsParamId": "ATS-006",
+			"logic_description": {
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
 				}
 			}
 		}
