@@ -406,6 +406,7 @@ public class GeneralATSUtil {
 			for (String keyword : keywords) {
 				String key = caseSensitive ? keyword : keyword.toLowerCase();
 				if (resumeText.contains(key)) {
+					System.out.println("ATS-001 :: "+key);
 					matchCount++;
 				}
 			}
@@ -475,6 +476,7 @@ public class GeneralATSUtil {
 					String key = caseSensitive ? keyword : keyword.toLowerCase();
 
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-002 :: "+key);
 						matchedCategories++;
 					}
 				}
@@ -555,6 +557,7 @@ public class GeneralATSUtil {
 				for (int i = 1; i < variants.size(); i++) {
 					String alternate = caseSensitive ? variants.get(i) : variants.get(i).toLowerCase();
 					if (resumeText.contains(" " + alternate + " ")) {
+						System.out.println("ATS-003 :: "+alternate);
 						alternatePresent = true;
 						break;
 					}
@@ -613,7 +616,7 @@ public class GeneralATSUtil {
 
 			String extension = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
 
-			System.out.println("Extension :: " + extension);
+			System.out.println("ATS-004 :: "+extension);
 
 			// 5️ Scoring logic
 			if (fullScoreFormats.contains(extension)) {
@@ -670,6 +673,7 @@ public class GeneralATSUtil {
 			for (List<String> indicators : layoutIndicators.values()) {
 				for (String indicator : indicators) {
 					if (resumeText.contains(indicator)) {
+						System.out.println("ATS-005 :: "+indicator);
 						layoutViolations++;
 					}
 				}
@@ -747,10 +751,12 @@ public class GeneralATSUtil {
 
 				if (standardFonts.contains(fontName)) {
 					hasStandard = true;
+					System.out.println("ATS-006 (hasStandard) :: "+hasStandard);
 				}
 
 				if (nonStandardFonts.contains(fontName)) {
 					hasNonStandard = true;
+					System.out.println("ATS-006 (hasNonStandard) :: "+hasNonStandard);
 				}
 			}
 
@@ -822,6 +828,7 @@ public class GeneralATSUtil {
 				if (resumeText.contains("\n" + sectionKey) || resumeText.startsWith(sectionKey)
 						|| resumeText.contains(sectionKey + "\n") || resumeText.startsWith(" " + sectionKey + " ")
 						|| resumeText.startsWith("\n" + sectionKey + "\n")) {
+					System.out.println("ATS-007 :: "+sectionKey);
 					matchedSections.add(sectionKey);
 				}
 			}
@@ -898,6 +905,7 @@ public class GeneralATSUtil {
 
 					// Handle heading at very beginning
 					if (index == -1 && resumeText.startsWith(key)) {
+						System.out.println("ATS-008 :: "+key);
 						index = 0;
 					}
 
@@ -991,6 +999,7 @@ public class GeneralATSUtil {
 				for (String keyword : keywords) {
 					String key = caseSensitive ? keyword : keyword.toLowerCase();
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-009 :: "+key);
 						matchCount++;
 					}
 				}
@@ -1052,6 +1061,7 @@ public class GeneralATSUtil {
 			for (String title : recognizedTitles) {
 				String key = caseSensitive ? title : title.toLowerCase();
 				if (resumeText.contains(key)) {
+					System.out.println("ATS-010 :: "+key);
 					titleMatchCount++;
 				}
 			}
@@ -1114,6 +1124,7 @@ public class GeneralATSUtil {
 
 			for (String regex : regexPatterns) {
 				if (resumeText.matches("(?s).*" + regex + ".*")) {
+					System.out.println("ATS-011 :: "+regex);
 					dateMatchCount++;
 				}
 			}
@@ -1179,6 +1190,7 @@ public class GeneralATSUtil {
 					String key = caseSensitive ? indicator : indicator.toLowerCase();
 
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-012 :: "+key);
 						impactMatchCount++;
 					}
 				}
@@ -1254,6 +1266,7 @@ public class GeneralATSUtil {
 				for (String skill : skills) {
 					String key = caseSensitive ? skill : skill.toLowerCase();
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-013 :: "+key);
 						groupMatched = true;
 						break; // only count this group once
 					}
@@ -1328,6 +1341,7 @@ public class GeneralATSUtil {
 				for (String keyword : group.getValue()) {
 					String key = caseSensitive ? keyword : keyword.toLowerCase();
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-014 :: "+key);
 						matchedGroups++;
 						break; // count group only once
 					}
@@ -1397,6 +1411,7 @@ public class GeneralATSUtil {
 					String key = caseSensitive ? keyword : keyword.toLowerCase();
 
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-015 :: "+key);
 						groupMatched = true;
 						break;
 					}
@@ -1470,6 +1485,7 @@ public class GeneralATSUtil {
 					String key = caseSensitive ? keyword : keyword.toLowerCase();
 
 					if (resumeText.contains(key)) {
+						System.out.println("ATS-016 :: "+key);
 						groupMatched = true;
 						break;
 					}
@@ -1550,6 +1566,7 @@ public class GeneralATSUtil {
 					// word-boundary safe match
 					if (resumeText.matches("(?s).*\\b" + Pattern.quote(keyword) + "\\b.*")) {
 						groupMatched = true;
+						System.out.println("ATS-017 :: "+Pattern.quote(keyword));
 						break;
 					}
 				}
@@ -1610,7 +1627,8 @@ public class GeneralATSUtil {
 			for (Object ruleListObj : errorRules.values()) {
 				List<String> ruleList = (List<String>) ruleListObj;
 				for (String errorPattern : ruleList) {
-					if (resumeText.contains(errorPattern.toLowerCase())) {
+					if (resumeText.contains(" "+errorPattern.toLowerCase()+" ")) {
+						System.out.println("ATS-018 :: "+errorPattern.toLowerCase());
 						totalErrors++;
 					}
 				}
@@ -1686,6 +1704,7 @@ public class GeneralATSUtil {
 
 				for (String indicator : indicators) {
 					if (resumeText.contains(indicator.toLowerCase())) {
+						System.out.println("ATS-019 :: "+indicator.toLowerCase());
 						totalViolations++;
 					}
 				}
@@ -1762,6 +1781,7 @@ public class GeneralATSUtil {
 
 						for (String indicator : indicators) {
 							if (resumeText.contains(indicator.toLowerCase())) {
+								System.out.println("ATS-020 :: "+indicator.toLowerCase());
 								totalViolations++;
 								break;
 							}
