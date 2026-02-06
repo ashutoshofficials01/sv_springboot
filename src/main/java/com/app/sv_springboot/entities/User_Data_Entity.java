@@ -18,7 +18,7 @@ import lombok.Setter;
 public class User_Data_Entity {
 
 	@Id
-	@SequenceGenerator(name = "zseq_sv_user_data")
+	@SequenceGenerator(name = "zseq_sv_user_data", allocationSize = 1, initialValue = 1)
 	@GeneratedValue(generator = "zseq_sv_user_data", strategy = GenerationType.SEQUENCE)
 	private long userUniqueId;
 

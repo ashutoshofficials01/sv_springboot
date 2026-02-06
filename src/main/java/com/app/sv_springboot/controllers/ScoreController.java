@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.app.sv_springboot.dtos.SendResponseDto;
 import com.app.sv_springboot.services.ScoreService;
 
 @CrossOrigin(origins = "*")
@@ -25,14 +26,14 @@ public class ScoreController {
 	ScoreService scoreService;
 
 	@PostMapping("/resumeUpload")
-	public ResponseEntity<Map<String, Object>> resumeUpload(@RequestParam("resume") MultipartFile file,
+	public ResponseEntity<SendResponseDto> resumeUpload(@RequestParam("resume") MultipartFile file,
 			@RequestParam("userId") String userId) {
 
 		try {
-			Map<String, Object> result = scoreService.resumeUpload(file, userId);
+			SendResponseDto result = scoreService.resumeUpload(file, userId);
 			return ResponseEntity.ok(result);
 		} catch (Exception e) {
-			Map<String, Object> error = Map.of("success", false, "message", "Upload failed: " + e.getMessage());
+			SendResponseDto error = scoreService.resumeUpload(file, userId);
 			return ResponseEntity.internalServerError().body(error);
 		}
 

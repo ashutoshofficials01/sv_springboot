@@ -16,7 +16,7 @@ import lombok.Data;
 public class Res_Score_Entity {
 	
 	@Id
-	@SequenceGenerator(name = "zseq_sv_res_score_data", initialValue = 10)
+	@SequenceGenerator(name = "zseq_sv_res_score_data", allocationSize = 1, initialValue = 10)
 	@GeneratedValue(generator = "zseq_sv_res_score_data", strategy = GenerationType.SEQUENCE)
 	private long resUploadId;
 

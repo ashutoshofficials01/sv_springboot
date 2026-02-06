@@ -30,7 +30,7 @@ public class ExtraATSUtil {
 
 			String fileName = file.getOriginalFilename();
 			if (fileName == null) {
-				return fonts;
+				return null;
 			}
 
 			String extension = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
