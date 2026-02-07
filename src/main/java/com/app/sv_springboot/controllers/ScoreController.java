@@ -25,7 +25,7 @@ public class ScoreController {
 	@Autowired
 	ScoreService scoreService;
 
-	@PostMapping("/resumeUpload")
+	@PostMapping("/resumeUploadIT")
 	public ResponseEntity<SendResponseDto> resumeUpload(@RequestParam("resume") MultipartFile file,
 			@RequestParam("userId") String userId) {
 
