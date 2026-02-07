@@ -1,0 +1,104 @@
+{
+	"Tourism_ATSParameter": [
+		{
+			"atsGeneralId": 271,
+			"atsParamId": "ATS-271",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 272,
+			"atsParamId": "ATS-272",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 273,
+			"atsParamId": "ATS-273",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 274,
+			"atsParamId": "ATS-274",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 275,
+			"atsParamId": "ATS-275",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 276,
+			"atsParamId": "ATS-276",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 277,
+			"atsParamId": "ATS-277",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 278,
+			"atsParamId": "ATS-278",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 279,
+			"atsParamId": "ATS-279",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 280,
+			"atsParamId": "ATS-280",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 281,
+			"atsParamId": "ATS-281",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 282,
+			"atsParamId": "ATS-282",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 283,
+			"atsParamId": "ATS-283",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 284,
+			"atsParamId": "ATS-284",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 285,
+			"atsParamId": "ATS-285",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 286,
+			"atsParamId": "ATS-286",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 287,
+			"atsParamId": "ATS-287",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 288,
+			"atsParamId": "ATS-288",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 289,
+			"atsParamId": "ATS-289",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 290,
+			"atsParamId": "ATS-290",
+			"logic_description": {}
+		}
+	]
+}

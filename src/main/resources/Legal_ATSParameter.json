@@ -1,0 +1,104 @@
+{
+	"Legal_ATSParameter": [
+		{
+			"atsGeneralId": 241,
+			"atsParamId": "ATS-241",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 242,
+			"atsParamId": "ATS-242",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 243,
+			"atsParamId": "ATS-243",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 244,
+			"atsParamId": "ATS-244",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 245,
+			"atsParamId": "ATS-245",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 246,
+			"atsParamId": "ATS-246",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 247,
+			"atsParamId": "ATS-247",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 248,
+			"atsParamId": "ATS-248",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 249,
+			"atsParamId": "ATS-249",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 250,
+			"atsParamId": "ATS-250",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 251,
+			"atsParamId": "ATS-251",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 252,
+			"atsParamId": "ATS-252",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 253,
+			"atsParamId": "ATS-253",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 254,
+			"atsParamId": "ATS-254",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 255,
+			"atsParamId": "ATS-255",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 256,
+			"atsParamId": "ATS-256",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 257,
+			"atsParamId": "ATS-257",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 258,
+			"atsParamId": "ATS-258",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 259,
+			"atsParamId": "ATS-259",
+			"logic_description": {}
+		},
+		{
+			"atsGeneralId": 260,
+			"atsParamId": "ATS-260",
+			"logic_description": {}
+		}
+	]
+}

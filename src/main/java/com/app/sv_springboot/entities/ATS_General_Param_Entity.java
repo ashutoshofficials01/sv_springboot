@@ -25,5 +25,6 @@ public class ATS_General_Param_Entity {
 	private long max_points;
 	private long penalty_points;
 	private long total_points;
+	private long resumeId;
 
 }

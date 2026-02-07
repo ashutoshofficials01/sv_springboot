@@ -1,0 +1,144 @@
+{
+	"Construction_ATSParameter": [
+		{
+			"atsGeneralId": 61,
+			"atsParamId": "ATS-061",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 62,
+			"atsParamId": "ATS-062",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 63,
+			"atsParamId": "ATS-063",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 64,
+			"atsParamId": "ATS-064",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 65,
+			"atsParamId": "ATS-065",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 66,
+			"atsParamId": "ATS-066",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 67,
+			"atsParamId": "ATS-067",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 68,
+			"atsParamId": "ATS-068",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 69,
+			"atsParamId": "ATS-069",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 70,
+			"atsParamId": "ATS-070",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 71,
+			"atsParamId": "ATS-071",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 72,
+			"atsParamId": "ATS-072",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 73,
+			"atsParamId": "ATS-073",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 74,
+			"atsParamId": "ATS-074",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 75,
+			"atsParamId": "ATS-075",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 76,
+			"atsParamId": "ATS-076",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 77,
+			"atsParamId": "ATS-077",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 78,
+			"atsParamId": "ATS-078",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 79,
+			"atsParamId": "ATS-079",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 80,
+			"atsParamId": "ATS-080",
+			"logic_description": {
+				
+			}
+		}
+	]
+}

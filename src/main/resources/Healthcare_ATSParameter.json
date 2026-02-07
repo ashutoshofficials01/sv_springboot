@@ -1,0 +1,144 @@
+{
+	"Healthcare_ATSParameter": [
+		{
+			"atsGeneralId": 211,
+			"atsParamId": "ATS-211",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 212,
+			"atsParamId": "ATS-212",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 213,
+			"atsParamId": "ATS-213",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 214,
+			"atsParamId": "ATS-214",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 215,
+			"atsParamId": "ATS-215",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 216,
+			"atsParamId": "ATS-216",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 217,
+			"atsParamId": "ATS-217",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 218,
+			"atsParamId": "ATS-218",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 219,
+			"atsParamId": "ATS-219",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 220,
+			"atsParamId": "ATS-220",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 221,
+			"atsParamId": "ATS-221",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 222,
+			"atsParamId": "ATS-222",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 223,
+			"atsParamId": "ATS-223",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 224,
+			"atsParamId": "ATS-224",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 225,
+			"atsParamId": "ATS-225",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 226,
+			"atsParamId": "ATS-226",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 227,
+			"atsParamId": "ATS-227",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 228,
+			"atsParamId": "ATS-228",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 229,
+			"atsParamId": "ATS-229",
+			"logic_description": {
+				
+			}
+		},
+		{
+			"atsGeneralId": 230,
+			"atsParamId": "ATS-230",
+			"logic_description": {
+				
+			}
+		}
+	]
+}

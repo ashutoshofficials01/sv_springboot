@@ -26,14 +26,140 @@ public class ScoreController {
 	ScoreService scoreService;
 
 	@PostMapping("/resumeUploadIT")
-	public ResponseEntity<SendResponseDto> resumeUpload(@RequestParam("resume") MultipartFile file,
+	public ResponseEntity<SendResponseDto> resumeUploadIT(@RequestParam("resume") MultipartFile file,
 			@RequestParam("userId") String userId) {
 
 		try {
-			SendResponseDto result = scoreService.resumeUpload(file, userId);
+			SendResponseDto result = scoreService.resumeUploadIT(file, userId);
 			return ResponseEntity.ok(result);
 		} catch (Exception e) {
-			SendResponseDto error = scoreService.resumeUpload(file, userId);
+			SendResponseDto error = scoreService.resumeUploadIT(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadConstruction")
+	public ResponseEntity<SendResponseDto> resumeUploadConstruction(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadConstruction(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadConstruction(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadEducation")
+	public ResponseEntity<SendResponseDto> resumeUploadEducation(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadEducation(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadEducation(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadFinance")
+	public ResponseEntity<SendResponseDto> resumeUploadFinance(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadFinance(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadFinance(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadBusiness")
+	public ResponseEntity<SendResponseDto> resumeUploadBusiness(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadBusiness(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadBusiness(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadTourism")
+	public ResponseEntity<SendResponseDto> resumeUploadTourism(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadTourism(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadTourism(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadHealthcare")
+	public ResponseEntity<SendResponseDto> resumeUploadHealthcare(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadHealthcare(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadHealthcare(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadLegal")
+	public ResponseEntity<SendResponseDto> resumeUploadLegal(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadLegal(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadLegal(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadGovernment")
+	public ResponseEntity<SendResponseDto> resumeUploadGovernment(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadGovernment(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadGovernment(file, userId);
+			return ResponseEntity.internalServerError().body(error);
+		}
+
+	}
+
+	@PostMapping("/resumeUploadDesign")
+	public ResponseEntity<SendResponseDto> resumeUploadDesign(@RequestParam("resume") MultipartFile file,
+			@RequestParam("userId") String userId) {
+
+		try {
+			SendResponseDto result = scoreService.resumeUploadDesign(file, userId);
+			return ResponseEntity.ok(result);
+		} catch (Exception e) {
+			SendResponseDto error = scoreService.resumeUploadDesign(file, userId);
 			return ResponseEntity.internalServerError().body(error);
 		}
 
