@@ -586,7 +586,7 @@ public class GeneralATSUtil {
 		AtsGenParamDto combinedGenDto = new AtsGenParamDto();
 
 		List<Map<String, Object>> generalAllATSParams = getAllGeneralATSParams();
-		List<ATS_General_Param_Entity> genATSParamAll = atsGeneralParamRepo.findAll();
+		List<ATS_General_Param_Entity> genATSParamAll = atsGeneralParamRepo.findAllByResumeId(100L);
 //		Map<String, Object> generalATSParam = getGeneralATSParam();
 
 		for (Map<String, Object> genATS : generalAllATSParams) {
