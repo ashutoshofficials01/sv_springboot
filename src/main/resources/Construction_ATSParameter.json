@@ -4,140 +4,1577 @@
 			"atsGeneralId": 61,
 			"atsParamId": "ATS-061",
 			"logic_description": {
-				
+				"type": "CORE_CONSTRUCTION_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine construction or civil engineering professional profile",
+				"keywords": [
+					"construction",
+					"civil engineering",
+					"site execution",
+					"site supervision",
+					"project coordination",
+					"project execution",
+					"construction management",
+					"site management",
+					"structural engineering",
+					"foundation work",
+					"concrete",
+					"reinforced concrete",
+					"rcc",
+					"steel structure",
+					"masonry",
+					"brickwork",
+					"formwork",
+					"shuttering",
+					"bar bending",
+					"rebar",
+					"materials management",
+					"construction materials",
+					"quality control",
+					"quality assurance",
+					"qa/qc",
+					"safety",
+					"site safety",
+					"hse",
+					"health and safety",
+					"ppe",
+					"drawing reading",
+					"auto cad",
+					"autocad",
+					"shop drawings",
+					"bill of quantities",
+					"boq",
+					"estimation",
+					"cost estimation",
+					"rate analysis",
+					"planning",
+					"scheduling",
+					"ms project",
+					"primavera",
+					"procurement",
+					"vendor coordination",
+					"contract management",
+					"subcontractor management",
+					"measurement",
+					"quantity surveying",
+					"execution drawings",
+					"as built drawings"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 62,
 			"atsParamId": "ATS-062",
 			"logic_description": {
-				
+				"type": "CONSTRUCTION_SKILL_BREADTH",
+				"purpose": "Measure breadth of construction skills across planning, execution, quality control, safety, and coordination",
+				"skill_categories": {
+					"planning": [
+						"planning",
+						"scheduling",
+						"project planning",
+						"ms project",
+						"primavera",
+						"bar chart",
+						"construction scheduling"
+					],
+					"execution": [
+						"site execution",
+						"site supervision",
+						"construction execution",
+						"rcc work",
+						"foundation work",
+						"structural work",
+						"finishing work",
+						"civil works"
+					],
+					"quality_control": [
+						"quality control",
+						"quality assurance",
+						"qa/qc",
+						"material inspection",
+						"site inspection",
+						"test reports",
+						"quality standards"
+					],
+					"safety": [
+						"safety",
+						"site safety",
+						"hse",
+						"health and safety",
+						"ppe",
+						"safety compliance",
+						"safety procedures"
+					],
+					"coordination": [
+						"project coordination",
+						"vendor coordination",
+						"subcontractor coordination",
+						"client coordination",
+						"consultant coordination",
+						"interdepartmental coordination"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
 			}
 		},
 		{
 			"atsGeneralId": 63,
 			"atsParamId": "ATS-063",
 			"logic_description": {
-				
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names and abbreviations for construction and civil engineering terms",
+				"keyword_variations": {
+					"rcc": [
+						"rcc",
+						"reinforced cement concrete"
+					],
+					"pcc": [
+						"pcc",
+						"plain cement concrete"
+					],
+					"boq": [
+						"boq",
+						"bill of quantities"
+					],
+					"bua": [
+						"bua",
+						"built up area",
+						"built-up area"
+					],
+					"is_codes": [
+						"is code",
+						"indian standard code",
+						"bis code"
+					],
+					"hse": [
+						"hse",
+						"health safety environment",
+						"health, safety and environment"
+					],
+					"qa_qc": [
+						"qa/qc",
+						"quality assurance",
+						"quality control"
+					],
+					"mivan": [
+						"mivan",
+						"mivan shuttering",
+						"aluminium formwork"
+					],
+					"plinth": [
+						"plinth level",
+						"plinth"
+					],
+					"superstructure": [
+						"superstructure",
+						"super structure"
+					],
+					"substructure": [
+						"substructure",
+						"sub structure"
+					],
+					"bar_bending_schedule": [
+						"bbs",
+						"bar bending schedule"
+					],
+					"quantity_surveying": [
+						"qs",
+						"quantity surveying",
+						"quantity surveyor"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 64,
 			"atsParamId": "ATS-064",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 65,
 			"atsParamId": "ATS-065",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____"
+					],
+					"column_indicators": [
+						"  ",
+						"\u00A0\u00A0",
+						"||"
+					],
+					"visual_separators": [
+						"•",
+						"▪",
+						"■"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 66,
 			"atsParamId": "ATS-066",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 67,
 			"atsParamId": "ATS-067",
 			"logic_description": {
-				
+				"type": "STANDARD_CONSTRUCTION_SECTIONS",
+				"purpose": "Check presence of common construction resume sections",
+				"sections": [
+					"summary",
+					"profile summary",
+					"professional summary",
+					"experience",
+					"work experience",
+					"site experience",
+					"professional experience",
+					"projects",
+					"construction projects",
+					"major projects",
+					"projects and extracurricular achievements",
+					"skills",
+					"technical skills",
+					"key skills",
+					"core competencies",
+					"education",
+					"educational qualification",
+					"academic qualification",
+					"certifications",
+					"certifications and accomplishments",
+					"licenses",
+					"professional certifications"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 68,
 			"atsParamId": "ATS-068",
 			"logic_description": {
-				
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of construction resume sections",
+				"accepted_formats": {
+					"summary": [
+						"summary",
+						"profile summary",
+						"professional summary"
+					],
+					"skills": [
+						"skills",
+						"technical skills",
+						"key skills",
+						"core competencies"
+					],
+					"experience": [
+						"experience",
+						"work experience",
+						"site experience",
+						"professional experience"
+					],
+					"projects": [
+						"projects",
+						"construction projects",
+						"project experience",
+						"major projects",
+						"projects and site exposure"
+					],
+					"education": [
+						"education",
+						"educational qualification",
+						"academic qualification"
+					],
+					"certifications": [
+						"certifications",
+						"certifications and accomplishments",
+						"licenses",
+						"professional certifications"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 69,
 			"atsParamId": "ATS-069",
 			"logic_description": {
-				
+				"type": "CONSTRUCTION_SITE_EXPERIENCE",
+				"purpose": "Detect presence of hands-on construction, site execution, or field experience through roles, projects, or on-site responsibilities",
+				"experience_indicators": {
+					"job_titles": [
+						"site engineer",
+						"project engineer",
+						"construction engineer",
+						"civil engineer",
+						"structural engineer",
+						"planning engineer",
+						"billing engineer",
+						"quantity surveyor",
+						"construction manager",
+						"project manager",
+						"site supervisor",
+						"site incharge",
+						"site in-charge",
+						"field engineer",
+						"execution engineer",
+						"quality engineer",
+						"quality control engineer",
+						"safety engineer",
+						"hse engineer",
+						"resident engineer",
+						"junior engineer",
+						"assistant engineer"
+					],
+					"internship_keywords": [
+						"intern",
+						"internship",
+						"trainee",
+						"graduate engineer trainee",
+						"get",
+						"apprentice",
+						"site trainee"
+					],
+					"project_keywords": [
+						"project",
+						"projects",
+						"construction project",
+						"site execution",
+						"on-site work",
+						"field work",
+						"building construction",
+						"road construction",
+						"bridge construction",
+						"infrastructure project",
+						"residential project",
+						"commercial project",
+						"industrial project"
+					],
+					"experience_verbs": [
+						"worked on",
+						"executed",
+						"supervised",
+						"managed",
+						"monitored",
+						"coordinated",
+						"handled",
+						"implemented",
+						"planned",
+						"scheduled",
+						"measured",
+						"estimated",
+						"inspected",
+						"reviewed",
+						"approved",
+						"maintained",
+						"controlled",
+						"reported"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 70,
 			"atsParamId": "ATS-070",
 			"logic_description": {
-				
+				"type": "CONSTRUCTION_JOB_TITLES",
+				"purpose": "Detect use of common and recognized construction and civil engineering job titles",
+				"recognized_titles": [
+					"site engineer",
+					"project engineer",
+					"construction engineer",
+					"civil engineer",
+					"structural engineer",
+					"planning engineer",
+					"billing engineer",
+					"quantity surveyor",
+					"construction manager",
+					"project manager",
+					"site supervisor",
+					"site incharge",
+					"site in-charge",
+					"field engineer",
+					"execution engineer",
+					"quality engineer",
+					"quality control engineer",
+					"safety engineer",
+					"hse engineer",
+					"contracts engineer",
+					"estimation engineer",
+					"tendering engineer",
+					"resident engineer",
+					"junior engineer",
+					"assistant engineer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 71,
 			"atsParamId": "ATS-071",
 			"logic_description": {
-				
+				"type": "PROJECT_TIMELINE_CLARITY",
+				"purpose": "Detect clear project or employment timelines",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 72,
 			"atsParamId": "ATS-072",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_CONSTRUCTION_IMPACT",
+				"purpose": "Detect quantified construction impact using area, cost, manpower, duration, volume, and efficiency metrics",
+				"impact_indicators": {
+					"area_and_scale_metrics": [
+						"sqft",
+						"sq. ft",
+						"square feet",
+						"sqm",
+						"sq. m",
+						"square meters",
+						"acres",
+						"hectares",
+						"built-up area",
+						"plinth area"
+					],
+					"cost_and_budget_metrics": [
+						"crore",
+						"crores",
+						"lakh",
+						"lakhs",
+						"million",
+						"budget",
+						"project cost",
+						"estimated cost",
+						"contract value",
+						"tender value",
+						"billing amount"
+					],
+					"time_and_schedule_metrics": [
+						"days",
+						"weeks",
+						"months",
+						"project duration",
+						"construction period",
+						"timeline",
+						"schedule",
+						"ahead of schedule",
+						"on time completion",
+						"delay reduced"
+					],
+					"manpower_and_resources": [
+						"manpower",
+						"workers",
+						"labour",
+						"labor",
+						"engineers",
+						"supervisors",
+						"technicians",
+						"crew size",
+						"team size"
+					],
+					"productivity_and_efficiency_metrics": [
+						"reduced",
+						"improved",
+						"optimized",
+						"increased",
+						"decreased",
+						"saved",
+						"cost saving",
+						"time saving",
+						"productivity improvement",
+						"wastage reduction"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 1,
+					"minimum_matches_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 73,
 			"atsParamId": "ATS-073",
 			"logic_description": {
-				
+				"type": "CONSTRUCTION_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of construction skills, methods, materials, tools, and software",
+				"skill_groups": {
+					"construction_methods": [
+						"rcc",
+						"reinforced cement concrete",
+						"pcc",
+						"plain cement concrete",
+						"masonry",
+						"brick work",
+						"block work",
+						"plastering",
+						"concreting",
+						"formwork",
+						"shuttering",
+						"centering",
+						"bar bending",
+						"reinforcement detailing",
+						"steel fixing",
+						"earthwork",
+						"excavation",
+						"backfilling",
+						"finishing works"
+					],
+					"materials_and_components": [
+						"cement",
+						"aggregate",
+						"sand",
+						"steel",
+						"tmt bars",
+						"structural steel",
+						"ready mix concrete",
+						"rmc",
+						"tiles",
+						"granite",
+						"marble",
+						"bitumen",
+						"asphalt",
+						"waterproofing materials",
+						"construction chemicals"
+					],
+					"planning_and_estimation": [
+						"estimation",
+						"cost estimation",
+						"rate analysis",
+						"quantity surveying",
+						"billing",
+						"bill of quantities",
+						"boq",
+						"measurement book",
+						"mb",
+						"budgeting",
+						"cost control",
+						"tendering",
+						"tender documents"
+					],
+					"construction_software_and_tools": [
+						"autocad",
+						"revit",
+						"staad pro",
+						"etabs",
+						"safe",
+						"primavera",
+						"p6",
+						"ms project",
+						"excel",
+						"spreadsheet",
+						"construction management software"
+					],
+					"site_management_and_execution": [
+						"site supervision",
+						"site execution",
+						"site coordination",
+						"contractor coordination",
+						"vendor coordination",
+						"subcontractor management",
+						"daily progress monitoring",
+						"quality checks",
+						"material management",
+						"labor management"
+					],
+					"quality_and_safety_skills": [
+						"quality control",
+						"quality assurance",
+						"qa/qc",
+						"safety management",
+						"safety supervision",
+						"site safety",
+						"inspection",
+						"testing",
+						"snag list",
+						"rectification work"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 74,
 			"atsParamId": "ATS-074",
 			"logic_description": {
-				
+				"type": "CONSTRUCTION_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard construction engineering, site execution, safety, and quality practices",
+				"practice_groups": {
+					"site_execution_and_supervision": [
+						"site execution",
+						"site supervision",
+						"on-site management",
+						"field execution",
+						"construction execution",
+						"daily progress monitoring",
+						"work sequencing",
+						"method statement",
+						"work methodology",
+						"site coordination",
+						"construction planning"
+					],
+					"safety_practices": [
+						"safety compliance",
+						"site safety",
+						"safety management",
+						"safety procedures",
+						"toolbox talk",
+						"hazard identification",
+						"risk assessment",
+						"ppe",
+						"personal protective equipment",
+						"safety audit",
+						"safety inspection",
+						"accident prevention",
+						"osha",
+						"nebosh",
+						"iosh"
+					],
+					"quality_management": [
+						"quality control",
+						"quality assurance",
+						"qc",
+						"qa",
+						"inspection test plan",
+						"itp",
+						"quality checklist",
+						"material inspection",
+						"workmanship standards",
+						"snag list",
+						"defect rectification",
+						"quality audit"
+					],
+					"standards_and_codes": [
+						"is codes",
+						"indian standard codes",
+						"bis codes",
+						"cpwd specifications",
+						"nbc",
+						"national building code",
+						"irc codes",
+						"astm standards",
+						"bs codes",
+						"aci codes",
+						"design standards",
+						"statutory compliance"
+					],
+					"planning_and_scheduling": [
+						"planning",
+						"project planning",
+						"construction planning",
+						"work breakdown structure",
+						"wbs",
+						"bar chart",
+						"gantt chart",
+						"primavera",
+						"p6",
+						"ms project",
+						"schedule tracking",
+						"baseline schedule",
+						"progress tracking",
+						"delay analysis"
+					],
+					"contract_and_cost_management": [
+						"bill of quantities",
+						"boq",
+						"quantity surveying",
+						"cost control",
+						"budgeting",
+						"rate analysis",
+						"billing",
+						"measurement book",
+						"mb",
+						"contract management",
+						"variation order",
+						"claims management",
+						"cost estimation"
+					],
+					"documentation_and_reporting": [
+						"daily progress report",
+						"dpr",
+						"weekly progress report",
+						"monthly progress report",
+						"site records",
+						"as built drawings",
+						"method statements",
+						"inspection reports",
+						"test reports",
+						"handover documentation"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 75,
 			"atsParamId": "ATS-075",
 			"logic_description": {
-				
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, certification, or formal education aligned with construction, civil engineering, and infrastructure roles",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of technology",
+						"b.tech",
+						"bachelor of engineering",
+						"b.e",
+						"diploma in engineering",
+						"diploma in civil engineering",
+						"diploma in construction",
+						"master of technology",
+						"m.tech",
+						"master of engineering",
+						"m.e",
+						"civil engineering",
+						"construction engineering",
+						"structural engineering",
+						"environmental engineering",
+						"transportation engineering",
+						"geotechnical engineering",
+						"urban planning",
+						"infrastructure engineering",
+						"quantity surveying",
+						"construction management"
+					],
+					"certifications": [
+						"certification",
+						"certified",
+						"construction management certification",
+						"project management professional",
+						"pmp",
+						"primavera certified",
+						"ms project certified",
+						"quantity surveyor certification",
+						"safety officer certification",
+						"nebosh",
+						"iosh",
+						"osha",
+						"quality management certification",
+						"iso certification"
+					],
+					"online_courses": [
+						"coursera",
+						"udemy",
+						"udacity",
+						"edx",
+						"linkedin learning",
+						"nptel",
+						"great learning",
+						"simplilearn",
+						"upgrad"
+					],
+					"bootcamps_and_training": [
+						"construction training",
+						"site engineer training",
+						"planning engineer training",
+						"safety training",
+						"industrial training",
+						"internship program",
+						"apprenticeship",
+						"professional training",
+						"certification course",
+						"skill development program"
+					],
+					"academic_keywords": [
+						"education",
+						"academic project",
+						"final year project",
+						"thesis",
+						"dissertation",
+						"coursework",
+						"major",
+						"minor",
+						"specialization",
+						"cgpa",
+						"gpa",
+						"percentage"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 76,
 			"atsParamId": "ATS-076",
 			"logic_description": {
-				
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of educational institutions, professional councils, and construction-related certification bodies",
+				"clarity_groups": {
+					"engineering_and_architecture_institutions": [
+						"iit",
+						"nit",
+						"iiit",
+						"indian institute of technology",
+						"national institute of technology",
+						"government engineering college",
+						"college of engineering",
+						"engineering college",
+						"school of engineering",
+						"faculty of engineering",
+						"institute of engineering",
+						"technical institute",
+						"polytechnic",
+						"government polytechnic",
+						"state engineering college",
+						"deemed university",
+						"autonomous college",
+						"central university",
+						"state university",
+						"private university",
+						"university",
+						"college"
+					],
+					"architecture_and_planning_institutions": [
+						"school of architecture",
+						"college of architecture",
+						"faculty of architecture",
+						"spa delhi",
+						"school of planning and architecture",
+						"sir jj college of architecture",
+						"chandigarh college of architecture",
+						"cept university",
+						"jamia millia islamia",
+						"jadavpur university",
+						"anna university",
+						"andhra university",
+						"osmania university",
+						"madras university",
+						"calcutta university",
+						"banaras hindu university"
+					],
+					"global_universities": [
+						"harvard",
+						"stanford",
+						"mit",
+						"massachusetts institute of technology",
+						"oxford",
+						"cambridge",
+						"imperial college london",
+						"ucla",
+						"uc berkeley",
+						"columbia university",
+						"princeton",
+						"yale",
+						"cornell",
+						"eth zurich",
+						"national university of singapore",
+						"nus",
+						"ntu singapore",
+						"technical university of munich",
+						"tum",
+						"university of toronto",
+						"university of melbourne",
+						"university of sydney"
+					],
+					"professional_councils_and_regulatory_bodies": [
+						"council of architecture",
+						"coa",
+						"institution of engineers india",
+						"iei",
+						"engineering council of india",
+						"eci",
+						"bureau of indian standards",
+						"bis",
+						"national building code",
+						"nbc india",
+						"central public works department",
+						"cpwd",
+						"public works department",
+						"pwd"
+					],
+					"construction_and_project_management_certifications": [
+						"pmp",
+						"project management professional",
+						"prince2",
+						"construction project management",
+						"quantity surveying certification",
+						"planning engineer certification",
+						"primavera certified",
+						"ms project certified",
+						"contract management certification",
+						"cost management certification"
+					],
+					"safety_and_quality_certifications": [
+						"nebosh",
+						"iosh",
+						"osha",
+						"construction safety certification",
+						"health and safety certification",
+						"hse certification",
+						"safety officer certification",
+						"quality management system",
+						"iso 9001",
+						"iso 14001",
+						"iso 45001",
+						"quality auditor certification"
+					],
+					"government_and_skill_development_bodies": [
+						"ugc",
+						"aicte",
+						"aiu",
+						"nsdc",
+						"skill india",
+						"ministry of education",
+						"govt of india",
+						"state board of technical education",
+						"directorate of technical education",
+						"dte",
+						"national skill development corporation"
+					],
+					"training_and_professional_programs": [
+						"industrial training",
+						"apprenticeship",
+						"internship training",
+						"on the job training",
+						"professional development program",
+						"executive training program",
+						"construction management program",
+						"site engineer training",
+						"planning engineer training",
+						"safety training program"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 77,
 			"atsParamId": "ATS-077",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe construction, site execution, and project delivery responsibilities",
+				"action_verb_groups": {
+					"project_execution_and_delivery": [
+						"executed",
+						"delivered",
+						"implemented",
+						"completed",
+						"carried out",
+						"handled execution",
+						"achieved milestones",
+						"project rollout",
+						"on-time delivery",
+						"site execution"
+					],
+					"site_management_and_supervision": [
+						"supervised",
+						"oversaw",
+						"managed site",
+						"monitored site activities",
+						"controlled site operations",
+						"handled site supervision",
+						"site coordination",
+						"field supervision",
+						"on-site management",
+						"daily site monitoring"
+					],
+					"planning_and_scheduling": [
+						"planned",
+						"scheduled",
+						"prepared work plans",
+						"construction planning",
+						"resource planning",
+						"timeline management",
+						"progress planning",
+						"activity scheduling",
+						"work sequencing",
+						"project scheduling"
+					],
+					"coordination_and_collaboration": [
+						"coordinated",
+						"liaised",
+						"collaborated",
+						"worked with contractors",
+						"interfaced with consultants",
+						"vendor coordination",
+						"client coordination",
+						"cross-team coordination",
+						"stakeholder interaction",
+						"subcontractor coordination"
+					],
+					"quality_control_and_assurance": [
+						"ensured quality",
+						"quality inspection",
+						"quality monitoring",
+						"implemented quality standards",
+						"QA/QC compliance",
+						"maintained quality",
+						"quality audits",
+						"rectified quality issues",
+						"inspection and testing",
+						"quality assurance"
+					],
+					"safety_and_compliance": [
+						"ensured safety",
+						"implemented safety measures",
+						"site safety enforcement",
+						"safety compliance",
+						"conducted safety audits",
+						"maintained safety standards",
+						"risk mitigation",
+						"hazard identification",
+						"HSE compliance",
+						"accident prevention"
+					],
+					"cost_and_resource_management": [
+						"controlled costs",
+						"budget monitoring",
+						"resource allocation",
+						"material planning",
+						"inventory management",
+						"cost optimization",
+						"expense tracking",
+						"manpower management",
+						"equipment management",
+						"resource utilization"
+					],
+					"technical_and_engineering_execution": [
+						"interpreted drawings",
+						"reviewed drawings",
+						"implemented designs",
+						"technical execution",
+						"engineering supervision",
+						"handled specifications",
+						"construction detailing",
+						"method statement execution",
+						"technical coordination",
+						"as-built execution"
+					],
+					"problem_solving_and_issue_resolution": [
+						"resolved issues",
+						"troubleshot site problems",
+						"handled construction challenges",
+						"addressed delays",
+						"issue resolution",
+						"conflict resolution",
+						"root cause analysis",
+						"corrective actions",
+						"problem solving",
+						"risk resolution"
+					],
+					"documentation_and_reporting": [
+						"prepared reports",
+						"maintained documentation",
+						"daily progress reporting",
+						"site records maintenance",
+						"inspection reports",
+						"measurement records",
+						"billing documentation",
+						"progress tracking",
+						"project documentation",
+						"compliance documentation"
+					],
+					"leadership_and_team_management": [
+						"led teams",
+						"managed workforce",
+						"guided site staff",
+						"mentored engineers",
+						"team leadership",
+						"crew management",
+						"labour supervision",
+						"workforce coordination",
+						"site leadership",
+						"team oversight"
+					],
+					"maintenance_and_handover": [
+						"maintained structures",
+						"handled snag list",
+						"final inspections",
+						"project handover",
+						"defect rectification",
+						"post-construction support",
+						"handover documentation",
+						"maintenance coordination",
+						"close-out activities",
+						"completion certification"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 78,
 			"atsParamId": "ATS-078",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling and grammatical errors affecting ATS parsing",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"experiance",
+						"acheive",
+						"maintainance",
+						"responsiblity",
+						"managment",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"implimentation",
+						"statment",
+						"paramter",
+						"arguement",
+						"modul",
+						"architechture",
+						"perfromance",
+						"documantation",
+						"avaliable",
+						"compatiblity",
+						"continous",
+						"calender",
+						"defination",
+						"desciption",
+						"occurance",
+						"sucess",
+						"sucessful",
+						"tecnical",
+						"thier",
+						"wierd",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"seperated",
+						"improvment"
+					],
+					"technical_spelling_errors": [
+						"concret",
+						"reinforcemnt",
+						"reinforcment",
+						"structral",
+						"structuraly",
+						"coloumn",
+						"beem",
+						"slabb",
+						"excavtion",
+						"foudation",
+						"plinthh",
+						"superstructre",
+						"substructre",
+						"formwok",
+						"form workk",
+						"shutteringg",
+						"scafolding",
+						"centerring",
+						"barbending",
+						"bar bendng",
+						"quantitiy",
+						"estimtion",
+						"estimaton",
+						"bill of quantitiy",
+						"boqq",
+						"rccc",
+						"curingg",
+						"surveyng",
+						"auto cad",
+						"staad proo",
+						"primveraa",
+						"microsft project",
+						"saftey",
+						"qualtiy control",
+						"qaqc",
+						"iscode",
+						"is cod"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on project",
+						"responsible to execute",
+						"handled site work",
+						"good knowledge of",
+						"basic knowledge of",
+						"worked in site",
+						"involved in execution",
+						"doing site work",
+						"helped to execute",
+						"worked as engineer",
+						"learning site activities",
+						"my role was",
+						"i was involved",
+						"my responsibility includes",
+						"worked under guidance",
+						"familiar with site work",
+						"knowledge about",
+						"hands on experience on",
+						"exposure to construction"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without action verbs"
+					],
+					"capitalization_errors": [
+						"site engineer",
+						"project engineer",
+						"construction manager",
+						"planning engineer",
+						"billing engineer",
+						"quantity surveyor",
+						"civil engineer",
+						"qa qc engineer",
+						"safety engineer"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"passionate engineer",
+						"enthusiastic learner",
+						"dynamic professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to learn",
+						"dedicated professional",
+						"excellent communication skills",
+						"strong problem solving skills"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 79,
 			"atsParamId": "ATS-079",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect images, charts, icons, or graphics in resume",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"skill chart",
+						"rating chart",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 80,
 			"atsParamId": "ATS-080",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT",
+				"purpose": "Detect critical information placed in headers or footers",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"candidate name",
+						"resume of",
+						"curriculum vitae",
+						"cv"
+					],
+					"job_and_role_information": [
+						"site engineer",
+						"project engineer",
+						"construction manager",
+						"planning engineer",
+						"billing engineer",
+						"quantity surveyor",
+						"civil engineer",
+						"designation",
+						"current role",
+						"job title"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"india"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]

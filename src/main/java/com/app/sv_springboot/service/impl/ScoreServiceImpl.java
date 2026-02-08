@@ -211,7 +211,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateConstruction_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 81) {
 					atsScore = rev.getAtsScore();
 				}
 			}

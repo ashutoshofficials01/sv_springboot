@@ -1,6 +1,9 @@
 package com.app.sv_springboot.util;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.pdfbox.*;
@@ -21,6 +24,10 @@ import java.io.InputStream;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.app.sv_springboot.dtos.AtsGenParamDto;
+import com.app.sv_springboot.dtos.AtsListDto;
+import com.app.sv_springboot.entities.ATS_General_Param_Entity;
+
 @Component
 public class ExtraATSUtil {
 
@@ -34,6 +41,8 @@ public class ExtraATSUtil {
 			}
 
 			String extension = fileName.substring(fileName.lastIndexOf('.') + 1).toLowerCase();
+			
+			System.out.println("Extension :: "+ extension);
 
 			switch (extension) {
 			case "docx":
@@ -41,6 +50,7 @@ public class ExtraATSUtil {
 					for (XWPFParagraph para : document.getParagraphs()) {
 						for (XWPFRun run : para.getRuns()) {
 							if (run.getFontFamily() != null) {
+								System.out.println("FontFamily :: "+ run.getFontFamily());
 								fonts.add(run.getFontFamily().toLowerCase());
 							}
 						}
@@ -56,6 +66,7 @@ public class ExtraATSUtil {
 						for (int j = 0; j < para.numCharacterRuns(); j++) {
 							CharacterRun run = para.getCharacterRun(j);
 							if (run.getFontName() != null) {
+								System.out.println("FontName :: " + run.getFontName());
 								fonts.add(run.getFontName().toLowerCase());
 							}
 						}
@@ -87,5 +98,7 @@ public class ExtraATSUtil {
 		}
 
 	}
+	
+
 
 }
