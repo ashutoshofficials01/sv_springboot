@@ -3,102 +3,1849 @@
 		{
 			"atsGeneralId": 241,
 			"atsParamId": "ATS-241",
-			"logic_description": {}
+			"logic_description": {
+				"type": "CORE_LEGAL_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine legal and compliance profile with fundamental legal terms including contracts, regulations, litigation, and corporate law",
+				"keywords": [
+					"contracts",
+					"contract drafting",
+					"contract negotiation",
+					"contract review",
+					"contract management",
+					"contract administration",
+					"agreement drafting",
+					"moa",
+					"memorandum of agreement",
+					"mou",
+					"memorandum of understanding",
+					"nda",
+					"non disclosure agreement",
+					"non compete agreement",
+					"service agreement",
+					"sla",
+					"service level agreement",
+					"regulations",
+					"regulatory compliance",
+					"compliance officer",
+					"legal compliance",
+					"statutory compliance",
+					"risk compliance",
+					"litigation",
+					"lawsuits",
+					"court proceedings",
+					"civil litigation",
+					"criminal litigation",
+					"arbitration",
+					"mediation",
+					"dispute resolution",
+					"adr",
+					"alternative dispute resolution",
+					"corporate law",
+					"company law",
+					"commercial law",
+					"mergers",
+					"acquisitions",
+					"m&a",
+					"due diligence",
+					"legal due diligence",
+					"corporate governance",
+					"board secretary",
+					"shareholder agreement",
+					"joint venture agreement",
+					"legal research",
+					"case law research",
+					"statutory research",
+					"labour law",
+					"employment law",
+					"industrial law",
+					"shops and establishments act",
+					"gratuity",
+					"pf",
+					"provident fund",
+					"esi",
+					"labour compliance",
+					"ipr",
+					"intellectual property rights",
+					"trademarks",
+					"tm",
+					"patents",
+					"copyrights",
+					"trade secrets",
+					"ip litigation",
+					"rbi",
+					"rbi compliance",
+					"sebi",
+					"sebi compliance",
+					"fema",
+					"foreign exchange management act",
+					"pmla",
+					"prevention of money laundering act",
+					"aml",
+					"anti money laundering",
+					"kyc",
+					"know your customer",
+					"cft",
+					"gst compliance",
+					"it compliance",
+					"income tax compliance",
+					"tds compliance",
+					"data protection",
+					"gdpr",
+					"dpdp act",
+					"digital personal data protection",
+					"cyber law",
+					"it act",
+					"information technology act",
+					"advocate",
+					"lawyer",
+					"attorney",
+					"legal advisor",
+					"company secretary",
+					"cs",
+					"legal counsel",
+					"in house counsel",
+					"paralegal",
+					"legal executive",
+					"compliance manager",
+					"risk manager",
+					"legal manager",
+					"associate counsel",
+					"litigation counsel",
+					"aoa",
+					"articles of association",
+					"roc",
+					"registrar of companies",
+					"llp compliance",
+					"partnership deed",
+					"power of attorney",
+					"poa",
+					"affidavit drafting",
+					"legal opinion",
+					"regulatory filing",
+					"company incorporation",
+					"llp registration",
+					"trademark registration",
+					"patent filing",
+					"insolvency",
+					"ibc",
+					"insolvency and bankruptcy code",
+					"rera",
+					"real estate regulation act",
+					"competition law",
+					"cci",
+					"consumer protection act",
+					"posh compliance",
+					"sexual harassment compliance"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
+			}
 		},
 		{
 			"atsGeneralId": 242,
 			"atsParamId": "ATS-242",
-			"logic_description": {}
+			"logic_description": {
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Measure breadth of legal and compliance skills across core areas covering corporate law, compliance, regulatory affairs, and legal operations",
+				"skill_categories": {
+					"corporate_law": [
+						"company law",
+						"corporate governance",
+						"mergers and acquisitions",
+						"due diligence",
+						"shareholder agreements",
+						"board resolutions"
+					],
+					"contracts": [
+						"contract drafting",
+						"contract negotiation",
+						"contract review",
+						"nda",
+						"sla",
+						"commercial agreements"
+					],
+					"compliance": [
+						"statutory compliance",
+						"regulatory compliance",
+						"kyc",
+						"aml",
+						"gst compliance",
+						"labour compliance"
+					],
+					"litigation": [
+						"civil litigation",
+						"arbitration",
+						"mediation",
+						"dispute resolution",
+						"court proceedings",
+						"adr"
+					],
+					"regulatory_affairs": [
+						"rbi compliance",
+						"sebi compliance",
+						"fema",
+						"pmla",
+						"sebi regulations",
+						"rbi guidelines"
+					],
+					"intellectual_property": [
+						"trademarks",
+						"patents",
+						"copyrights",
+						"ipr",
+						"trade secrets",
+						"ip licensing"
+					],
+					"employment_law": [
+						"labour law",
+						"employment contracts",
+						"gratuity",
+						"pf",
+						"esi",
+						"posh compliance"
+					],
+					"legal_operations": [
+						"legal research",
+						"legal opinion",
+						"document management",
+						"e-discovery",
+						"matter management",
+						"legal tech"
+					],
+					"advisory": [
+						"legal advisory",
+						"risk assessment",
+						"compliance training",
+						"policy drafting",
+						"internal audits",
+						"regulatory filings"
+					],
+					"software_tools": [
+						"manupatra",
+						"scconline",
+						"lexis nexis",
+						"westlaw",
+						"legal suite",
+						"contract lifecycle management"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
+			}
 		},
 		{
 			"atsGeneralId": 243,
 			"atsParamId": "ATS-243",
-			"logic_description": {}
+			"logic_description": {
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names and abbreviations for legal and compliance terms, acts, and regulations",
+				"keyword_variations": {
+					"non_disclosure_agreement": [
+						"nda",
+						"non disclosure agreement",
+						"confidentiality agreement",
+						"non-disclosure agreement"
+					],
+					"company_secretary": [
+						"cs",
+						"company secretary",
+						"corporate secretary"
+					],
+					"due_diligence": [
+						"due diligence",
+						"dd",
+						"legal due diligence"
+					],
+					"alternative_dispute_resolution": [
+						"adr",
+						"alternative dispute resolution",
+						"adr mechanisms"
+					],
+					"intellectual_property": [
+						"ipr",
+						"ip",
+						"intellectual property rights",
+						"intellectual property"
+					],
+					"know_your_customer": [
+						"kyc",
+						"know your customer",
+						"kyc compliance"
+					],
+					"anti_money_laundering": [
+						"aml",
+						"anti money laundering",
+						"money laundering prevention"
+					],
+					"foreign_exchange_management_act": [
+						"fema",
+						"foreign exchange management act",
+						"fema regulations"
+					],
+					"securities_exchange_board_india": [
+						"sebi",
+						"securities and exchange board of india",
+						"sebi compliance"
+					],
+					"memorandum_association": [
+						"moa",
+						"memorandum of association",
+						"moa filing"
+					],
+					"articles_association": [
+						"aoa",
+						"articles of association",
+						"aoa amendments"
+					],
+					"power_attorney": [
+						"poa",
+						"power of attorney",
+						"general poa"
+					],
+					"mergers_acquisitions": [
+						"m&a",
+						"mergers and acquisitions",
+						"ma transactions"
+					],
+					"goods_services_tax": [
+						"gst",
+						"goods and services tax",
+						"gst compliance"
+					],
+					"prevention_money_laundering_act": [
+						"pmla",
+						"prevention of money laundering act",
+						"pmla compliance"
+					],
+					"provident_fund": [
+						"pf",
+						"provident fund",
+						"epf"
+					],
+					"employee_state_insurance": [
+						"esi",
+						"employee state insurance",
+						"esi compliance"
+					],
+					"service_level_agreement": [
+						"sla",
+						"service level agreement",
+						"sla management"
+					],
+					"memorandum_understanding": [
+						"mou",
+						"memorandum of understanding",
+						"mou execution"
+					],
+					"registrar_companies": [
+						"roc",
+						"registrar of companies",
+						"roc compliance"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 244,
 			"atsParamId": "ATS-244",
-			"logic_description": {}
+			"logic_description": {
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
+			}
 		},
 		{
 			"atsGeneralId": 245,
 			"atsParamId": "ATS-245",
-			"logic_description": {}
+			"logic_description": {
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____",
+						"<table>"
+					],
+					"column_indicators": [
+						" ",
+						"\u00A0\u00A0",
+						"||",
+						"<div style="
+					],
+					"visual_separators": [
+						"- ",
+						"▪",
+						"■",
+						"★",
+						"♦"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
+			}
 		},
 		{
 			"atsGeneralId": 246,
 			"atsParamId": "ATS-246",
-			"logic_description": {}
+			"logic_description": {
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new",
+						"garamond"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller",
+						"wingdings",
+						"symbol"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
+			}
 		},
 		{
 			"atsGeneralId": 247,
 			"atsParamId": "ATS-247",
-			"logic_description": {}
+			"logic_description": {
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Check presence of standard legal resume sections such as Summary, Experience, Skills, Education, and Certifications",
+				"sections": [
+					"professional summary",
+					"career objective",
+					"summary",
+					"profile",
+					"legal profile",
+					"experience",
+					"work experience",
+					"professional experience",
+					"legal experience",
+					"litigation experience",
+					"corporate experience",
+					"employment history",
+					"skills",
+					"core competencies",
+					"legal skills",
+					"technical skills",
+					"professional skills",
+					"compliance skills",
+					"litigation skills",
+					"education",
+					"educational qualification",
+					"academic qualification",
+					"law degree",
+					"llb",
+					"llm",
+					"certifications",
+					"professional certifications",
+					"bar council",
+					"bar admission",
+					"advocate enrollment",
+					"cs qualification",
+					"company secretary",
+					"professional qualifications",
+					"dispute resolution",
+					"arbitration experience",
+					"mediation certification",
+					"compliance certification",
+					"corporate governance",
+					"projects",
+					"legal assignments",
+					"case matters",
+					"litigation matters",
+					"contract matters",
+					"advisory assignments"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
+			}
 		},
 		{
 			"atsGeneralId": 248,
 			"atsParamId": "ATS-248",
-			"logic_description": {}
+			"logic_description": {
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of resume sections for legal and compliance resumes",
+				"accepted_formats": {
+					"summary": [
+						"professional summary",
+						"career objective",
+						"summary",
+						"profile",
+						"legal profile"
+					],
+					"skills": [
+						"skills",
+						"core competencies",
+						"legal skills",
+						"technical skills",
+						"professional skills",
+						"compliance skills"
+					],
+					"experience": [
+						"work experience",
+						"professional experience",
+						"legal experience",
+						"litigation experience",
+						"corporate experience",
+						"employment history"
+					],
+					"practice_areas": [
+						"practice areas",
+						"areas of practice",
+						"expertise areas",
+						"specializations"
+					],
+					"education": [
+						"education",
+						"educational qualification",
+						"law degree",
+						"academic qualification"
+					],
+					"certifications": [
+						"certifications",
+						"professional certifications",
+						"bar council",
+						"bar admission",
+						"cs qualification",
+						"compliance certification"
+					],
+					"matters_projects": [
+						"projects",
+						"legal assignments",
+						"case matters",
+						"litigation matters",
+						"contract matters",
+						"advisory assignments"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 249,
 			"atsParamId": "ATS-249",
-			"logic_description": {}
+			"logic_description": {
+				"type": "HANDS_ON_EXPERIENCE",
+				"purpose": "Detect presence of hands-on legal and compliance experience through jobs, internships, or projects such as litigation support, contract drafting, or regulatory compliance",
+				"experience_indicators": {
+					"job_titles": [
+						"advocate",
+						"lawyer",
+						"attorney",
+						"legal advisor",
+						"company secretary",
+						"cs",
+						"legal counsel",
+						"in house counsel",
+						"compliance officer",
+						"compliance manager",
+						"legal executive",
+						"paralegal",
+						"litigation counsel",
+						"corporate lawyer",
+						"associate counsel",
+						"legal manager"
+					],
+					"internship_keywords": [
+						"legal intern",
+						"intern",
+						"internship",
+						"law intern",
+						"articleship",
+						"advocate articleship",
+						"cs articleship",
+						"trainee",
+						"legal trainee",
+						"apprentice",
+						"chambers attachment"
+					],
+					"project_keywords": [
+						"litigation matter",
+						"case handled",
+						"contract drafting",
+						"due diligence project",
+						"compliance audit",
+						"regulatory filing",
+						"arbitration matter",
+						"mediation case",
+						"ip registration",
+						"trademark filing",
+						"company incorporation",
+						"merger documentation",
+						"kyc implementation",
+						"aml program"
+					],
+					"experience_verbs": [
+						"drafted contracts",
+						"negotiated agreements",
+						"reviewed contracts",
+						"conducted due diligence",
+						"handled litigation",
+						"represented clients",
+						"filed regulatory returns",
+						"ensured statutory compliance",
+						"prepared legal opinions",
+						"managed compliance program",
+						"conducted legal research",
+						"appeared in court",
+						"drafted pleadings",
+						"handled arbitration",
+						"mediated disputes",
+						"implemented kyc",
+						"performed aml checks",
+						"advised on corporate law",
+						"prepared board resolutions",
+						"filed roc returns"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
+			}
 		},
 		{
 			"atsGeneralId": 250,
 			"atsParamId": "ATS-250",
-			"logic_description": {}
+			"logic_description": {
+				"type": "LEGAL_JOB_TITLES",
+				"purpose": "Detect use of common legal and compliance job titles such as Legal Associate, Advocate, Compliance Officer, or Corporate Counsel",
+				"recognized_titles": [
+					"advocate",
+					"junior advocate",
+					"senior advocate",
+					"lawyer",
+					"associate lawyer",
+					"legal associate",
+					"junior legal associate",
+					"senior legal associate",
+					"legal advisor",
+					"junior legal advisor",
+					"senior legal advisor",
+					"company secretary",
+					"cs",
+					"deputy company secretary",
+					"compliance officer",
+					"junior compliance officer",
+					"senior compliance officer",
+					"compliance manager",
+					"legal counsel",
+					"associate counsel",
+					"senior counsel",
+					"in house counsel",
+					"corporate counsel",
+					"junior corporate counsel",
+					"legal executive",
+					"senior legal executive",
+					"paralegal",
+					"junior paralegal",
+					"senior paralegal",
+					"litigation counsel",
+					"litigation associate",
+					"dispute resolution counsel",
+					"contract manager",
+					"legal manager",
+					"senior legal manager",
+					"head legal",
+					"general counsel",
+					"vice president legal",
+					"legal head",
+					"compliance head",
+					"corporate lawyer",
+					"associate corporate lawyer",
+					"transactional lawyer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 251,
 			"atsParamId": "ATS-251",
-			"logic_description": {}
+			"logic_description": {
+				"type": "EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent date formats showing career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
+			}
 		},
 		{
 			"atsGeneralId": 252,
 			"atsParamId": "ATS-252",
-			"logic_description": {}
+			"logic_description": {
+				"type": "QUANTIFIED_IMPACT",
+				"purpose": "Detect quantified impact using numbers, percentages, scale, performance or efficiency metrics in legal and compliance achievements such as cases handled, contracts reviewed, audits completed, or compliance metrics",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"percentage",
+						"compliance rate",
+						"success rate",
+						"recovery rate"
+					],
+					"scale_metrics": [
+						"cr",
+						"crore",
+						"lakh",
+						"million",
+						"cases",
+						"matters",
+						"contracts",
+						"agreements",
+						"filings",
+						"audits",
+						"transactions",
+						"employees",
+						"vendors",
+						"litigations"
+					],
+					"performance_metrics": [
+						"cases won",
+						"cases settled",
+						"disputes resolved",
+						"contracts drafted",
+						"contracts reviewed",
+						"compliance score",
+						"audit findings",
+						"regulatory filings",
+						"trademarks filed",
+						"ip registrations"
+					],
+					"efficiency_metrics": [
+						"reduced litigation time",
+						"cost savings",
+						"improved compliance",
+						"risk reduction",
+						"faster turnaround",
+						"minimized penalties",
+						"successful negotiations",
+						"avoided disputes",
+						"streamlined processes",
+						"enhanced governance"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
+			}
 		},
 		{
 			"atsGeneralId": 253,
 			"atsParamId": "ATS-253",
-			"logic_description": {}
+			"logic_description": {
+				"type": "TECHNICAL_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of legal, regulatory, compliance, and advisory skills",
+				"skill_groups": {
+					"core_legal_practice": [
+						"contract drafting",
+						"contract negotiation",
+						"contract review",
+						"legal research",
+						"legal drafting",
+						"legal opinion",
+						"due diligence",
+						"corporate governance",
+						"company law",
+						"commercial law"
+					],
+					"litigation_dispute": [
+						"civil litigation",
+						"criminal litigation",
+						"arbitration",
+						"mediation",
+						"dispute resolution",
+						"adr",
+						"court practice",
+						"pleadings",
+						"affidavits"
+					],
+					"compliance_regulatory": [
+						"statutory compliance",
+						"regulatory compliance",
+						"kyc",
+						"aml",
+						"gst compliance",
+						"labour compliance",
+						"rbi compliance",
+						"sebi compliance",
+						"fema compliance",
+						"pmla compliance"
+					],
+					"intellectual_property": [
+						"trademarks",
+						"tm filing",
+						"patents",
+						"copyrights",
+						"ipr",
+						"trade secrets",
+						"ip licensing",
+						"non compete agreements"
+					],
+					"corporate_transactional": [
+						"mergers acquisitions",
+						"m&a",
+						"joint ventures",
+						"shareholder agreements",
+						"nda",
+						"sla",
+						"moa",
+						"aoa",
+						"roc filings"
+					],
+					"employment_labour": [
+						"employment contracts",
+						"labour law",
+						"gratuity",
+						"pf compliance",
+						"esi compliance",
+						"posh compliance",
+						"industrial disputes"
+					],
+					"legal_research_tools": [
+						"manupatra",
+						"scconline",
+						"lexis nexis",
+						"westlaw",
+						"indian kanoon",
+						"legal suite"
+					],
+					"document_management": [
+						"contract lifecycle management",
+						"clm",
+						"document review",
+						"e-discovery",
+						"matter management",
+						"legal operations"
+					],
+					"other_tools": [
+						"microsoft office",
+						"ms word",
+						"excel",
+						"powerpoint",
+						"adobe acrobat",
+						"zoom",
+						"teams",
+						"jira",
+						"asana"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
+			}
 		},
 		{
 			"atsGeneralId": 254,
 			"atsParamId": "ATS-254",
-			"logic_description": {}
+			"logic_description": {
+				"type": "ENGINEERING_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard legal and compliance practices such as due diligence, risk assessment, policy drafting, or regulatory compliance",
+				"practice_groups": {
+					"corporate_governance": [
+						"corporate governance",
+						"board practices",
+						"board resolutions",
+						"shareholder meetings",
+						"agm",
+						"egm",
+						"director compliance",
+						"related party transactions",
+						"insider trading policy",
+						"whistleblower policy"
+					],
+					"contract_management": [
+						"contract lifecycle management",
+						"contract review",
+						"contract negotiation",
+						"contract execution",
+						"contract amendments",
+						"nda management",
+						"sla monitoring",
+						"vendor contracts",
+						"termination clauses",
+						"breach management"
+					],
+					"due_diligence": [
+						"legal due diligence",
+						"financial due diligence",
+						"compliance due diligence",
+						"title search",
+						"encumbrance certificate",
+						"litigation search",
+						"regulatory clearance",
+						"dd report",
+						"risk identification"
+					],
+					"compliance_programs": [
+						"statutory compliance",
+						"regulatory compliance",
+						"kyc compliance",
+						"aml compliance",
+						"gst compliance",
+						"labour law compliance",
+						"posh compliance",
+						"data protection compliance",
+						"annual compliance calendar",
+						"compliance audit"
+					],
+					"litigation_dispute": [
+						"litigation management",
+						"cause list management",
+						"court filing",
+						"pleading drafting",
+						"affidavit filing",
+						"discovery process",
+						"settlement negotiations",
+						"appeal management",
+						"execution proceedings",
+						"limitation tracking"
+					],
+					"regulatory_filings": [
+						"roc filings",
+						"sebi filings",
+						"rbi filings",
+						"fema compliance",
+						"pmla reporting",
+						"gst filings",
+						"trademark filings",
+						"patent applications",
+						"annual returns",
+						"event based filings"
+					],
+					"risk_assessment": [
+						"legal risk assessment",
+						"compliance risk",
+						"litigation risk",
+						"contract risk",
+						"regulatory risk",
+						"enterprise risk management",
+						"risk register",
+						"risk mitigation",
+						"risk reporting"
+					],
+					"policy_drafting": [
+						"policy drafting",
+						"compliance policy",
+						"hr policy",
+						"it policy",
+						"anti bribery policy",
+						"data privacy policy",
+						"code of conduct",
+						"standard operating procedures",
+						"sop"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
+			}
 		},
 		{
 			"atsGeneralId": 255,
 			"atsParamId": "ATS-255",
-			"logic_description": {}
+			"logic_description": {
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, certification, or formal education aligned with legal and compliance careers such as LLB, LLM, or compliance certification",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of laws",
+						"llb",
+						"bachelor of law",
+						"llb hons",
+						"master of laws",
+						"llm",
+						"llm corporate law",
+						"llm commercial law",
+						"llm ipr",
+						"bachelor of arts law",
+						"ba llb",
+						"b.com llb",
+						"bachelor of business administration llb",
+						"bba llb",
+						"master of business laws",
+						"mbl",
+						"diploma in business laws",
+						"bachelor of commerce cs",
+						"company secretary course",
+						"post graduate diploma in corporate laws"
+					],
+					"certifications": [
+						"bar council",
+						"bar admission",
+						"advocate enrollment",
+						"company secretary",
+						"cs executive",
+						"cs professional",
+						"cs final",
+						"icsi",
+						"compliance certification",
+						"gdpr certification",
+						"aml certification",
+						"kyc certification",
+						"corporate governance certification",
+						"arbitration certification",
+						"mediation certification",
+						"dispute resolution certification",
+						"contract management certification",
+						"legal process outsourcing",
+						"lpo certification"
+					],
+					"online_courses": [
+						"coursera contract law",
+						"edx corporate law",
+						"udemy company secretary",
+						"udemy contract drafting",
+						"linkedin learning compliance",
+						"upgrad llm",
+						"simplilearn legal compliance",
+						"unacademy judiciary",
+						"lawsikho contract drafting",
+						"lawsikho corporate law"
+					],
+					"bootcamps_and_training": [
+						"advocate articleship",
+						"senior advocate chambers",
+						"cs articleship",
+						"law firm internship",
+						"legal intern training",
+						"compliance training",
+						"arbitration workshop",
+						"mediation training",
+						"contract drafting workshop",
+						"due diligence training"
+					],
+					"academic_keywords": [
+						"education",
+						"law college",
+						"law university",
+						"law school",
+						"nlus",
+						"national law university",
+						"bar council registration",
+						"enrollment number",
+						"law degree",
+						"legal education",
+						"llb project",
+						"llm dissertation",
+						"cgpa law",
+						"percentage llb"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
+			}
 		},
 		{
 			"atsGeneralId": 256,
 			"atsParamId": "ATS-256",
-			"logic_description": {}
+			"logic_description": {
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of educational institutions, learning platforms, and certification bodies for Legal & Compliance",
+				"clarity_groups": {
+					"universities_and_colleges": [
+						"university",
+						"national law school india",
+						"nlsiu bangalore",
+						"national law university",
+						"nlu",
+						"nalsar hyderabad",
+						"nlud delhi",
+						"nluj ranchi",
+						"hidayatullah national law university",
+						"hnlu raipur",
+						"gujarat national law university",
+						"gnlu gandhinagar",
+						"wbnujs kolkata",
+						"rmlnlu lucknow",
+						"national university of advanced legal studies",
+						"nu als kochi",
+						"symbiosis law school",
+						"sls pune",
+						"army institute of law",
+						"ail mohali",
+						"iils pune",
+						"indian institute of law",
+						"school of law christ university",
+						"gitaramanyam law college",
+						"university law college bangalore",
+						"iiscs pune",
+						"ilnu noida",
+						"school of law galgotias",
+						"jindal global law school",
+						"jgls sonipat",
+						"upes dehradun",
+						"nmims ketchum school of law",
+						"amu law faculty",
+						"banaras hindu university law",
+						"university of delhi law faculty",
+						"lucknow university law",
+						"pune university law"
+					],
+					"global_universities": [
+						"harvard law school",
+						"yale law school",
+						"stanford law school",
+						"columbia law school",
+						"nyu school of law",
+						"university of chicago law school",
+						"university of pennsylvania carey law",
+						"university of virginia law school",
+						"university of michigan law school",
+						"georgetown university law center",
+						"university of california berkeley school of law",
+						"ucl laws",
+						"university of oxford faculty of law",
+						"cambridge faculty of law",
+						"king s college london dickinson poon school of law",
+						"london school of economics department of law",
+						"university college london faculty of laws",
+						"university of melbourne law school",
+						"university of sydney law school",
+						"university of new south wales law",
+						"national university of singapore faculty of law",
+						"university of hong kong faculty of law"
+					],
+					"certification_bodies": [
+						"bar council of india",
+						"bci",
+						"state bar council",
+						"advocate enrollment",
+						"bar council registration",
+						"icsi",
+						"institute of company secretaries of india",
+						"cs professional",
+						"cs executive",
+						"company secretary",
+						"nlus",
+						"national law universities",
+						"ilnu",
+						"jgls",
+						"arbitration council of india",
+						"international chamber of commerce",
+						"icc arbitration",
+						"singapore international arbitration centre",
+						"siac",
+						"lcia",
+						"london court of international arbitration",
+						"indian council of arbitration",
+						"ica",
+						"mediators india",
+						"centre for effective dispute resolution",
+						"cedr"
+					],
+					"online_learning_platforms": [
+						"lawsikho",
+						"lawctopus",
+						"legally india",
+						"barandbench",
+						"coursera law",
+						"edx law",
+						"udemy legal courses",
+						"linkedin learning compliance",
+						"upgrad llm",
+						"simplilearn cyber law",
+						"unacademy judiciary",
+						"byjus clat",
+						"testbook judiciary",
+						"gradeup legal",
+						"adda judiciary",
+						"manupatra training",
+						"scconline webinars",
+						"lexisnexis learning"
+					],
+					"training_and_bootcamps": [
+						"senior advocate chambers",
+						"articleship training",
+						"advocate on record training",
+						"cs coaching institute",
+						"icsi coaching",
+						"law firm internship program",
+						"lpo training",
+						"legal process outsourcing training",
+						"contract drafting bootcamp",
+						"due diligence workshop",
+						"compliance officer certification",
+						"arbitration practitioner course",
+						"mediation training india"
+					],
+					"government_and_recognized_bodies": [
+						"bar council of india",
+						"bci",
+						"university grants commission",
+						"ugc",
+						"all india council for technical education",
+						"aicte",
+						"national assessment accreditation council",
+						"naac",
+						"national institutional ranking framework",
+						"nirf",
+						"ministry of law justice",
+						"law commission of india",
+						"national legal services authority",
+						"nalsa",
+						"national judicial academy",
+						"nja",
+						"supreme court of india",
+						"high court",
+						"district court"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
+			}
 		},
 		{
 			"atsGeneralId": 257,
 			"atsParamId": "ATS-257",
-			"logic_description": {}
+			"logic_description": {
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe legal responsibilities, case handling, and compliance activities",
+				"action_verb_groups": {
+					"contract_management": [
+						"drafted contracts",
+						"negotiated agreements",
+						"reviewed contracts",
+						"executed agreements",
+						"amended contracts",
+						"terminated agreements",
+						"managed ndas",
+						"monitored slas",
+						"vetted vendors",
+						"contract lifecycle"
+					],
+					"litigation_dispute": [
+						"litigated matters",
+						"represented clients",
+						"argued cases",
+						"won judgments",
+						"settled disputes",
+						"mediated conflicts",
+						"arbitrated claims",
+						"filed appeals",
+						"drafted pleadings",
+						"cross examined"
+					],
+					"compliance_regulatory": [
+						"ensured compliance",
+						"conducted audits",
+						"filed returns",
+						"implemented kyc",
+						"performed aml checks",
+						"trained employees",
+						"mitigated risks",
+						"prepared reports",
+						"liaised regulators",
+						"achieved certification"
+					],
+					"corporate_advisory": [
+						"advised directors",
+						"structured transactions",
+						"conducted due diligence",
+						"prepared opinions",
+						"drafted resolutions",
+						"organized agms",
+						"managed governance",
+						"handled roc filings",
+						"structured joint ventures",
+						"advised mergers"
+					],
+					"intellectual_property": [
+						"filed trademarks",
+						"registered patents",
+						"protected copyrights",
+						"licensed ip",
+						"enforced trademarks",
+						"defended patents",
+						"drafted licensing agreements",
+						"managed portfolios",
+						"opposed applications",
+						"renewed registrations"
+					],
+					"risk_management": [
+						"assessed risks",
+						"mitigated liabilities",
+						"prevented litigation",
+						"identified exposures",
+						"implemented controls",
+						"conducted gap analysis",
+						"developed policies",
+						"monitored compliance",
+						"reported risks",
+						"trained stakeholders"
+					],
+					"research_analysis": [
+						"researched precedents",
+						"analyzed statutes",
+						"interpreted regulations",
+						"reviewed case laws",
+						"prepared research memos",
+						"tracked amendments",
+						"benchmarked practices",
+						"competitive analysis",
+						"market intelligence",
+						"regulatory updates"
+					],
+					"leadership_management": [
+						"led legal team",
+						"managed department",
+						"mentored associates",
+						"coordinated paralegals",
+						"headed compliance",
+						"oversaw litigation",
+						"partnered business units",
+						"stakeholder engagement",
+						"cross functional teams",
+						"client relationship management"
+					],
+					"process_improvement": [
+						"streamlined workflows",
+						"automated processes",
+						"implemented clm",
+						"digitized records",
+						"optimized turnaround",
+						"reduced cycle time",
+						"standardized templates",
+						"improved accuracy",
+						"enhanced efficiency",
+						"cost optimization"
+					],
+					"policy_development": [
+						"drafted policies",
+						"developed sops",
+						"updated manuals",
+						"created guidelines",
+						"aligned regulations",
+						"implemented frameworks",
+						"trained personnel",
+						"audited adherence",
+						"reported compliance",
+						"continuous improvement"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
+			}
 		},
 		{
 			"atsGeneralId": 258,
 			"atsParamId": "ATS-258",
-			"logic_description": {}
+			"logic_description": {
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, poor sentence construction, and noisy text that affects ATS parsing in Legal & Compliance resumes",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"experiance",
+						"acheive",
+						"maintainance",
+						"responsiblity",
+						"mangement",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"implimentation",
+						"funtionality",
+						"statment",
+						"paramter",
+						"arguement",
+						"modul",
+						"architechture",
+						"databse",
+						"perfromance",
+						"optimzation",
+						"documantation",
+						"authintication",
+						"avaliable",
+						"compatiblity",
+						"continous",
+						"calender",
+						"defination",
+						"desciption",
+						"occurance",
+						"sucess",
+						"sucessful",
+						"tecnical",
+						"thier",
+						"wierd",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"seperated",
+						"improvment",
+						"profesional",
+						"organised",
+						"enviroment",
+						"recieve"
+					],
+					"technical_spelling_errors": [
+						"contrcat",
+						"contrcts",
+						"litigationn",
+						"litgation",
+						"arbitrationn",
+						"arbritration",
+						"meditaion",
+						"complaince",
+						"complience",
+						"complaince officer",
+						"kyc complience",
+						"aml",
+						"advocat",
+						"lawyar",
+						"company secratary",
+						"cs",
+						"due diligance",
+						"duediligence",
+						"corporat law",
+						"company law",
+						"contract drafting",
+						"nda",
+						"sla",
+						"moa",
+						"aoa",
+						"roc",
+						"sebi",
+						"rbi",
+						"fema",
+						"pmla",
+						"gst compliance",
+						"trademark",
+						"tm",
+						"copywrite",
+						"copy right",
+						"ipr",
+						"labour law",
+						"labor law",
+						"posh",
+						"gratuityy",
+						"pf esi",
+						"roc filing",
+						"sebi filing",
+						"legal counsel",
+						"paralegal",
+						"in house counsel",
+						"litgation counsel",
+						"disput resolution",
+						"adr"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on case",
+						"responsible to draft",
+						"handled litigation",
+						"good knowledge of law",
+						"basic knowledge of contracts",
+						"worked in law firm",
+						"involved in drafting",
+						"doing compliance",
+						"helped to negotiate",
+						"worked as lawyer",
+						"learning new laws",
+						"my role was advocate",
+						"i was involved in case",
+						"my responsibility includes drafting",
+						"worked under senior advocate",
+						"familiar with statutes",
+						"knowledge about regulations",
+						"hands on experience on litigation",
+						"exposure to compliance",
+						"managed legal matters",
+						"prepared contracts",
+						"handled compliance",
+						"good in research",
+						"basic drafting knowledge"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without action verbs"
+					],
+					"capitalization_errors": [
+						"advocate",
+						"lawyer",
+						"company secretary",
+						"compliance officer",
+						"legal counsel",
+						"corporate counsel",
+						"litigation counsel",
+						"contract manager",
+						"legal manager",
+						"paralegal",
+						"general counsel",
+						"head legal",
+						"bar council",
+						"state bar council",
+						"roc",
+						"sebi",
+						"rbi",
+						"kyc",
+						"aml",
+						"nda",
+						"sla",
+						"moa",
+						"aoa"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"passionate lawyer",
+						"enthusiastic advocate",
+						"dynamic legal professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to learn",
+						"dedicated lawyer",
+						"excellent communication skills",
+						"strong legal research skills",
+						"detail oriented",
+						"meticulous",
+						"proactive",
+						"versatile legal professional"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
+			}
 		},
 		{
 			"atsGeneralId": 259,
 			"atsParamId": "ATS-259",
-			"logic_description": {}
+			"logic_description": {
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, progress bars, emojis, or graphical elements that reduce ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"skill chart",
+						"rating chart",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 260,
 			"atsParamId": "ATS-260",
-			"logic_description": {}
+			"logic_description": {
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Avoidance of placing critical information inside headers or footers which may not be parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"candidate name",
+						"resume of",
+						"curriculum vitae",
+						"cv"
+					],
+					"job_and_role_information": [
+						"advocate",
+						"lawyer",
+						"legal advisor",
+						"company secretary",
+						"cs",
+						"compliance officer",
+						"legal counsel",
+						"corporate counsel",
+						"litigation counsel",
+						"legal associate",
+						"paralegal",
+						"in house counsel",
+						"legal manager",
+						"head legal",
+						"general counsel",
+						"designation",
+						"current role",
+						"job title"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"india",
+						"bangalore",
+						"hyderabad",
+						"pune",
+						"chennai",
+						"mumbai",
+						"delhi",
+						"kolkata",
+						"ahmedabad",
+						"bar council",
+						"state bar"
+					],
+					"enrollment_bar_details": [
+						"enrollment number",
+						"bar council number",
+						"advocate id",
+						"bar registration",
+						"state bar council",
+						"bar council of india"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer",
+					"privileged and confidential"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
+			}
 		}
 	]
 }

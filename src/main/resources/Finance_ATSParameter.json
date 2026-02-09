@@ -432,7 +432,7 @@
 			"atsGeneralId": 160,
 			"atsParamId": "ATS-160",
 			"logic_description": {
-				"type": "DEVELOPER_JOB_TITLES",
+				"type": "FINANCE_JOB_TITLES",
 				"purpose": "Detect use of common finance and accounting job titles",
 				"recognized_titles": [
 					"accountant",
