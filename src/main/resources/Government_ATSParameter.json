@@ -4,140 +4,1395 @@
 			"atsGeneralId": 181,
 			"atsParamId": "ATS-181",
 			"logic_description": {
-				
+				"type": "CORE_DEV_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine government and public services profile",
+				"keywords": [
+					"government",
+					"public administration",
+					"civil services",
+					"ias",
+					"ips",
+					"irs",
+					"public service",
+					"government service",
+					"administration",
+					"policy",
+					"public policy",
+					"government policy",
+					"scheme",
+					"government scheme",
+					"pm scheme",
+					"budget",
+					"government budget",
+					"public finance",
+					"audit",
+					"cag",
+					"rt",
+					"rti",
+					"right to information",
+					"grievance",
+					"public grievance",
+					"citizen charter",
+					"e governance",
+					"digital india",
+					"pmkisan",
+					"pmjdy",
+					"pmay",
+					"mnrega",
+					"psu",
+					"public sector",
+					"department",
+					"ministry",
+					"government department",
+					"file noting",
+					"noting",
+					"disposal",
+					"note file",
+					"dak",
+					"public dealing",
+					"scheme implementation",
+					"project implementation",
+					"monitoring",
+					"evaluation",
+					"vigilance",
+					"corruption prevention",
+					"transparency"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 182,
 			"atsParamId": "ATS-182",
 			"logic_description": {
-				
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Measure breadth of government and public service skills across core functional areas",
+				"skill_categories": {
+					"administration": [
+						"public administration",
+						"administrative management",
+						"office administration",
+						"government administration",
+						"civil administration"
+					],
+					"policy": [
+						"policy analysis",
+						"policy development",
+						"policy implementation",
+						"policy evaluation",
+						"public policy"
+					],
+					"regulatory": [
+						"regulatory compliance",
+						"regulation enforcement",
+						"compliance monitoring",
+						"legal compliance",
+						"statutory compliance"
+					],
+					"financial": [
+						"budget management",
+						"public finance",
+						"government budgeting",
+						"financial planning",
+						"expenditure control"
+					],
+					"project": [
+						"project management",
+						"programme implementation",
+						"scheme implementation",
+						"project coordination",
+						"government projects"
+					],
+					"stakeholder": [
+						"stakeholder engagement",
+						"public engagement",
+						"community outreach",
+						"interdepartmental coordination",
+						"citizen services"
+					],
+					"hr_personnel": [
+						"personnel administration",
+						"staff management",
+						"recruitment",
+						"training coordination",
+						"performance appraisal"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
 			}
 		},
 		{
 			"atsGeneralId": 183,
 			"atsParamId": "ATS-183",
 			"logic_description": {
-				
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of official abbreviations, scheme short names, and department acronyms for government and public services",
+				"keyword_variations": {
+					"ias": [
+						"ias",
+						"indian administrative service"
+					],
+					"ips": [
+						"ips",
+						"indian police service"
+					],
+					"irs": [
+						"irs",
+						"indian revenue service"
+					],
+					"ifs": [
+						"ifs",
+						"indian foreign service"
+					],
+					"rti": [
+						"rti",
+						"right to information"
+					],
+					"pmkisan": [
+						"pmkisan",
+						"pradhan mantri kisan samman nidhi"
+					],
+					"pmjdy": [
+						"pmjdy",
+						"pradhan mantri jan dhan yojana"
+					],
+					"pmuy": [
+						"pmuy",
+						"pradhan mantri ujjwala yojana"
+					],
+					"mnrega": [
+						"mnrega",
+						"mahatma gandhi national rural employment guarantee act"
+					],
+					"psu": [
+						"psu",
+						"public sector undertaking"
+					],
+					"cghs": [
+						"cghs",
+						"central government health scheme"
+					],
+					"cgie": [
+						"cgie",
+						"central government employees insurance scheme"
+					],
+					"pmay": [
+						"pmay",
+						"pradhan mantri awas yojana"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 184,
 			"atsParamId": "ATS-184",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 185,
 			"atsParamId": "ATS-185",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____",
+						"<table>"
+					],
+					"column_indicators": [
+						" ",
+						"\u00A0\u00A0",
+						"||",
+						"<div style="
+					],
+					"visual_separators": [
+						"- ",
+						"▪",
+						"■",
+						"★",
+						"♦"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 186,
 			"atsParamId": "ATS-186",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new",
+						"garamond"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller",
+						"wingdings",
+						"symbol"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 187,
 			"atsParamId": "ATS-187",
 			"logic_description": {
-				
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Check presence of common resume sections for government and public services",
+				"sections": [
+					"professional summary",
+					"career objective",
+					"summary",
+					"profile summary",
+					"experience",
+					"work experience",
+					"service profile",
+					"responsibilities handled",
+					"key responsibilities",
+					"duties performed",
+					"achievements",
+					"notable achievements",
+					"accomplishments",
+					"results achieved",
+					"skills",
+					"core competencies",
+					"administrative skills",
+					"professional skills",
+					"education",
+					"educational qualifications",
+					"academic qualifications",
+					"training",
+					"professional training",
+					"departmental training",
+					"awards",
+					"declarations"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 188,
 			"atsParamId": "ATS-188",
 			"logic_description": {
-				
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of resume sections for government and public services resumes",
+				"accepted_formats": {
+					"summary": [
+						"professional summary",
+						"career objective",
+						"summary",
+						"profile"
+					],
+					"experience": [
+						"experience",
+						"work experience",
+						"service profile",
+						"responsibilities handled",
+						"key responsibilities"
+					],
+					"achievements": [
+						"achievements",
+						"notable achievements",
+						"accomplishments",
+						"results achieved"
+					],
+					"skills": [
+						"skills",
+						"core competencies",
+						"administrative skills"
+					],
+					"education": [
+						"education",
+						"educational qualifications",
+						"academic qualifications"
+					],
+					"training": [
+						"training",
+						"professional training",
+						"departmental training"
+					],
+					"awards": [
+						"awards",
+						"recognitions"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 189,
 			"atsParamId": "ATS-189",
 			"logic_description": {
-				
+				"type": "HANDS_ON_EXPERIENCE",
+				"purpose": "Detect presence of hands-on government and public service experience through jobs, postings, or projects",
+				"experience_indicators": {
+					"job_titles": [
+						"ias officer",
+						"ips officer",
+						"irs officer",
+						"deputy collector",
+						"sub divisional magistrate",
+						"sdm",
+						"tehsildar",
+						"block development officer",
+						"bdo",
+						"district officer",
+						"section officer",
+						"under secretary",
+						"deputy secretary",
+						"joint secretary"
+					],
+					"internship_keywords": [
+						"ias trainee",
+						"ips trainee",
+						"district training",
+						"foundation course",
+						"lal bahadur shastri national academy",
+						"lbsnaa"
+					],
+					"project_keywords": [
+						"scheme implementation",
+						"government project",
+						"public welfare project",
+						"rural development project",
+						"election duty",
+						"census project"
+					],
+					"experience_verbs": [
+						"implemented government schemes",
+						"supervised scheme implementation",
+						"conducted public grievance redressal",
+						"handled file disposal",
+						"prepared policy notes",
+						"coordinated interdepartmental meetings",
+						"monitored project progress",
+						"ensured policy compliance",
+						"organized public awareness camps",
+						"managed revenue collection",
+						"conducted inspections",
+						"handled law and order",
+						"facilitated citizen services"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 190,
 			"atsParamId": "ATS-190",
 			"logic_description": {
-				
+				"type": "GOVERNMENT_JOB_TITLES",
+				"purpose": "Detect use of common government and public services job titles",
+				"recognized_titles": [
+					"ias officer",
+					"indian administrative service",
+					"ips officer",
+					"indian police service",
+					"irs officer",
+					"indian revenue service",
+					"deputy collector",
+					"district collector",
+					"sub divisional magistrate",
+					"sdm",
+					"tehsildar",
+					"block development officer",
+					"bdo",
+					"district magistrate",
+					"dm",
+					"section officer",
+					"under secretary",
+					"deputy secretary",
+					"joint secretary",
+					"additional secretary",
+					"revenue officer",
+					"commercial tax officer",
+					"assistant commissioner",
+					"circle inspector",
+					"sub inspector",
+					"station officer",
+					"public relations officer",
+					"vigilance officer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 191,
 			"atsParamId": "ATS-191",
 			"logic_description": {
-				
+				"type": "EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent date formats showing career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 192,
 			"atsParamId": "ATS-192",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_IMPACT",
+				"purpose": "Detect quantified impact using numbers, percentages, scale, performance or efficiency metrics in public service achievements",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"coverage percentage",
+						"achievement rate"
+					],
+					"scale_metrics": [
+						"beneficiaries",
+						"villages",
+						"households",
+						"families served",
+						"projects completed",
+						"cases disposed",
+						"grievances resolved"
+					],
+					"performance_metrics": [
+						"budget utilized",
+						"funds allocated",
+						"funds managed",
+						"crore",
+						"lakh",
+						"revenue collected",
+						"tax collected"
+					],
+					"efficiency_metrics": [
+						"reduced pendency",
+						"timely disposal",
+						"improved efficiency",
+						"scheme saturation",
+						"target achievement",
+						"fund utilization"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 193,
 			"atsParamId": "ATS-193",
 			"logic_description": {
-				
+				"type": "TECHNICAL_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of administrative, regulatory, technical, and policy-related skills",
+				"skill_groups": {
+					"administrative": [
+						"file management",
+						"note drafting",
+						"file disposal",
+						"dak handling",
+						"office administration",
+						"personnel management",
+						"establishment matters"
+					],
+					"policy_regulatory": [
+						"policy formulation",
+						"policy implementation",
+						"regulatory compliance",
+						"scheme implementation",
+						"legal drafting",
+						"rule making",
+						"notification issuance"
+					],
+					"financial": [
+						"budget preparation",
+						"budget monitoring",
+						"fund allocation",
+						"expenditure sanction",
+						"audit coordination",
+						"public procurement"
+					],
+					"project_programme": [
+						"project management",
+						"programme implementation",
+						"monitoring evaluation",
+						"scheme monitoring",
+						"target achievement"
+					],
+					"public_interface": [
+						"public grievance",
+						"citizen charter",
+						"public dealing",
+						"community engagement",
+						"stakeholder coordination"
+					],
+					"technical": [
+						"e office",
+						"e governance",
+						"pfms",
+						"gem portal",
+						"rti management",
+						"digital filing"
+					],
+					"hr_training": [
+						"staff training",
+						"performance appraisal",
+						"disciplinary proceedings",
+						"recruitment process",
+						"promotion management"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 194,
 			"atsParamId": "ATS-194",
 			"logic_description": {
-				
+				"type": "ENGINEERING_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard government and public service practices",
+				"practice_groups": {
+					"governance_standards": [
+						"citizen charter",
+						"rt",
+						"rti",
+						"right to information act",
+						"public service guarantee act",
+						"sevottam",
+						"e governance"
+					],
+					"financial_procedures": [
+						"budget preparation",
+						"budget allocation",
+						"fund release",
+						"expenditure sanction",
+						"audit para",
+						"cag audit",
+						"internal audit"
+					],
+					"administrative": [
+						"file noting",
+						"file disposal",
+						"dak management",
+						"note file",
+						"concurrence",
+						"approval process",
+						"delegation of power"
+					],
+					"scheme_implementation": [
+						"scheme guidelines",
+						"scheme monitoring",
+						"physical financial targets",
+						"uc utilization certificate",
+						"third party evaluation",
+						"mis management information system"
+					],
+					"regulatory_compliance": [
+						"statutory returns",
+						"compliance verification",
+						"inspection verification",
+						"vigilance clearance",
+						"disciplinary proceedings"
+					],
+					"public_interface": [
+						"public grievance redressal",
+						"pg portal",
+						"cpgrams",
+						"jan sunwai",
+						"help desk"
+					],
+					"hr_establishment": [
+						"cadre management",
+						"recruitment rules",
+						"promotion policy",
+						"acr appraisal",
+						"transfer posting"
+					],
+					"procurement": [
+						"gem portal",
+						"e procurement",
+						"cvc guidelines",
+						"public procurement policy"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 195,
 			"atsParamId": "ATS-195",
 			"logic_description": {
-				
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, certification, or formal education aligned with government and public services careers",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of arts",
+						"b.a",
+						"b.a political science",
+						"b.a public administration",
+						"b.a economics",
+						"master of arts",
+						"m.a",
+						"m.a public administration",
+						"m.a political science",
+						"m.a economics",
+						"master of public administration",
+						"mpa",
+						"bachelor of commerce",
+						"b.com",
+						"law degree",
+						"llb",
+						"bachelor of laws"
+					],
+					"certifications": [
+						"certification",
+						"ias training",
+						"ips training",
+						"lbsnaa",
+						"lal bahadur shastri national academy",
+						"foundation course",
+						"phase training",
+						"district training",
+						"rt training",
+						"e governance certification"
+					],
+					"online_courses": [
+						"coursera public policy",
+						"edx public administration",
+						"swayam nptel governance",
+						"udemy civil services",
+						"linkedin learning leadership"
+					],
+					"bootcamps_and_training": [
+						"ias foundation course",
+						"ips foundation course",
+						"ir training",
+						"revenue service training",
+						"directorate of training",
+						"in service training"
+					],
+					"academic_keywords": [
+						"education",
+						"academic qualification",
+						"degree",
+						"post graduation",
+						"year of passing",
+						"percentage",
+						"division",
+						"university rank"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 196,
 			"atsParamId": "ATS-196",
 			"logic_description": {
-				
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of educational institutions, training academies, and certification bodies for government services",
+				"clarity_groups": {
+					"universities_and_colleges": [
+						"university",
+						"delhi university",
+						"mumbai university",
+						"calcutta university",
+						"madras university",
+						"osmania university",
+						"punjab university",
+						"lucknow university",
+						"aligarh muslim university",
+						"banaras hindu university",
+						"jawaharlal nehru university",
+						"jamia millia islamia",
+						"pondicherry university",
+						"manipur university",
+						"kerala university",
+						"andhra university",
+						"karnataka university",
+						"guwahati university",
+						"st stephens college",
+						"hindu college",
+						"miranda house",
+						"lsr college",
+						"srcc",
+						"commerce college",
+						"arts college",
+						"political science college",
+						"public administration college",
+						"sri venkateswara college",
+						"ramjas college",
+						"daulat ram college",
+						"gargi college",
+						"hansraj college"
+					],
+					"global_universities": [
+						"oxford university",
+						"cambridge university",
+						"harvard university",
+						"lse",
+						"london school of economics",
+						"yale university",
+						"princeton university",
+						"stanford university",
+						"columbia university",
+						"university of chicago",
+						"university of california berkeley",
+						"massachusetts institute of technology",
+						"eth zurich",
+						"national university of singapore",
+						"university of toronto",
+						"university of melbourne",
+						"university of sydney",
+						"university of michigan",
+						"university of wisconsin"
+					],
+					"certification_bodies": [
+						"upsc",
+						"union public service commission",
+						"ssc",
+						"staff selection commission",
+						"lbsnaa",
+						"lal bahadur shastri national academy",
+						"svpnpa",
+						"sardar vallabhbhai patel national police academy",
+						"iipa",
+						"indian institute of public administration",
+						"nac in",
+						"national academy of customs indirect taxes narcotics",
+						"dtrti",
+						"direct taxes regional training institute",
+						"indirect taxes regional training institute",
+						"itrti",
+						"niftar",
+						"national institute for training and research in indirect taxation",
+						"iim",
+						"indian institute of management",
+						"iipa",
+						"institute of secretariat training and management",
+						"istm"
+					],
+					"online_learning_platforms": [
+						"swayam",
+						"nptel",
+						"coursera",
+						"edx",
+						"upsc online",
+						"ssc online",
+						"udemy",
+						"linkedin learning",
+						"study iq",
+						"unacademy",
+						"byjus",
+						"testbook",
+						"gradeup",
+						"adda247",
+						"vision ias"
+					],
+					"training_and_bootcamps": [
+						"ias training",
+						"ips training",
+						"irs training",
+						"foundation course lbsnaa",
+						"district training",
+						"phase ii training",
+						"in service training",
+						"mid career training",
+						"compulsory training",
+						"ias professional course",
+						"ips professional course",
+						"irts training",
+						"indian railway traffic service training"
+					],
+					"government_and_recognized_bodies": [
+						"ugc",
+						"university grants commission",
+						"aicte",
+						"all india council technical education",
+						"naac",
+						"national assessment accreditation council",
+						"nba",
+						"national board of accreditation",
+						"nirf",
+						"national institutional ranking framework",
+						"cbse",
+						"central board secondary education",
+						"icse",
+						"indian certificate secondary education",
+						"ncert",
+						"national council educational research training",
+						"nios",
+						"national institute open schooling"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 197,
 			"atsParamId": "ATS-197",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe administrative, policy, and public service responsibilities",
+				"action_verb_groups": {
+					"administration": [
+						"coordinated",
+						"supervised",
+						"directed",
+						"managed administration",
+						"oversaw operations",
+						"streamlined processes",
+						"implemented procedures"
+					],
+					"policy": [
+						"formulated policy",
+						"implemented policy",
+						"monitored implementation",
+						"evaluated outcomes",
+						"reviewed policies",
+						"drafted notifications"
+					],
+					"financial": [
+						"prepared budget",
+						"allocated funds",
+						"monitored expenditure",
+						"sanctioned payments",
+						"conducted audits"
+					],
+					"scheme_programme": [
+						"implemented schemes",
+						"monitored schemes",
+						"achieved targets",
+						"benefited households",
+						"covered villages"
+					],
+					"public_grievance": [
+						"resolved grievances",
+						"disposed cases",
+						"conducted hearings",
+						"facilitated services"
+					],
+					"regulatory": [
+						"enforced regulations",
+						"conducted inspections",
+						"issued notices",
+						"levied penalties",
+						"granted approvals"
+					],
+					"personnel": [
+						"initiated recruitment",
+						"conducted appraisals",
+						"recommended promotions",
+						"handled transfers"
+					],
+					"public_engagement": [
+						"organized meetings",
+						"conducted awareness",
+						"facilitated consultations",
+						"addressed concerns"
+					],
+					"monitoring": [
+						"conducted reviews",
+						"prepared reports",
+						"submitted uc",
+						"verified progress"
+					],
+					"leadership": [
+						"led team",
+						"mentored staff",
+						"coordinated departments",
+						"represented organization"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 198,
 			"atsParamId": "ATS-198",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, poor sentence construction, and noisy text affecting ATS parsing in government resumes",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"experiance",
+						"acheive",
+						"maintainance",
+						"responsiblity",
+						"mangement",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"implimentation",
+						"funtionality",
+						"statment",
+						"paramter",
+						"arguement",
+						"modul",
+						"architechture",
+						"databse",
+						"perfromance",
+						"optimzation",
+						"documantation",
+						"authintication",
+						"avaliable",
+						"compatiblity",
+						"continous",
+						"calender",
+						"defination",
+						"desciption",
+						"occurance",
+						"sucess",
+						"sucessful",
+						"tecnical",
+						"thier",
+						"wierd",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"seperated",
+						"improvment",
+						"profesional",
+						"organised",
+						"enviroment",
+						"recieve",
+						"goverment",
+						"admnistration",
+						"implemeted",
+						"monitered"
+					],
+					"technical_spelling_errors": [
+						"upsc",
+						"ssc",
+						"lbsnaa",
+						"svpnpa",
+						"iipa",
+						"rt",
+						"rtii",
+						"pmkisan",
+						"pmjdy",
+						"pmay",
+						"mnrega",
+						"psu",
+						"cghs",
+						"epf",
+						"esi",
+						"ias officer",
+						"ips officer",
+						"irs officer",
+						"sdm",
+						"bdo",
+						"tehsildar",
+						"dak",
+						"noting",
+						"disposal",
+						"grievance",
+						"scheme implimentation",
+						"budgetry",
+						"expendituree",
+						"sanctioned",
+						"utilisation",
+						"grievence",
+						"implemantation",
+						"monitering",
+						"evalution",
+						"coordination",
+						"stakeholder",
+						"decentralisation",
+						"transparancy",
+						"acountability"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on project",
+						"responsible to develop",
+						"handled the project",
+						"good knowledge of",
+						"basic knowledge of",
+						"worked in team",
+						"learning new technologies",
+						"my role was",
+						"i was involved",
+						"worked under guidance",
+						"familiar with",
+						"exposure to",
+						"managed department",
+						"supervised staff",
+						"i handled files",
+						"responsible for dak",
+						"was in charge of",
+						"assisted in implementation",
+						"participated in scheme"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without action verbs",
+						"fragmented phrases"
+					],
+					"capitalization_errors": [
+						"ias officer",
+						"ips officer",
+						"district magistrate",
+						"sub divisional magistrate",
+						"block development officer",
+						"revenue officer",
+						"section officer",
+						"under secretary",
+						"public administration",
+						"civil services",
+						"government servant",
+						"public servant"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts",
+						"handwritten notes"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"dynamic professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"excellent communication skills",
+						"strong problem solving skills",
+						"detail oriented",
+						"meticulous",
+						"proactive",
+						"versatile",
+						"committed to public service"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 199,
 			"atsParamId": "ATS-199",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, progress bars, emojis, or graphical elements that reduce ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"skill chart",
+						"rating chart",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 200,
 			"atsParamId": "ATS-200",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Avoidance of placing critical information inside headers or footers which may not be parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"whatsapp",
+						"telegram"
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"candidate name",
+						"resume of",
+						"service profile",
+						"ias officer",
+						"ips officer"
+					],
+					"job_and_role_information": [
+						"ias",
+						"ips",
+						"irs",
+						"sdm",
+						"bdo",
+						"tehsildar",
+						"section officer",
+						"under secretary",
+						"designation",
+						"post held",
+						"cadre",
+						"batch"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"district",
+						"division",
+						"state",
+						"posting",
+						"current posting",
+						"place of posting"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer",
+					"service record"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]

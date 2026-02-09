@@ -4,140 +4,1624 @@
 			"atsGeneralId": 211,
 			"atsParamId": "ATS-211",
 			"logic_description": {
-				
+				"type": "CORE_HEALTHCARE_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine healthcare profile",
+				"keywords": [
+					"patient care",
+					"clinical",
+					"healthcare",
+					"medical",
+					"nursing",
+					"patient",
+					"diagnosis",
+					"treatment",
+					"ehr",
+					"electronic health records",
+					"emr",
+					"hipaa",
+					"patient safety",
+					"infection control",
+					"vital signs",
+					"medication administration",
+					"wound care",
+					"patient assessment",
+					"care coordination",
+					"clinical procedures",
+					"hospital",
+					"documentation",
+					"medical records",
+					"nurse",
+					"physician",
+					"doctor",
+					"therapist",
+					"bls",
+					"cpr",
+					"iv therapy",
+					"phlebotomy",
+					"patient education",
+					"discharge planning",
+					"case management",
+					"quality assurance",
+					"health informatics"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 212,
 			"atsParamId": "ATS-212",
 			"logic_description": {
-				
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Measure breadth of healthcare skills covering clinical care, patient safety, documentation, and coordination",
+				"skill_categories": {
+					"clinical_care": [
+						"patient assessment",
+						"vital signs monitoring",
+						"wound care",
+						"medication administration",
+						"iv therapy",
+						"catheterization",
+						"phlebotomy",
+						"ecg",
+						"patient diagnosis",
+						"treatment planning"
+					],
+					"patient_safety": [
+						"hipaa compliance",
+						"infection control",
+						"fall prevention",
+						"risk assessment",
+						"incident reporting",
+						"root cause analysis",
+						"safety protocols",
+						"quality improvement",
+						"error prevention",
+						"emergency response"
+					],
+					"patient_assessment": [
+						"vital signs",
+						"patient assessment",
+						"head to toe assessment",
+						"pain assessment",
+						"neurological assessment",
+						"respiratory assessment",
+						"cardiac assessment",
+						"braden scale"
+					],
+					"medication_administration": [
+						"medication administration",
+						"iv therapy",
+						"iv insertion",
+						"oral medications",
+						"injections",
+						"insulin administration",
+						"chemotherapy administration",
+						"five rights of medication"
+					],
+					"wound_care": [
+						"wound care",
+						"dressing changes",
+						"wound assessment",
+						"pressure ulcer prevention",
+						"vac dressing",
+						"debridement"
+					],
+					"emergency_care": [
+						"cpr",
+						"bls",
+						"acls",
+						"triage",
+						"emergency response",
+						"code blue",
+						"airway management",
+						"defibrillation"
+					],
+					"documentation": [
+						"ehr",
+						"electronic health records",
+						"clinical documentation",
+						"medical coding",
+						"icd-10",
+						"cpt coding",
+						"progress notes",
+						"discharge summaries",
+						"charting",
+						"data entry"
+					],
+					"coordination": [
+						"care coordination",
+						"patient advocacy",
+						"interdisciplinary collaboration",
+						"referral management",
+						"case management",
+						"appointment scheduling",
+						"insurance verification",
+						"discharge planning",
+						"team communication",
+						"patient education"
+					],
+					"compliance": [
+						"hipaa",
+						"osha",
+						"joint commission standards",
+						"healthcare regulations",
+						"quality assurance",
+						"audit compliance",
+						"ethical practices",
+						"patient rights"
+					],
+					"software": [
+						"epic",
+						"cerner",
+						"allscripts",
+						"meditech",
+						"ehr systems",
+						"powerchart",
+						"clinical documentation systems",
+						"telehealth platforms",
+						"billing software",
+						"practice management"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
 			}
 		},
 		{
 			"atsGeneralId": 213,
 			"atsParamId": "ATS-213",
 			"logic_description": {
-				
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names and abbreviations for healthcare and medical terms",
+				"keyword_variations": {
+					"blood_pressure": [
+						"blood pressure",
+						"bp",
+						"b.p."
+					],
+					"outpatient_department": [
+						"outpatient department",
+						"opd",
+						"o.p.d."
+					],
+					"emergency_department": [
+						"emergency department",
+						"ed",
+						"emergency room",
+						"er"
+					],
+					"intravenous": [
+						"intravenous",
+						"iv",
+						"i.v."
+					],
+					"electronic_health_record": [
+						"electronic health record",
+						"ehr",
+						"electronic medical record",
+						"emr"
+					],
+					"vital_signs": [
+						"vital signs",
+						"vs",
+						"v/s"
+					],
+					"registered_nurse": [
+						"registered nurse",
+						"rn"
+					],
+					"intensive_care_unit": [
+						"intensive care unit",
+						"icu"
+					],
+					"electrocardiogram": [
+						"electrocardiogram",
+						"ecg",
+						"ekg"
+					],
+					"subcutaneous": [
+						"subcutaneous",
+						"sc",
+						"s.c."
+					],
+					"intramuscular": [
+						"intramuscular",
+						"im",
+						"i.m."
+					],
+					"basic_life_support": [
+						"basic life support",
+						"bls"
+					],
+					"advanced_cardiac_life_support": [
+						"advanced cardiac life support",
+						"acls"
+					],
+					"operating_theatre": [
+						"operating theatre",
+						"ot",
+						"operation theatre"
+					],
+					"laboratory": [
+						"laboratory",
+						"lab"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 214,
 			"atsParamId": "ATS-214",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 215,
 			"atsParamId": "ATS-215",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____",
+						"<table>"
+					],
+					"column_indicators": [
+						" ",
+						"\u00A0\u00A0",
+						"||",
+						"<div style="
+					],
+					"visual_separators": [
+						"- ",
+						"▪",
+						"■",
+						"★",
+						"♦"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 216,
 			"atsParamId": "ATS-216",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new",
+						"garamond"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller",
+						"wingdings",
+						"symbol"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 217,
 			"atsParamId": "ATS-217",
 			"logic_description": {
-				
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Check presence of common resume sections for healthcare and nursing",
+				"sections": [
+					"professional summary",
+					"career objective",
+					"summary",
+					"profile",
+					"nursing summary",
+					"clinical summary",
+					"experience",
+					"work experience",
+					"professional experience",
+					"clinical experience",
+					"nursing experience",
+					"hospital experience",
+					"skills",
+					"clinical skills",
+					"nursing skills",
+					"technical skills",
+					"core competencies",
+					"education",
+					"educational qualification",
+					"nursing education",
+					"medical education",
+					"certifications",
+					"professional certifications",
+					"nursing certifications",
+					"bls certification",
+					"acls certification",
+					"projects",
+					"clinical projects",
+					"healthcare projects"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 218,
 			"atsParamId": "ATS-218",
 			"logic_description": {
-				
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of resume sections for healthcare and nursing resumes",
+				"accepted_formats": {
+					"summary": [
+						"professional summary",
+						"career objective",
+						"profile summary",
+						"nursing summary"
+					],
+					"skills": [
+						"skills",
+						"clinical skills",
+						"nursing skills",
+						"technical skills",
+						"core competencies"
+					],
+					"experience": [
+						"work experience",
+						"professional experience",
+						"clinical experience",
+						"nursing experience",
+						"employment history",
+						"hospital experience"
+					],
+					"education": [
+						"education",
+						"educational qualification",
+						"nursing education",
+						"medical education"
+					],
+					"certifications": [
+						"certifications",
+						"professional certifications",
+						"bls certified",
+						"acls certified",
+						"nursing certifications"
+					],
+					"projects": [
+						"projects",
+						"clinical projects",
+						"healthcare projects",
+						"quality improvement projects"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 219,
 			"atsParamId": "ATS-219",
 			"logic_description": {
-				
+				"type": "HANDS_ON_EXPERIENCE",
+				"purpose": "Detect presence of hands-on clinical or healthcare experience through jobs, internships, or projects",
+				"experience_indicators": {
+					"job_titles": [
+						"nurse",
+						"staff nurse",
+						"medical officer",
+						"lab technician",
+						"pharmacist",
+						"nursing assistant",
+						"operation theatre technician",
+						"radiology technician",
+						"physiotherapist",
+						"dietician",
+						"nurse manager",
+						"head nurse",
+						"registered nurse",
+						"clinical nurse",
+						"patient care technician"
+					],
+					"internship_keywords": [
+						"intern",
+						"internship",
+						"clinical internship",
+						"nursing internship",
+						"medical internship",
+						"house surgeon",
+						"resident internship",
+						"hospital trainee",
+						"clinical rotation",
+						"student nurse extern",
+						"observership",
+						"hospital externship"
+					],
+					"project_keywords": [
+						"project",
+						"projects",
+						"clinical project",
+						"healthcare project",
+						"community health project",
+						"patient care project",
+						"quality improvement project",
+						"infection control project",
+						"hospital management project",
+						"research project",
+						"case study",
+						"evidence-based project"
+					],
+					"experience_verbs": [
+						"provided patient care",
+						"administered medications",
+						"monitored vital signs",
+						"assisted in procedures",
+						"performed phlebotomy",
+						"managed iv therapy",
+						"conducted patient assessments",
+						"prepared patient charts",
+						"implemented care plans",
+						"ensured infection control",
+						"coordinated patient discharge",
+						"trained nursing staff",
+						"managed emergency cases",
+						"documented findings in ehr",
+						"assisted with trauma resuscitations",
+						"triaged patients",
+						"educated patients and families",
+						"collaborated with interdisciplinary team",
+						"maintained telemetry monitoring",
+						"performed ecgs"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 220,
 			"atsParamId": "ATS-220",
 			"logic_description": {
-				
+				"type": "DEVELOPER_JOB_TITLES",
+				"purpose": "Detect use of common healthcare and medical job titles",
+				"recognized_titles": [
+					"nurse",
+					"staff nurse",
+					"junior nurse",
+					"senior nurse",
+					"registered nurse",
+					"rn",
+					"nursing officer",
+					"nursing supervisor",
+					"nurse manager",
+					"head nurse",
+					"medical officer",
+					"junior medical officer",
+					"senior medical officer",
+					"doctor",
+					"resident doctor",
+					"consultant doctor",
+					"lab technician",
+					"laboratory technician",
+					"lab technologist",
+					"senior lab technician",
+					"pharmacist",
+					"junior pharmacist",
+					"senior pharmacist",
+					"pharmacy officer",
+					"patient care assistant",
+					"nursing assistant",
+					"healthcare assistant",
+					"operation theatre technician",
+					"ott",
+					"radiology technician",
+					"x ray technician",
+					"physiotherapist",
+					"physiotherapy assistant",
+					"dietician",
+					"nutritionist"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 221,
 			"atsParamId": "ATS-221",
 			"logic_description": {
-				
+				"type": "EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent date formats showing career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 222,
 			"atsParamId": "ATS-222",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_IMPACT",
+				"purpose": "Detect quantified impact using numbers, percentages, scale, performance or efficiency metrics in healthcare achievements",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"percentage",
+						"patient satisfaction",
+						"readmission rate",
+						"infection rate",
+						"medication error rate",
+						"compliance rate",
+						"adherence rate",
+						"mortality rate reduction"
+					],
+					"scale_metrics": [
+						"patients",
+						"patient",
+						"cases",
+						"procedures",
+						"shifts",
+						"hours",
+						"nurses",
+						"staff",
+						"appointments",
+						"records",
+						"caseload",
+						"surgeries",
+						"screenings"
+					],
+					"performance_metrics": [
+						"response time",
+						"wait time",
+						"treatment success",
+						"recovery rate",
+						"discharge time",
+						"hcahps score",
+						"mortality rate",
+						"length of stay",
+						"occupancy rate",
+						"throughput",
+						"nurse-to-patient ratio"
+					],
+					"efficiency_metrics": [
+						"reduced wait times",
+						"improved satisfaction",
+						"decreased infections",
+						"reduced readmissions",
+						"increased efficiency",
+						"cost savings",
+						"outcome improvement",
+						"error reduction",
+						"time savings",
+						"staff retention",
+						"fall reduction"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 223,
 			"atsParamId": "ATS-223",
 			"logic_description": {
-				
+				"type": "TECHNICAL_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of clinical skills, medical procedures, tools, and healthcare systems",
+				"skill_groups": {
+					"clinical_assessment_monitoring": [
+						"patient assessment",
+						"vital signs",
+						"patient monitoring",
+						"clinical assessment",
+						"head to toe assessment",
+						"pain assessment",
+						"neurological assessment",
+						"respiratory assessment",
+						"cardiac monitoring",
+						"telemetry monitoring"
+					],
+					"medication_procedures": [
+						"medication administration",
+						"iv therapy",
+						"iv insertion",
+						"phlebotomy",
+						"venipuncture",
+						"blood draw",
+						"wound care",
+						"dressing changes",
+						"catheterization",
+						"foley catheter"
+					],
+					"emergency_resuscitation": [
+						"cpr",
+						"basic life support",
+						"bls",
+						"advanced cardiac life support",
+						"acls",
+						"triage",
+						"emergency response",
+						"code blue",
+						"airway management",
+						"defibrillation"
+					],
+					"healthcare_software_systems": [
+						"epic",
+						"cerner",
+						"meditech",
+						"ehr",
+						"electronic health records",
+						"emr",
+						"electronic medical records",
+						"allscripts",
+						"nextgen",
+						"athenahealth"
+					],
+					"diagnostic_assistant": [
+						"ekg",
+						"ecg",
+						"12 lead ecg",
+						"blood glucose monitoring",
+						"specimen collection",
+						"lab specimen handling",
+						"urinalysis",
+						"point of care testing",
+						"pulse oximetry",
+						"non invasive monitoring"
+					],
+					"other_tools": [
+						"microsoft office",
+						"ms excel",
+						"medical equipment",
+						"infusion pumps",
+						"ventilators",
+						"defibrillators",
+						"glucometers",
+						"oxygen therapy",
+						"suction equipment",
+						"telehealth"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 224,
 			"atsParamId": "ATS-224",
 			"logic_description": {
-				
+				"type": "ENGINEERING_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard healthcare practices and protocols",
+				"practice_groups": {
+					"patient_safety_hygiene": [
+						"patient safety",
+						"hand hygiene",
+						"infection prevention",
+						"aseptic technique",
+						"sterilization",
+						"hygiene protocols",
+						"universal precautions",
+						"standard precautions",
+						"cleaning protocols",
+						"sanitation standards"
+					],
+					"infection_control": [
+						"infection control",
+						"contact precautions",
+						"droplet precautions",
+						"airborne precautions",
+						"isolation protocols",
+						"ppe usage",
+						"personal protective equipment",
+						"disinfection",
+						"fomite control",
+						"outbreak management"
+					],
+					"clinical_documentation": [
+						"patient charting",
+						"medical records",
+						"emr",
+						"electronic medical records",
+						"ehr",
+						"electronic health records",
+						"nursing notes",
+						"progress notes",
+						"soap notes",
+						"discharge summary"
+					],
+					"emergency_protocols": [
+						"bls",
+						"basic life support",
+						"cpr",
+						"cardiopulmonary resuscitation",
+						"acls",
+						"advanced cardiac life support",
+						"code blue",
+						"emergency response",
+						"triage",
+						"abc assessment"
+					],
+					"medication_administration": [
+						"medication administration",
+						"five rights",
+						"drug dosage",
+						"iv medication",
+						"oral medication",
+						"subcutaneous injection",
+						"im injection",
+						"insulin administration",
+						"chemotherapy administration",
+						"pain medication"
+					],
+					"compliance_regulations": [
+						"hipaa compliance",
+						"nabh standards",
+						"joint commission",
+						"quality assurance",
+						"risk management",
+						"incident reporting",
+						"root cause analysis",
+						"sentinel events",
+						"patient rights",
+						"consent documentation"
+					],
+					"ehr_hospital_software": [
+						"epic systems",
+						"cerner",
+						"meditech",
+						"nextgen",
+						"allscripts",
+						"hospital information system",
+						"his",
+						"healthcare erp",
+						"telemedicine platform",
+						"lab information system"
+					],
+					"quality_patient_care": [
+						"patient centered care",
+						"evidence based practice",
+						"sbarr communication",
+						"handover communication",
+						"care bundles",
+						"fall prevention",
+						"pressure ulcer prevention",
+						"dvt prophylaxis",
+						"vap prevention",
+						"cauti prevention"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 225,
 			"atsParamId": "ATS-225",
 			"logic_description": {
-				
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, certification, or formal education aligned with healthcare and medical careers",
+				"education_groups": {
+					"formal_degrees": [
+						"mbbs",
+						"bachelor of medicine",
+						"md",
+						"ms medicine",
+						"bds",
+						"bachelor of dental surgery",
+						"bsc nursing",
+						"bachelor of nursing",
+						"msc nursing",
+						"bpt",
+						"bachelor of physiotherapy",
+						"bpharm",
+						"bachelor of pharmacy",
+						"bams",
+						"bhms",
+						"bachelor of physiotherapy",
+						"bsc radiology",
+						"bsc medical laboratory technology",
+						"bsc optometry",
+						"bsc operation theatre technology",
+						"master of public health",
+						"mph",
+						"master of hospital administration",
+						"mha"
+					],
+					"certifications": [
+						"certified",
+						"bls",
+						"basic life support",
+						"acls",
+						"advanced cardiac life support",
+						"nbc",
+						"nursing certification",
+						"rn",
+						"registered nurse",
+						"rgnm",
+						"critical care nursing",
+						"infection control certification",
+						"nabh certification",
+						"diploma in nursing",
+						"gnm",
+						"general nursing midwifery",
+						"anm",
+						"auxiliary nursing midwifery",
+						"cpr certified",
+						"ihf certification"
+					],
+					"online_courses": [
+						"coursera nursing",
+						"edx public health",
+						"udemy medical coding",
+						"udemy bls",
+						"linkedin learning healthcare",
+						"simplilearn health informatics",
+						"upgrad healthcare management",
+						"great learning clinical research",
+						"unacademy neet",
+						"byjus mbbs",
+						"khan academy medicine",
+						"futurelearn nursing"
+					],
+					"bootcamps_and_training": [
+						"clinical training",
+						"hospital internship",
+						"nursing internship",
+						"medical internship",
+						"house surgeon",
+						"residency",
+						"nursing training",
+						"bls training",
+						"acls training",
+						"pharmacy internship"
+					],
+					"academic_keywords": [
+						"education",
+						"medical education",
+						"academic project",
+						"research project",
+						"thesis",
+						"dissertation",
+						"clinical rotation",
+						"cgpa",
+						"percentage",
+						"neett",
+						"aiims nursing",
+						"jipmer nursing"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 226,
 			"atsParamId": "ATS-226",
 			"logic_description": {
-				
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of educational institutions, hospitals, and medical certification bodies for Healthcare",
+				"clarity_groups": {
+					"medical_colleges_universities": [
+						"university",
+						"aiims delhi",
+						"aiims",
+						"cmc vellore",
+						"christian medical college",
+						"pgimer chandigarh",
+						"jipmer",
+						"sanjay gandhi pgimer",
+						"banaras hindu university",
+						"bh u medical",
+						"king george medical university",
+						"kgmu",
+						"maulana azad medical college",
+						"mamc",
+						"lady hardinge medical college",
+						"lhmc",
+						"madras medical college",
+						"grant medical college",
+						"st johns medical college",
+						"kasturba medical college",
+						"manipal academy",
+						"armmch",
+						"ms ramaiah medical college",
+						"castillo medical college",
+						"government medical college",
+						"medical college thiruvananthapuram",
+						"kasturba medical college manipal"
+					],
+					"nursing_colleges": [
+						"college",
+						"college of nursing aiims",
+						"cmc vellore nursing",
+						"aiims rishikesh nursing",
+						"sri ramachandra nursing",
+						"manipal college of nursing",
+						"saveetha college of nursing",
+						"madras medical college nursing",
+						"bethany college of nursing",
+						"father muller college of nursing",
+						"hinduja hospital college of nursing",
+						"loyola college of nursing",
+						"st johns college of nursing",
+						"christian college of nursing",
+						"kmc nursing",
+						"jipmer college of nursing"
+					],
+					"hospitals_training": [
+						"apollo hospitals",
+						"fortis hospital",
+						"max healthcare",
+						"medanta hospital",
+						"narayana health",
+						"manipal hospital",
+						"continental hospitals",
+						"aster medcity",
+						"gem hospital",
+						"aiims hospital",
+						"pgimer hospital",
+						"cmc hospital",
+						"kgmu hospital",
+						"safdarjung hospital",
+						"aiims rishikesh"
+					],
+					"certification_bodies": [
+						"nbc",
+						"national board of certification",
+						"nbe",
+						"nursing council of india",
+						"indian nursing council",
+						"inc",
+						"nch",
+						"national centre for health",
+						"nabh",
+						"national accreditation board for hospitals",
+						"nabh accredited",
+						"nac",
+						"rguhs",
+						"tamil nadu dr mgr medical university",
+						"kerala university of health sciences",
+						"medical council of india",
+						"nmc",
+						"national medical commission"
+					],
+					"global_institutions": [
+						"harvard medical school",
+						"johns hopkins medicine",
+						"mayo clinic",
+						"stanford medicine",
+						"university of oxford medical",
+						"university of cambridge medicine",
+						"university of toronto medicine",
+						"university of melbourne medical",
+						"nus yong loo lin",
+						"imperial college school of medicine",
+						"ucl medical school",
+						"kcl medicine",
+						"university of michigan medicine"
+					],
+					"online_learning_platforms": [
+						"coursera healthcare",
+						"edx health",
+						"udemy nursing",
+						"medcerts",
+						"futurelearn medical",
+						"linkedin learning healthcare",
+						"upgrad healthcare",
+						"simplilearn health informatics",
+						"great learning public health",
+						"unacademy neet",
+						"byjus medical",
+						"khan academy medicine"
+					],
+					"nursing_mbbs_programs": [
+						"mbbs",
+						"md ms",
+						"bsc nursing",
+						"msc nursing",
+						"gnm nursing",
+						"anm nursing",
+						"bpt",
+						"bsc physiotherapy",
+						"bpharm",
+						"bsc radiology",
+						"bsc ml t",
+						"operation theatre technology",
+						"critical care nursing"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 227,
 			"atsParamId": "ATS-227",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe healthcare responsibilities and patient care activities",
+				"action_verb_groups": {
+					"patient_care_assessment": [
+						"assessed",
+						"evaluated",
+						"diagnosed",
+						"monitored",
+						"examined",
+						"treated",
+						"cared for",
+						"patient assessment",
+						"vital signs monitoring",
+						"clinical evaluation"
+					],
+					"treatment_administration": [
+						"administered",
+						"prescribed",
+						"implemented treatments",
+						"provided care",
+						"delivered medication",
+						"wound care",
+						"iv therapy",
+						"pain management",
+						"therapy sessions",
+						"emergency response"
+					],
+					"nursing_operations": [
+						"prepared",
+						"assisted",
+						"coordinated care",
+						"documented",
+						"charted",
+						"shift handover",
+						"patient admission",
+						"discharge planning",
+						"hygiene assistance",
+						"mobility support"
+					],
+					"compliance_quality": [
+						"ensured compliance",
+						"followed protocols",
+						"infection control",
+						"quality assurance",
+						"hipaa compliance",
+						"joint commission standards",
+						"risk management",
+						"incident reporting",
+						"audit preparation",
+						"safety protocols"
+					],
+					"leadership_management": [
+						"led team",
+						"supervised staff",
+						"mentored nurses",
+						"trained personnel",
+						"headed shift",
+						"coordinated teams",
+						"delegated tasks",
+						"staff development",
+						"performance evaluation",
+						"unit management"
+					],
+					"patient_education": [
+						"educated patients",
+						"counseled families",
+						"discharge teaching",
+						"health coaching",
+						"preventive care",
+						"lifestyle counseling",
+						"disease management",
+						"medication education",
+						"self-care training",
+						"wellness programs"
+					],
+					"process_improvement": [
+						"improved processes",
+						"streamlined workflows",
+						"reduced wait times",
+						"increased efficiency",
+						"implemented protocols",
+						"quality improvement",
+						"lean healthcare",
+						"patient satisfaction",
+						"throughput optimization",
+						"error reduction"
+					],
+					"ehr_software": [
+						"implemented ehr",
+						"epic implementation",
+						"cerner configuration",
+						"emr migration",
+						"data entry",
+						"system training",
+						"report generation",
+						"integration setup",
+						"charting optimization",
+						"telehealth setup"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 228,
 			"atsParamId": "ATS-228",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, poor sentence construction, and noisy text that affects ATS parsing in Healthcare resumes",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"experiance",
+						"acheive",
+						"responsiblity",
+						"mangement",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"funtionality",
+						"statment",
+						"paramter",
+						"arguement",
+						"patinet",
+						"medicin",
+						"hopsital",
+						"docter",
+						"nusing",
+						"theraphy",
+						"procedur",
+						"diagonsis",
+						"symtom",
+						"anatomy",
+						"phisiology",
+						"recieve",
+						"alot",
+						"becuase",
+						"improvment",
+						"profesional"
+					],
+					"technical_spelling_errors": [
+						"registre nurse",
+						"registared nurse",
+						"physcian",
+						"phsyician",
+						"surgen",
+						"anestesiologist",
+						"pediatrition",
+						"cardialogist",
+						"radiologyst",
+						"pharmasist",
+						"therapistt",
+						"dialated",
+						"diphtheria",
+						"discectomy",
+						"defibulator",
+						"lypmh nodes",
+						"malabsorbtion",
+						"mammogram",
+						"nebulizer",
+						"opthalmology",
+						"osteoporosis",
+						"ventilator",
+						"ehr",
+						"emr",
+						"hipaa",
+						"cpr",
+						"bls",
+						"acls",
+						"epic",
+						"cerner",
+						"meditech",
+						"anesthesia",
+						"catheter",
+						"diabeties",
+						"epilepsy",
+						"hypertention",
+						"pneumonia",
+						"appendicitus"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on patient",
+						"responsible to care",
+						"handled the patients",
+						"good knowledge of",
+						"basic knowledge of",
+						"worked in team",
+						"involved in care",
+						"doing nursing",
+						"helped to treat",
+						"worked as nurse",
+						"learning new procedures",
+						"my role was",
+						"i was involved",
+						"my responsibility includes",
+						"worked under supervision",
+						"familiar with equipment",
+						"knowledge about",
+						"hands on experience on",
+						"exposure to patients",
+						"managed cases",
+						"prepared charts",
+						"handled medications",
+						"good in documentation",
+						"basic computer knowledge"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without action verbs"
+					],
+					"capitalization_errors": [
+						"registered nurse",
+						"staff nurse",
+						"charge nurse",
+						"nurse practitioner",
+						"physician assistant",
+						"medical doctor",
+						"surgeon",
+						"anesthesiologist",
+						"pediatrician",
+						"cardiologist",
+						"radiologist",
+						"pharmacist",
+						"physical therapist",
+						"occupational therapist",
+						"respiratory therapist",
+						"medical assistant",
+						"lab technician",
+						"radiology technician",
+						"chief medical officer",
+						"director of nursing"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"passionate nurse",
+						"enthusiastic caregiver",
+						"dynamic professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to learn",
+						"dedicated nurse",
+						"excellent communication skills",
+						"strong problem solving skills",
+						"detail oriented",
+						"meticulous",
+						"proactive",
+						"versatile",
+						"compassionate caregiver",
+						"patient advocate"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 229,
 			"atsParamId": "ATS-229",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, progress bars, emojis, or graphical elements that reduce ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"skill chart",
+						"rating chart",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 230,
 			"atsParamId": "ATS-230",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Avoidance of placing critical information inside headers or footers which may not be parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"whatsapp",
+						"telemedicine"
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"dr",
+						"doctor",
+						"mbbs",
+						"md",
+						"ms",
+						"dm",
+						"mch"
+					],
+					"job_and_role_information": [
+						"doctor",
+						"physician",
+						"surgeon",
+						"general practitioner",
+						"gp",
+						"consultant physician",
+						"specialist doctor",
+						"nurse",
+						"staff nurse",
+						"pharmacist",
+						"medical officer",
+						"registrar",
+						"resident doctor",
+						"house surgeon"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"hospital",
+						"clinic",
+						"nursing home",
+						"apollo hospital",
+						"fortis hospital",
+						"max hospital",
+						"medanta",
+						"aiims",
+						"pgi",
+						"cmc vellore"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer",
+					"patient confidential"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]
