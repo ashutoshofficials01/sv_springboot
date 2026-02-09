@@ -3,102 +3,1690 @@
 		{
 			"atsGeneralId": 271,
 			"atsParamId": "ATS-271",
-			"logic_description": {}
+			"logic_description": {
+				"type": "CORE_DEV_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine hospitality and tourism profile",
+				"keywords": [
+					"hospitality",
+					"hotel",
+					"hotels",
+					"resort",
+					"resorts",
+					"guest",
+					"guests",
+					"guest service",
+					"guest relations",
+					"customer service",
+					"front office",
+					"front desk",
+					"housekeeping",
+					"house keeping",
+					"f&b",
+					"food and beverage",
+					"restaurant",
+					"room service",
+					"check in",
+					"check out",
+					"reservation",
+					"reservations",
+					"occupancy",
+					"revenue management",
+					"revpar",
+					"adr",
+					"concierge",
+					"housekeeping supervisor",
+					"front office manager",
+					"hotel manager",
+					"hospitality management",
+					"tourism",
+					"tour guide",
+					"travel consultant",
+					"travel agent",
+					"tour coordinator",
+					"event management",
+					"conference",
+					"banquet",
+					"guest satisfaction",
+					"nps",
+					"guest experience",
+					"pms",
+					"opera pms",
+					"ota",
+					"booking.com",
+					"tripadvisor",
+					"housekeeping",
+					"room cleaning",
+					"guest registration",
+					"night audit",
+					"upselling",
+					"cross selling"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
+			}
 		},
 		{
 			"atsGeneralId": 272,
 			"atsParamId": "ATS-272",
-			"logic_description": {}
+			"logic_description": {
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Measure breadth of hospitality and tourism skills across core areas",
+				"skill_categories": {
+					"guest_service": [
+						"guest relations",
+						"customer service",
+						"check in check out",
+						"guest registration",
+						"guest satisfaction",
+						"complaint handling",
+						"service recovery",
+						"personalized service"
+					],
+					"front_office": [
+						"front desk operations",
+						"reservation management",
+						"billing operations",
+						"night audit",
+						"concierge services",
+						"guest information"
+					],
+					"housekeeping": [
+						"room cleaning",
+						"housekeeping supervision",
+						"linen management",
+						"laundry operations",
+						"room inspection",
+						"lost and found"
+					],
+					"food_beverage": [
+						"f&b service",
+						"table service",
+						"room service",
+						"bartending",
+						"order taking",
+						"food presentation",
+						"menu knowledge"
+					],
+					"operations_coordination": [
+						"event coordination",
+						"conference management",
+						"transportation coordination",
+						"vendor management",
+						"shift scheduling"
+					],
+					"revenue_management": [
+						"occupancy management",
+						"rate management",
+						"upselling",
+						"cross selling",
+						"revenue optimization"
+					],
+					"safety_quality": [
+						"food safety",
+						"fire safety",
+						"health safety",
+						"emergency procedures",
+						"hygiene standards"
+					],
+					"software_systems": [
+						"pms opera",
+						"micros pos",
+						"channel manager",
+						"ota management",
+						"ms office excel"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
+			}
 		},
 		{
 			"atsGeneralId": 273,
 			"atsParamId": "ATS-273",
-			"logic_description": {}
+			"logic_description": {
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names and abbreviations for hospitality and tourism terms",
+				"keyword_variations": {
+					"front_office": [
+						"front office",
+						"front desk",
+						"front office operations",
+						"reception"
+					],
+					"food_beverage": [
+						"f&b",
+						"food and beverage",
+						"fnb",
+						"food n beverage"
+					],
+					"housekeeping": [
+						"housekeeping",
+						"hk",
+						"room cleaning",
+						"house keeping"
+					],
+					"guest_relations": [
+						"guest relations",
+						"guest services",
+						"guest experience",
+						"grm"
+					],
+					"property_management_system": [
+						"pms",
+						"property management system",
+						"hotel pms",
+						"opera pms"
+					],
+					"revenue_per_available_room": [
+						"revpar",
+						"revenue per available room",
+						"revenue par"
+					],
+					"average_daily_rate": [
+						"adr",
+						"average daily rate",
+						"avg daily rate"
+					],
+					"net_promoter_score": [
+						"nps",
+						"net promoter score",
+						"guest satisfaction score"
+					],
+					"online_travel_agency": [
+						"ota",
+						"online travel agency",
+						"booking sites"
+					],
+					"occupancy_rate": [
+						"occupancy",
+						"occupancy rate",
+						"room occupancy",
+						"hotel occupancy"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 274,
 			"atsParamId": "ATS-274",
-			"logic_description": {}
+			"logic_description": {
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
+			}
 		},
 		{
 			"atsGeneralId": 275,
 			"atsParamId": "ATS-275",
-			"logic_description": {}
+			"logic_description": {
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____",
+						"<table>"
+					],
+					"column_indicators": [
+						" ",
+						"\u00A0\u00A0",
+						"||",
+						"<div style="
+					],
+					"visual_separators": [
+						"- ",
+						"▪",
+						"■",
+						"★",
+						"♦"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
+			}
 		},
 		{
 			"atsGeneralId": 276,
 			"atsParamId": "ATS-276",
-			"logic_description": {}
+			"logic_description": {
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new",
+						"garamond"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller",
+						"wingdings",
+						"symbol"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
+			}
 		},
 		{
 			"atsGeneralId": 277,
 			"atsParamId": "ATS-277",
-			"logic_description": {}
+			"logic_description": {
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Check presence of common resume sections for hospitality and tourism",
+				"sections": [
+					"professional summary",
+					"career objective",
+					"summary",
+					"profile",
+					"hospitality summary",
+					"experience",
+					"work experience",
+					"professional experience",
+					"employment history",
+					"hotel experience",
+					"hospitality experience",
+					"skills",
+					"core competencies",
+					"hospitality skills",
+					"guest service skills",
+					"technical skills",
+					"education",
+					"educational qualification",
+					"academic qualification",
+					"ihm education",
+					"certifications",
+					"professional certifications",
+					"hospitality certifications",
+					"food safety certification",
+					"projects",
+					"hospitality projects",
+					"event projects",
+					"languages",
+					"language proficiency",
+					"achievements",
+					"accomplishments"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
+			}
 		},
 		{
 			"atsGeneralId": 278,
 			"atsParamId": "ATS-278",
-			"logic_description": {}
+			"logic_description": {
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of resume sections for hospitality and tourism resumes",
+				"accepted_formats": {
+					"summary": [
+						"professional summary",
+						"career objective",
+						"profile summary",
+						"hospitality professional summary"
+					],
+					"skills": [
+						"skills",
+						"core competencies",
+						"hospitality skills",
+						"professional skills",
+						"guest service skills"
+					],
+					"experience": [
+						"work experience",
+						"professional experience",
+						"employment history",
+						"hotel experience",
+						"hospitality experience",
+						"experience"
+					],
+					"education": [
+						"education",
+						"educational qualification",
+						"academic qualification",
+						"ihm education"
+					],
+					"certifications": [
+						"certifications",
+						"professional certifications",
+						"hospitality certifications",
+						"food safety certification"
+					],
+					"projects": [
+						"projects",
+						"event projects",
+						"hospitality projects",
+						"tourism projects"
+					],
+					"languages": [
+						"languages",
+						"language proficiency",
+						"multilingual"
+					],
+					"achievements": [
+						"achievements",
+						"accomplishments",
+						"key achievements"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 279,
 			"atsParamId": "ATS-279",
-			"logic_description": {}
+			"logic_description": {
+				"type": "HANDS_ON_EXPERIENCE",
+				"purpose": "Detect presence of hands-on hospitality and tourism experience through jobs, internships, or projects",
+				"experience_indicators": {
+					"job_titles": [
+						"hotel manager",
+						"front office executive",
+						"front office manager",
+						"housekeeping supervisor",
+						"restaurant manager",
+						"f&b service",
+						"guest relations executive",
+						"reservation executive",
+						"tour guide",
+						"travel consultant",
+						"event coordinator",
+						"spa therapist",
+						"concierge",
+						"revenue manager",
+						"operations manager"
+					],
+					"internship_keywords": [
+						"hotel internship",
+						"hospitality intern",
+						"ihm industrial training",
+						"front office intern",
+						"housekeeping intern",
+						"f&b intern",
+						"kitchen intern",
+						"tourism internship",
+						"travel agency intern",
+						"resort internship"
+					],
+					"project_keywords": [
+						"hotel project",
+						"event management project",
+						"tourism project",
+						"hospitality project",
+						"guest service project",
+						"revenue management project",
+						"housekeeping optimization",
+						"front office automation",
+						"ota integration project",
+						"guest feedback analysis"
+					],
+					"experience_verbs": [
+						"managed front desk operations",
+						"handled guest check ins",
+						"supervised housekeeping staff",
+						"coordinated room service",
+						"organized events and banquets",
+						"managed reservations and bookings",
+						"conducted guest satisfaction surveys",
+						"handled guest complaints",
+						"optimized room occupancy",
+						"trained service staff",
+						"managed f&b inventory",
+						"coordinated tour groups",
+						"upsold hotel services",
+						"maintained guest records",
+						"implemented service standards"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
+			}
 		},
 		{
 			"atsGeneralId": 280,
 			"atsParamId": "ATS-280",
-			"logic_description": {}
+			"logic_description": {
+				"type": "TOURISM_JOB_TITLES",
+				"purpose": "Detect use of common hospitality and tourism job titles",
+				"recognized_titles": [
+					"hotel manager",
+					"junior hotel manager",
+					"senior hotel manager",
+					"general manager",
+					"front office manager",
+					"front office executive",
+					"front desk manager",
+					"reservation manager",
+					"guest relations manager",
+					"housekeeping manager",
+					"executive housekeeper",
+					"housekeeping supervisor",
+					"restaurant manager",
+					"f&b manager",
+					"food and beverage manager",
+					"banquet manager",
+					"event manager",
+					"conference manager",
+					"spa manager",
+					"resort manager",
+					"tour manager",
+					"tour guide",
+					"tour coordinator",
+					"travel consultant",
+					"travel agent",
+					"tourism manager",
+					"hospitality manager",
+					"guest service executive",
+					"concierge",
+					"bell captain",
+					"revenue manager",
+					"sales manager",
+					"marketing manager",
+					"operations manager",
+					"duty manager",
+					"front office supervisor",
+					"housekeeping supervisor",
+					"restaurant supervisor",
+					"shift supervisor"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 281,
 			"atsParamId": "ATS-281",
-			"logic_description": {}
+			"logic_description": {
+				"type": "EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent date formats showing career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
+			}
 		},
 		{
 			"atsGeneralId": 282,
 			"atsParamId": "ATS-282",
-			"logic_description": {}
+			"logic_description": {
+				"type": "QUANTIFIED_IMPACT",
+				"purpose": "Detect quantified impact using numbers, percentages, scale, performance or efficiency metrics in hospitality and tourism achievements",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"percentage",
+						"occupancy rate",
+						"guest satisfaction score",
+						"nps score",
+						"revpar growth",
+						"adr increase",
+						"upsell conversion",
+						"repeat guest rate"
+					],
+					"scale_metrics": [
+						"rooms",
+						"guests served",
+						"check ins",
+						"bookings handled",
+						"tours conducted",
+						"events organized",
+						"covers served",
+						"tables managed",
+						"reservations",
+						"departments supervised"
+					],
+					"performance_metrics": [
+						"occupancy",
+						"revpar",
+						"adr",
+						"guest satisfaction",
+						"nps",
+						"tripadvisor rating",
+						"booking.com score",
+						"revenue per available room",
+						"average daily rate",
+						"guest feedback score"
+					],
+					"efficiency_metrics": [
+						"increased occupancy",
+						"improved guest satisfaction",
+						"revenue growth",
+						"cost reduction",
+						"reduced complaint rate",
+						"faster check in",
+						"improved housekeeping efficiency",
+						"higher upsell revenue",
+						"better staff utilization",
+						"optimized staffing"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
+			}
 		},
 		{
 			"atsGeneralId": 283,
 			"atsParamId": "ATS-283",
-			"logic_description": {}
+			"logic_description": {
+				"type": "TECHNICAL_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of hospitality, tourism, customer service, and operational skills",
+				"skill_groups": {
+					"core_hospitality_service": [
+						"guest relations",
+						"customer service",
+						"front office operations",
+						"reservation management",
+						"check in check out",
+						"guest registration",
+						"billing operations",
+						"guest satisfaction",
+						"service recovery",
+						"concierge services"
+					],
+					"housekeeping_operations": [
+						"room cleaning",
+						"housekeeping supervision",
+						"linen management",
+						"laundry operations",
+						"room inspection",
+						"lost and found",
+						"deep cleaning",
+						"turn down service",
+						"vip room setup",
+						"housekeeping scheduling"
+					],
+					"food_beverage_service": [
+						"f&b service",
+						"table service",
+						"buffet service",
+						"room service",
+						"bartending",
+						"wine service",
+						"order taking",
+						"food presentation",
+						"menu knowledge",
+						"upselling techniques"
+					],
+					"hospitality_software_pms": [
+						"opera pms",
+						"fidello",
+						"micros pos",
+						"oracle hospitality",
+						"protel pms",
+						"roomkey",
+						"resnexus",
+						"channel manager",
+						"property management system",
+						"hospitality pms"
+					],
+					"revenue_tourism_tools": [
+						"revenue management",
+						"yield management",
+						"ota management",
+						"dynamic pricing",
+						"rate shopping",
+						"booking engine",
+						"iata gds",
+						"amadeus",
+						"sabre",
+						"galileo"
+					],
+					"analytical_communication_tools": [
+						"ms excel",
+						"ms office",
+						"powerpoint presentations",
+						"guest feedback analysis",
+						"occupancy reports",
+						"revenue reports",
+						"guest database management",
+						"ms word",
+						"email communication",
+						"social media management"
+					],
+					"languages_cultural": [
+						"english proficiency",
+						"hindi",
+						"regional languages",
+						"multilingual",
+						"cross cultural communication",
+						"guest etiquette",
+						"cultural sensitivity",
+						"international guests"
+					],
+					"safety_quality_certifications": [
+						"first aid certified",
+						"cpr certified",
+						"fire safety training",
+						"food safety handler",
+						"haccp",
+						"fssai",
+						"servsafe",
+						"health and safety",
+						"emergency procedures",
+						"crisis management"
+					],
+					"other_operational_skills": [
+						"event coordination",
+						"conference management",
+						"wedding planning",
+						"spa operations",
+						"pool supervision",
+						"fitness center management",
+						"tour guiding",
+						"transportation coordination",
+						"vendor management",
+						"inventory control"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
+			}
 		},
 		{
 			"atsGeneralId": 284,
 			"atsParamId": "ATS-284",
-			"logic_description": {}
+			"logic_description": {
+				"type": "TOURISM_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard hospitality and tourism best practices",
+				"practice_groups": {
+					"guest_service_standards": [
+						"guest satisfaction",
+						"customer service excellence",
+						"service recovery",
+						"guest feedback",
+						"net promoter score",
+						"nps",
+						"guest loyalty",
+						"personalized service",
+						"guest relations",
+						"concierge service"
+					],
+					"front_office_operations": [
+						"check in process",
+						"check out procedure",
+						"room reservation",
+						"ota management",
+						"rate parity",
+						"overbooking management",
+						"guest registration",
+						"night audit",
+						"front desk operations",
+						"reservation system"
+					],
+					"housekeeping_standards": [
+						"room cleaning standards",
+						"housekeeping inspection",
+						"linen management",
+						"laundry operations",
+						"lost and found",
+						"room status report",
+						"deep cleaning",
+						"turn down service",
+						"vip amenities",
+						"housekeeping sop"
+					],
+					"food_beverage_service": [
+						"f&b service standards",
+						"table service",
+						"buffet service",
+						"room service delivery",
+						"wine service",
+						"bartending standards",
+						"kitchen hygiene",
+						"food safety",
+						"haccp compliance",
+						"menu engineering"
+					],
+					"safety_security_compliance": [
+						"fire safety",
+						"emergency evacuation",
+						"health and safety",
+						"occupational health safety",
+						"ohs",
+						"security protocols",
+						"cctv surveillance",
+						"guest privacy",
+						"data protection",
+						"crisis management"
+					],
+					"revenue_quality_management": [
+						"revenue management",
+						"yield management",
+						"occupancy optimization",
+						"adr achievement",
+						"revpar growth",
+						"upselling techniques",
+						"cross selling",
+						"dynamic pricing",
+						"group sales",
+						"contract management"
+					],
+					"hospitality_software_systems": [
+						"opera pms",
+						"fidello",
+						"micros pos",
+						"oracle hospitality",
+						"protel",
+						"roomkey pms",
+						"resnexus",
+						"channel manager",
+						"property management system",
+						"pms"
+					],
+					"quality_assurance_compliance": [
+						"iso 9001",
+						"quality assurance",
+						"qa qc",
+						"guest satisfaction survey",
+						"tripadvisor rating",
+						"booking.com score",
+						"mystery audit",
+						"internal audit",
+						"sop compliance",
+						"brand standards"
+					],
+					"training_certification": [
+						"first aid certified",
+						"food handler certification",
+						"fire warden",
+						"customer service training",
+						"hospitality training",
+						"ihm certification",
+						"thsc certified",
+						"servsafe",
+						"haccp trained",
+						"guest service champion"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
+			}
 		},
 		{
 			"atsGeneralId": 285,
 			"atsParamId": "ATS-285",
-			"logic_description": {}
+			"logic_description": {
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, certification, or formal education aligned with hospitality and tourism careers",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of hotel management",
+						"bhm",
+						"bachelor in hospitality management",
+						"bsc hospitality",
+						"bsc hotel management",
+						"diploma in hotel management",
+						"dhm",
+						"advanced diploma in hospitality",
+						"bachelor of tourism management",
+						"bttm",
+						"bachelor of travel and tourism management",
+						"mba hospitality",
+						"mba hotel management",
+						"master of tourism administration",
+						"mta",
+						"post graduate diploma in hospitality",
+						"pgdhm",
+						"bachelor of catering technology",
+						"bct",
+						"culinary arts degree",
+						"hospitality management",
+						"hotel management",
+						"tourism management",
+						"travel and tourism"
+					],
+					"certifications": [
+						"certified hospitality supervisor",
+						"chs",
+						"certified hotel administrator",
+						"cha",
+						"haccp certification",
+						"food safety manager",
+						"fssai license",
+						"iata certification",
+						"travel agent certification",
+						"tour guide certification",
+						"sommelier certification",
+						"bartending certification",
+						"servsafe certification",
+						"thsc certification",
+						"american hotel and lodging association",
+						"ahla",
+						"iso 22000 food safety"
+					],
+					"online_courses": [
+						"coursera hospitality",
+						"edx hotel management",
+						"udemy hotel operations",
+						"udemy food safety",
+						"linkedin learning customer service",
+						"alison hospitality management",
+						"futurelearn tourism",
+						"sha online academy",
+						"eihm courses",
+						"hospitality management institute online"
+					],
+					"bootcamps_and_training": [
+						"ihm industrial training",
+						"hotel internship",
+						"hospitality internship",
+						"on the job training",
+						"front office training",
+						"housekeeping training",
+						"f&b service training",
+						"kitchen training",
+						"culinary training",
+						"guest relations training"
+					],
+					"academic_keywords": [
+						"education",
+						"academic project",
+						"hospitality project",
+						"tourism dissertation",
+						"hotel management thesis",
+						"coursework hospitality",
+						"specialization in hotel management",
+						"cgpa hospitality",
+						"percentage bhm",
+						"ihm diploma",
+						"bhmct",
+						"bachelor hotel management catering technology"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
+			}
 		},
 		{
 			"atsGeneralId": 286,
 			"atsParamId": "ATS-286",
-			"logic_description": {}
+			"logic_description": {
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of educational institutions, hospitality institutes, tourism boards, and certification bodies for Hospitality & Tourism",
+				"clarity_groups": {
+					"hospitality_institutes": [
+						"ihm mumbai",
+						"ihm pusa",
+						"ihm bangalore",
+						"ihm chennai",
+						"ihm lucknow",
+						"ihm goa",
+						"ihm guwahati",
+						"ihm gwalior",
+						"oberoi centre of learning",
+						"ocl",
+						"taj academy of hospitality",
+						"state institute of hotel management",
+						"sihm",
+						"institute of hotel management",
+						"ihm",
+						"christ institute of hotel management",
+						"welcomgroup graduate school",
+						"wgsh",
+						"les roches",
+						"glion institute",
+						"ecole hoteliere de lausanne",
+						"culinary academy of india",
+						"cia",
+						"international institute of hotel management",
+						"iihm"
+					],
+					"tourism_universities": [
+						"tata institute of social sciences",
+						"tiss mumbai",
+						"indian institute of tourism and travel management",
+						"iittm",
+						"national institute of tourism",
+						"kuwait",
+						"university of madras tourism",
+						"pondicherry university tourism",
+						"manipal university hospitality",
+						"christ university hospitality",
+						"symbiosis school of culinary arts",
+						"ssca",
+						"jain university hospitality",
+						"amity institute of travel and tourism",
+						"kurukshetra university tourism",
+						"madurai kamaraj university",
+						"annamalai university tourism"
+					],
+					"certification_bodies": [
+						"american hotel and lodging educational institute",
+						"ahlei",
+						"certified hospitality supervisor",
+						"chs",
+						"certified hotel administrator",
+						"cha",
+						"thsc",
+						"tourism skill council",
+						"ihm certification",
+						"haccp",
+						"food safety supervisor",
+						"fssai",
+						"iso 22000",
+						"servsafe",
+						"sommelier certification",
+						"bartender certification",
+						"tour guide license",
+						"travel agent iata",
+						"iata certification",
+						" Amadeus",
+						"sabre certification",
+						"galileo gds",
+						"aptech aviation",
+						"frankfinn institute"
+					],
+					"online_learning_platforms": [
+						"coursera hospitality",
+						"edx tourism",
+						"udemy hotel management",
+						"alison hospitality courses",
+						"futurelearn tourism",
+						"hospitalitynet academy",
+						"eihm",
+						"ehotelier",
+						"hospitality online",
+						"sha academy",
+						"swiss hotel management school online",
+						"les roches online"
+					],
+					"tourism_boards_associations": [
+						"ministry of tourism india",
+						"india tourism development corporation",
+						"itdc",
+						"state tourism development corporation",
+						"kstdc",
+						"ktc",
+						"kerala tourism",
+						"goa tourism development corporation",
+						"rajasthan tourism",
+						"uttarakhand tourism",
+						"himachal tourism",
+						"iato",
+						"indian association of tour operators",
+						"tAAi",
+						"travel agents association of india",
+						"phd chamber tourism",
+						"ficci tourism committee"
+					],
+					"international_hospitality_chains_training": [
+						"marriott hospitality academy",
+						"ihg academy",
+						"accor hospitality academy",
+						"starwood hotels training",
+						"hyatt training academy",
+						"oberoi centre of learning",
+						"taj hospitality academy",
+						"leela academy",
+						"ITC hotels training",
+						"radisson blu academy"
+					],
+					"aviation_hospitality": [
+						"indiaco aviation academy",
+						"jet airways training academy",
+						"spicejet cadet program",
+						"air india training",
+						"indigo crew training",
+						"frankfinn institute of air hostess training",
+						"iafth",
+						"aptech aviation academy"
+					],
+					"government_institutes": [
+						"directorate general of employment and training",
+						"dget",
+						"national skill development corporation",
+						"nsdc",
+						"skill india hospitality",
+						"pmkaushal vikas yojana",
+						"tourism skill council",
+						"thsc",
+						"nstc",
+						"national skill training centre"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
+			}
 		},
 		{
 			"atsGeneralId": 287,
 			"atsParamId": "ATS-287",
-			"logic_description": {}
+			"logic_description": {
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe hospitality, tourism, and guest service responsibilities",
+				"action_verb_groups": {
+					"guest_service_front_office": [
+						"welcomed guests",
+						"checked in",
+						"checked out",
+						"handled reservations",
+						"managed front desk",
+						"coordinated room assignments",
+						"processed payments",
+						"up sold rooms",
+						"handled complaints",
+						"guest registration"
+					],
+					"housekeeping_operations": [
+						"supervised housekeeping",
+						"inspected rooms",
+						"coordinated cleaning",
+						"managed linen inventory",
+						"handled laundry operations",
+						"maintained room standards",
+						"deep cleaned",
+						"prepared vip rooms",
+						"managed housekeeping staff",
+						"quality control"
+					],
+					"food_beverage_service": [
+						"served guests",
+						"managed restaurant",
+						"coordinated banquets",
+						"handled room service",
+						"trained waitstaff",
+						"inventoried f&b",
+						"managed bar operations",
+						"cooked specialty dishes",
+						"organized catering",
+						"beverage service"
+					],
+					"revenue_management": [
+						"optimized occupancy",
+						"managed rates",
+						"analyzed demand",
+						"yield management",
+						"upsold services",
+						"cross sold packages",
+						"managed group bookings",
+						"revenue forecasting",
+						"pricing strategy",
+						"ota management"
+					],
+					"event_conference_management": [
+						"organized events",
+						"coordinated conferences",
+						"managed weddings",
+						"set up banquets",
+						"handled av setup",
+						"coordinated vendors",
+						"executed corporate events",
+						"managed exhibition space",
+						"event budgeting",
+						"client coordination"
+					],
+					"leadership_team_management": [
+						"led hospitality team",
+						"trained staff",
+						"scheduled shifts",
+						"performance managed",
+						"motivated employees",
+						"handled recruitment",
+						"conducted training",
+						"managed departments",
+						"developed sops",
+						"quality assurance"
+					],
+					"tourism_travel_operations": [
+						"organized tours",
+						"escorted groups",
+						"arranged itineraries",
+						"booked transportation",
+						"coordinated guides",
+						"managed tour groups",
+						"handled visas",
+						"organized excursions",
+						"adventure coordination",
+						"cultural tours"
+					],
+					"sales_marketing": [
+						"generated leads",
+						"closed deals",
+						"marketed packages",
+						"managed otas",
+						"handled corporate accounts",
+						"developed partnerships",
+						"promoted destination",
+						"social media marketing",
+						"email campaigns",
+						"loyalty programs"
+					],
+					"spa_wellness_resort": [
+						"managed spa operations",
+						"delivered treatments",
+						"scheduled appointments",
+						"inventoried spa products",
+						"trained therapists",
+						"wellness program design",
+						"resort activities",
+						"yoga coordination",
+						"fitness classes",
+						"pool management"
+					],
+					"process_customer_experience": [
+						"improved guest satisfaction",
+						"implemented feedback systems",
+						"streamlined checkin",
+						"enhanced service delivery",
+						"digitized reservations",
+						"automated housekeeping",
+						"contactless services",
+						"personalized experiences",
+						"loyalty program management",
+						"guest recovery"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
+			}
 		},
 		{
 			"atsGeneralId": 288,
 			"atsParamId": "ATS-288",
-			"logic_description": {}
+			"logic_description": {
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, poor sentence construction, and noisy text that affects ATS parsing in Hospitality & Tourism resumes",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"experiance",
+						"acheive",
+						"maintainance",
+						"responsiblity",
+						"mangement",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"implimentation",
+						"funtionality",
+						"statment",
+						"paramter",
+						"arguement",
+						"modul",
+						"architechture",
+						"databse",
+						"perfromance",
+						"optimzation",
+						"documantation",
+						"authintication",
+						"avaliable",
+						"compatiblity",
+						"continous",
+						"calender",
+						"defination",
+						"desciption",
+						"occurance",
+						"sucess",
+						"sucessful",
+						"tecnical",
+						"thier",
+						"wierd",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"seperated",
+						"improvment",
+						"profesional",
+						"organised",
+						"enviroment",
+						"recieve"
+					],
+					"hospitality_tourism_spelling_errors": [
+						"hotle",
+						"resot",
+						"restaurnt",
+						"housekeepping",
+						"frontdesk",
+						"fnb",
+						"foodandbevarage",
+						"bevarage",
+						"reservations",
+						"checkin",
+						"checkout",
+						"housekeeping",
+						"concierg",
+						"banqueting",
+						"eventmanagment",
+						"sparesort",
+						"wellness",
+						"tourguid",
+						"travelagent",
+						"itinerary",
+						"visa",
+						"passport",
+						"airlineticket",
+						"cruiseship",
+						"hospitalty",
+						"tourisim",
+						"goa",
+						"manali",
+						"keralatourism",
+						"hillstation",
+						"beachresort",
+						"luxuryhotel",
+						"budgetstay",
+						"guest house",
+						"serviced apartment",
+						"homestay",
+						"backpacker",
+						"adventuretourism"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on project",
+						"responsible to develop",
+						"handled the project",
+						"good knowledge of",
+						"basic knowledge of",
+						"worked in team",
+						"involved in development",
+						"doing development",
+						"helped to develop",
+						"worked as manager",
+						"learning new skills",
+						"my role was",
+						"i was involved",
+						"my responsibility includes",
+						"worked under guidance",
+						"familiar with operations",
+						"knowledge about hospitality",
+						"hands on experience on",
+						"exposure to tourism",
+						"managed guests",
+						"handled reservations",
+						"good in hotel operations",
+						"basic ms office knowledge",
+						"served customers",
+						"managed housekeeping",
+						"coordinated events"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without action verbs"
+					],
+					"capitalization_errors": [
+						"hotel manager",
+						"front office manager",
+						"housekeeping supervisor",
+						"restaurant manager",
+						"f&b manager",
+						"tour guide",
+						"travel consultant",
+						"event coordinator",
+						"spa manager",
+						"resort manager",
+						"guest relations executive",
+						"concierge",
+						"reservation supervisor",
+						"banquet manager",
+						"revenue manager",
+						"operations manager"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"passionate about hospitality",
+						"enthusiastic host",
+						"dynamic professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to serve",
+						"dedicated to guests",
+						"excellent customer service",
+						"strong hospitality skills",
+						"detail oriented",
+						"meticulous housekeeper",
+						"proactive manager",
+						"versatile tour guide"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
+			}
 		},
 		{
 			"atsGeneralId": 289,
 			"atsParamId": "ATS-289",
-			"logic_description": {}
+			"logic_description": {
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, progress bars, emojis, or graphical elements that reduce ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"skill chart",
+						"rating chart",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
+			}
 		},
 		{
 			"atsGeneralId": 290,
 			"atsParamId": "ATS-290",
-			"logic_description": {}
+			"logic_description": {
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Avoidance of placing critical Hospitality & Tourism information inside headers or footers which may not be parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"candidate name",
+						"resume of",
+						"curriculum vitae",
+						"cv"
+					],
+					"hospitality_tourism_roles": [
+						"hotel manager",
+						"front desk manager",
+						"front office executive",
+						"housekeeping supervisor",
+						"executive housekeeper",
+						"restaurant manager",
+						"f&b manager",
+						"food and beverage manager",
+						"tour guide",
+						"travel consultant",
+						"tourism manager",
+						"hospitality manager",
+						"guest relations",
+						"concierge",
+						"reservation manager",
+						"event coordinator",
+						"banquet manager",
+						"spa manager",
+						"resort manager",
+						"cruise staff",
+						"hostess",
+						"steward",
+						"bartender",
+						"chef de partie",
+						"sous chef",
+						"designation",
+						"current role",
+						"job title"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"india",
+						"goa",
+						"manali",
+						"shimla",
+						"ooty",
+						"munnar",
+						"kerala",
+						"jaipur",
+						"udaipur",
+						"agra",
+						"delhi",
+						"mumbai",
+						"chennai",
+						"hyderabad",
+						"bangalore"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
+			}
 		}
 	]
 }
