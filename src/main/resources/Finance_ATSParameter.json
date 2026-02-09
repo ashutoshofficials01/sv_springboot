@@ -4,140 +4,1596 @@
 			"atsGeneralId": 151,
 			"atsParamId": "ATS-151",
 			"logic_description": {
-				
+				"type": "CORE_DEV_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine finance and accounting profile",
+				"keywords": [
+					"accounting",
+					"accountant",
+					"finance",
+					"financial",
+					"accounts",
+					"general ledger",
+					"reconciliation",
+					"financial statements",
+					"balance sheet",
+					"profit and loss",
+					"p&l",
+					"cash flow",
+					"gst",
+					"tds",
+					"taxation",
+					"income tax",
+					"audit",
+					"auditing",
+					"internal audit",
+					"statutory audit",
+					"budgeting",
+					"forecasting",
+					"financial analysis",
+					"variance analysis",
+					"financial reporting",
+					"gaap",
+					"ifrs",
+					"ind as",
+					"tally",
+					"sap fico",
+					"quickbooks",
+					"excel",
+					"advanced excel",
+					"bank reconciliation",
+					"accounts payable",
+					"accounts receivable",
+					"ar",
+					"ap",
+					"payroll",
+					"cost accounting",
+					"management accounting"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 152,
 			"atsParamId": "ATS-152",
 			"logic_description": {
-				
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Measure breadth of finance and accounting skills across core areas",
+				"skill_categories": {
+					"accounting": [
+						"general ledger",
+						"accounts payable",
+						"accounts receivable",
+						"bank reconciliation",
+						"financial statements",
+						"bookkeeping"
+					],
+					"financial_analysis": [
+						"financial modeling",
+						"variance analysis",
+						"budgeting",
+						"forecasting",
+						"ratio analysis",
+						"cash flow analysis"
+					],
+					"taxation": [
+						"income tax",
+						"gst",
+						"tds",
+						"advance tax",
+						"tax planning",
+						"input tax credit"
+					],
+					"auditing": [
+						"internal audit",
+						"statutory audit",
+						"tax audit",
+						"audit trail",
+						"internal controls"
+					],
+					"compliance": [
+						"gaap",
+						"ifrs",
+						"ind as",
+						"sox compliance",
+						"statutory compliance",
+						"gst compliance"
+					],
+					"reporting": [
+						"p&l",
+						"balance sheet",
+						"cash flow statement",
+						"management reporting",
+						"monthly close"
+					],
+					"software": [
+						"tally",
+						"sap fico",
+						"quickbooks",
+						"excel",
+						"power bi"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
 			}
 		},
 		{
 			"atsGeneralId": 153,
 			"atsParamId": "ATS-153",
 			"logic_description": {
-				
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names and abbreviations for finance and accounting terms",
+				"keyword_variations": {
+					"profit_and_loss": [
+						"profit and loss",
+						"p&l",
+						"p and l",
+						"income statement",
+						"pl statement"
+					],
+					"accounts_receivable": [
+						"accounts receivable",
+						"ar",
+						"receivables",
+						"debtors"
+					],
+					"accounts_payable": [
+						"accounts payable",
+						"ap",
+						"payables",
+						"creditors"
+					],
+					"gaap": [
+						"gaap",
+						"generally accepted accounting principles"
+					],
+					"ifrs": [
+						"ifrs",
+						"international financial reporting standards"
+					],
+					"ind_as": [
+						"ind as",
+						"indian accounting standards"
+					],
+					"gst": [
+						"gst",
+						"goods and services tax"
+					],
+					"tds": [
+						"tds",
+						"tax deducted at source"
+					],
+					"balance_sheet": [
+						"balance sheet",
+						"bs"
+					],
+					"cash_flow": [
+						"cash flow",
+						"cf",
+						"cashflow statement"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 154,
 			"atsParamId": "ATS-154",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 155,
 			"atsParamId": "ATS-155",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex layouts like tables, columns, and visual separators that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____",
+						"<table>"
+					],
+					"column_indicators": [
+						" ",
+						"\u00A0\u00A0",
+						"||",
+						"<div style="
+					],
+					"visual_separators": [
+						"- ",
+						"▪",
+						"■",
+						"★",
+						"♦"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 156,
 			"atsParamId": "ATS-156",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Detect use of standard, ATS-friendly fonts and avoid decorative or non-machine-readable fonts",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new",
+						"garamond"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller",
+						"wingdings",
+						"symbol"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 157,
 			"atsParamId": "ATS-157",
 			"logic_description": {
-				
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Check presence of common resume sections for finance and accounting",
+				"sections": [
+					"professional summary",
+					"career objective",
+					"summary",
+					"profile",
+					"experience",
+					"work experience",
+					"professional experience",
+					"employment history",
+					"skills",
+					"core competencies",
+					"technical skills",
+					"professional skills",
+					"education",
+					"educational qualification",
+					"academic qualification",
+					"certifications",
+					"professional certifications",
+					"ca qualification",
+					"professional qualifications",
+					"projects",
+					"audit assignments"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 158,
 			"atsParamId": "ATS-158",
 			"logic_description": {
-				
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of resume sections for finance and accounting resumes",
+				"accepted_formats": {
+					"summary": [
+						"professional summary",
+						"career objective",
+						"profile summary"
+					],
+					"skills": [
+						"skills",
+						"core competencies",
+						"technical skills",
+						"professional skills"
+					],
+					"experience": [
+						"work experience",
+						"professional experience",
+						"employment history",
+						"experience"
+					],
+					"education": [
+						"education",
+						"educational qualification",
+						"academic qualification"
+					],
+					"certifications": [
+						"certifications",
+						"professional certifications",
+						"ca qualification",
+						"professional qualifications"
+					],
+					"projects": [
+						"projects",
+						"audit assignments",
+						"financial projects"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 159,
 			"atsParamId": "ATS-159",
 			"logic_description": {
-				
+				"type": "HANDS_ON_EXPERIENCE",
+				"purpose": "Detect presence of hands-on finance and accounting experience through jobs, internships, or projects",
+				"experience_indicators": {
+					"job_titles": [
+						"accountant",
+						"accounts executive",
+						"accounts officer",
+						"finance executive",
+						"financial analyst",
+						"auditor",
+						"internal auditor",
+						"tax analyst",
+						"cost accountant",
+						"payroll accountant",
+						"finance manager",
+						"accounts manager",
+						"credit controller"
+					],
+					"internship_keywords": [
+						"intern",
+						"internship",
+						"articleship",
+						"ca articleship",
+						"trainee",
+						"apprentice",
+						"industrial training"
+					],
+					"project_keywords": [
+						"project",
+						"projects",
+						"financial modeling",
+						"audit assignment",
+						"tax project",
+						"budget preparation",
+						"reconciliation project",
+						"implemented sap",
+						"implemented tally",
+						"gst implementation"
+					],
+					"experience_verbs": [
+						"prepared financial statements",
+						"handled accounts payable",
+						"managed accounts receivable",
+						"conducted bank reconciliation",
+						"filed gst returns",
+						"computed tds",
+						"performed internal audit",
+						"prepared budgets",
+						"generated reports",
+						"analyzed variances",
+						"managed payroll",
+						"ensured compliance",
+						"optimized costs"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 160,
 			"atsParamId": "ATS-160",
 			"logic_description": {
-				
+				"type": "DEVELOPER_JOB_TITLES",
+				"purpose": "Detect use of common finance and accounting job titles",
+				"recognized_titles": [
+					"accountant",
+					"junior accountant",
+					"senior accountant",
+					"staff accountant",
+					"accounts executive",
+					"accounts officer",
+					"accounts manager",
+					"accounting manager",
+					"finance executive",
+					"finance officer",
+					"finance manager",
+					"senior finance manager",
+					"financial analyst",
+					"junior financial analyst",
+					"senior financial analyst",
+					"investment analyst",
+					"treasury analyst",
+					"cost accountant",
+					"management accountant",
+					"tax accountant",
+					"tax analyst",
+					"auditor",
+					"internal auditor",
+					"external auditor",
+					"statutory auditor",
+					"audit associate",
+					"audit senior",
+					"credit controller",
+					"payroll accountant",
+					"financial controller",
+					"assistant controller",
+					"controller",
+					"finance controller",
+					"finance business partner"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 161,
 			"atsParamId": "ATS-161",
 			"logic_description": {
-				
+				"type": "EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent date formats showing career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 162,
 			"atsParamId": "ATS-162",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_IMPACT",
+				"purpose": "Detect quantified impact using numbers, percentages, scale, performance or efficiency metrics in financial achievements",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"percentage",
+						"roi",
+						"ebitda margin",
+						"profit margin"
+					],
+					"scale_metrics": [
+						"cr",
+						"crore",
+						"lakh",
+						"million",
+						"billion",
+						"transactions",
+						"invoices",
+						"vendors",
+						"customers",
+						"employees"
+					],
+					"performance_metrics": [
+						"revenue",
+						"sales",
+						"profit",
+						"turnover",
+						"budget",
+						"forecast accuracy",
+						"dsr",
+						"debtor days",
+						"creditor days",
+						"cash conversion cycle"
+					],
+					"efficiency_metrics": [
+						"reduced costs",
+						"cost savings",
+						"improved margins",
+						"revenue growth",
+						"profit increase",
+						"working capital reduction",
+						"tax savings",
+						"optimized expenses",
+						"cash flow improvement"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 163,
 			"atsParamId": "ATS-163",
 			"logic_description": {
-				
+				"type": "TECHNICAL_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of accounting, finance, taxation, compliance, analysis tools, and financial software",
+				"skill_groups": {
+					"core_finance_accounting": [
+						"financial reporting",
+						"financial statements",
+						"general ledger",
+						"accounts payable",
+						"accounts receivable",
+						"bookkeeping",
+						"reconciliation",
+						"variance analysis",
+						"financial analysis",
+						"budgeting",
+						"forecasting",
+						"cash flow management",
+						"profit and loss",
+						"balance sheet",
+						"trial balance"
+					],
+					"taxation_compliance": [
+						"gst",
+						"tds",
+						"income tax",
+						"tax planning",
+						"gst returns",
+						"tds returns",
+						"input tax credit",
+						"advance tax",
+						"tax audit",
+						"statutory compliance"
+					],
+					"standards_regulations": [
+						"gaap",
+						"ifrs",
+						"ind as",
+						"sox compliance",
+						"internal controls",
+						"audit trail",
+						"risk management",
+						"internal audit",
+						"statutory audit"
+					],
+					"financial_tools_software": [
+						"tally",
+						"tally prime",
+						"tally erp",
+						"quickbooks",
+						"sap fico",
+						"sap finance",
+						"oracle financials",
+						"zoho books",
+						"marg erp",
+						"busy software"
+					],
+					"analytical_tools": [
+						"ms excel",
+						"advanced excel",
+						"vlookup",
+						"pivot tables",
+						"power query",
+						"power bi",
+						"tableau",
+						"financial modeling",
+						"excel macros",
+						"data analysis"
+					],
+					"other_tools": [
+						"microsoft office",
+						"ms word",
+						"powerpoint",
+						"outlook",
+						"jira",
+						"asana",
+						"erp systems",
+						"sage",
+						"xero",
+						"freshbooks"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 164,
 			"atsParamId": "ATS-164",
 			"logic_description": {
-				
+				"type": "ENGINEERING_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard finance and accounting practices",
+				"practice_groups": {
+					"accounting_standards": [
+						"gaap",
+						"ifrs",
+						"ind as",
+						"us gaap",
+						"accounting standards",
+						"ind as compliance",
+						"ifrs convergence",
+						"fair value accounting",
+						"revenue recognition",
+						"lease accounting"
+					],
+					"financial_reporting": [
+						"financial statements",
+						"balance sheet",
+						"profit and loss",
+						"p&l",
+						"cash flow statement",
+						"trial balance",
+						"month end close",
+						"year end close",
+						"financial close",
+						"consolidated reporting"
+					],
+					"reconciliation": [
+						"bank reconciliation",
+						"vendor reconciliation",
+						"customer reconciliation",
+						"intercompany reconciliation",
+						"gst reconciliation",
+						"tds reconciliation",
+						"balance confirmation",
+						"account reconciliation",
+						"reconcile accounts"
+					],
+					"budgeting_forecasting": [
+						"budgeting",
+						"forecasting",
+						"variance analysis",
+						"budget vs actual",
+						"rolling forecast",
+						"financial modeling",
+						"financial models",
+						"cash flow forecast",
+						"budget preparation"
+					],
+					"auditing_compliance": [
+						"internal audit",
+						"statutory audit",
+						"tax audit",
+						"gst audit",
+						"compliance check",
+						"sox compliance",
+						"internal controls",
+						"risk assessment",
+						"audit trail",
+						"working papers"
+					],
+					"taxation_gst": [
+						"gst compliance",
+						"tds deduction",
+						"advance tax",
+						"input tax credit",
+						"gst returns",
+						"gstr 1",
+						"gstr 3b",
+						"tds returns",
+						"tax planning",
+						"it compliance"
+					],
+					"erp_software": [
+						"tally",
+						"tally erp",
+						"tally prime",
+						"sap fico",
+						"sap finance",
+						"oracle financials",
+						"quickbooks",
+						"zoho books",
+						"marg erp",
+						"busy accounting"
+					],
+					"payroll_finance": [
+						"payroll processing",
+						"pf esi",
+						"statutory compliance",
+						"gratuity",
+						"ptax",
+						"professional tax",
+						"leave encashment",
+						"payslip generation",
+						"payroll reconciliation"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 165,
 			"atsParamId": "ATS-165",
 			"logic_description": {
-				
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, certification, or formal education aligned with finance and accounting careers",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of commerce",
+						"b.com",
+						"bcom",
+						"master of commerce",
+						"m.com",
+						"mcom",
+						"bachelor of business administration",
+						"bba finance",
+						"bba accounting",
+						"mba finance",
+						"mba",
+						"master of business administration",
+						"bachelor of economics",
+						"b.a economics",
+						"m.a economics",
+						"chartered accountancy",
+						"ca",
+						"cost and management accountancy",
+						"cma",
+						"company secretary",
+						"cs",
+						"association of chartered certified accountants",
+						"acca",
+						"chartered institute of management accountants",
+						"cima",
+						"certified public accountant",
+						"cpa",
+						"financial accounting",
+						"managerial accounting",
+						"commerce",
+						"accountancy",
+						"cost accounting",
+						"auditing",
+						"taxation"
+					],
+					"certifications": [
+						"certification",
+						"certified",
+						"icai",
+						"icmai",
+						"icsi",
+						"ca inter",
+						"ca final",
+						"acca qualified",
+						"cima qualified",
+						"cpa",
+						"cma us",
+						"cifa",
+						"diploma in international financial accounting",
+						"gst practitioner",
+						"tds certified",
+						"tally certified professional",
+						"sap fico certified",
+						"advanced excel certified",
+						"financial modeling certification",
+						"cfa level",
+						"frM"
+					],
+					"online_courses": [
+						"coursera finance",
+						"edx accounting",
+						"udemy tally",
+						"udemy sap fico",
+						"linkedin learning excel",
+						"simplilearn pmp",
+						"upgrad mba",
+						"great learning financial analytics",
+						"unacademy ca foundation",
+						"byjus commerce",
+						"ca club india",
+						"icai bos portal"
+					],
+					"bootcamps_and_training": [
+						"ca articleship",
+						"ca training",
+						"articleship experience",
+						"industrial training commerce",
+						"tally training",
+						"sap fico training",
+						"financial modeling bootcamp",
+						"excel for finance bootcamp",
+						"gst training",
+						"taxation diploma"
+					],
+					"academic_keywords": [
+						"education",
+						"academic project",
+						"final year project",
+						"dissertation",
+						"thesis",
+						"coursework",
+						"major in commerce",
+						"specialization in finance",
+						"cgpa",
+						"percentage",
+						"bcom honors",
+						"mcom finance"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 166,
 			"atsParamId": "ATS-166",
 			"logic_description": {
-				
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of educational institutions, learning platforms, and certification bodies for Finance & Accounting",
+				"clarity_groups": {
+					"universities_and_colleges": [
+						"shri ram college of commerce",
+						"srcc",
+						"lady shri ram college",
+						"lsr",
+						"hindu college",
+						"st xaviers college mumbai",
+						"st xaviers kolkata",
+						"narsee monjee college",
+						"nm college",
+						"hr college of commerce",
+						"kishinchand chellaram college",
+						"k c college",
+						"goenka college of commerce",
+						"delhi university",
+						"mumbai university",
+						"christ university",
+						"loyola college",
+						"st josephs college",
+						"madras christian college",
+						"sacred heart college",
+						"b k birla college",
+						"jain university",
+						"st francis college",
+						"seshadripuram college",
+						"st xaviers ranchi",
+						"psg college of arts",
+						"ethiraj college",
+						"ss jain subodh pg college",
+						"st mira college",
+						"anna university",
+						"manipal academy",
+						"symbiosis college",
+						"guru nanak college",
+						"madras university",
+						"university of delhi",
+						"bangalore university",
+						"osmania university",
+						"commerce college",
+						"college of commerce",
+						"bcom college",
+						"mcom college"
+					],
+					"global_universities": [
+						"harvard business school",
+						"wharton school",
+						"london school of economics",
+						"lse",
+						"university of chicago booth",
+						"massachusetts institute of technology",
+						"mit sloan",
+						"stanford gsB",
+						"oxford said business school",
+						"cambridge judge",
+						"imperial college business school",
+						"ucla anderson",
+						"uc berkeley haas",
+						"columbia business school",
+						"nyu stern",
+						"university of toronto rotman",
+						"university of glasgow",
+						"national university of singapore",
+						"nus business school",
+						"university of melbourne",
+						"monash business school",
+						"university of sydney business school"
+					],
+					"certification_bodies": [
+						"icai",
+						"institute of chartered accountants of india",
+						"ca final",
+						"ca intermediate",
+						"chartered accountant",
+						"acca",
+						"association of chartered certified accountants",
+						"acca qualified",
+						"cima",
+						"chartered institute of management accountants",
+						"cpa",
+						"certified public accountant",
+						"cma",
+						"certified management accountant",
+						"csa",
+						"cost and management accountant",
+						"icmai",
+						"institute of cost accountants of india",
+						"cs",
+						"company secretary",
+						"icsi",
+						"institute of company secretaries of india",
+						"cifa",
+						"diploma in international financial accounting",
+						"us gaap",
+						"ifrs",
+						"tally certified",
+						"sap fico certified",
+						"quickbooks certified"
+					],
+					"online_learning_platforms": [
+						"coursera",
+						"edx",
+						"udemy",
+						"udacity",
+						"pluralsight",
+						"linkedin learning",
+						"simplilearn",
+						"upgrad",
+						"great learning",
+						"unacademy",
+						"byjus",
+						"testbook",
+						"ca club india",
+						"icai bos",
+						"acca global",
+						"cima learning",
+						"khan academy",
+						"investopedia academy",
+						"cfainstitute",
+						"cpa global"
+					],
+					"training_and_bootcamps": [
+						"ca coaching",
+						"icai coaching",
+						"acca coaching",
+						"cima coaching",
+						"tally training institute",
+						"sap fico training",
+						"advanced excel training",
+						"financial modeling course",
+						"cfa coaching",
+						"cpa coaching",
+						"professional diploma in accounting",
+						"pgdipm",
+						"mba finance",
+						"pgdm finance"
+					],
+					"government_and_recognized_bodies": [
+						"ugc",
+						"aicte",
+						"nba",
+						"naac",
+						"nirf",
+						"icai",
+						"icmai",
+						"icsi",
+						"nse academy",
+						"ncfm",
+						"sebi",
+						"rbi",
+						"ministry of corporate affairs",
+						"cbse commerce",
+						"isc commerce"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 167,
 			"atsParamId": "ATS-167",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe finance, accounting, and analytical responsibilities",
+				"action_verb_groups": {
+					"financial_planning_budgeting": [
+						"budgeted",
+						"forecasted",
+						"projected",
+						"planned",
+						"allocated",
+						"modeled",
+						"built financial models",
+						"variance analysis",
+						"prepared budgets",
+						"rolling forecasts"
+					],
+					"reporting_analysis": [
+						"analyzed",
+						"reviewed",
+						"interpreted",
+						"evaluated",
+						"generated reports",
+						"prepared statements",
+						"financial reporting",
+						"prepared p&l",
+						"balance sheet review",
+						"cash flow analysis"
+					],
+					"auditing_compliance": [
+						"audited",
+						"reconciled",
+						"ensured compliance",
+						"internal audit",
+						"statutory audit",
+						"tax compliance",
+						"gaap compliance",
+						"ifrs compliance",
+						"risk assessment",
+						"control testing"
+					],
+					"cost_optimization": [
+						"reduced costs",
+						"optimized expenses",
+						"cut overheads",
+						"streamlined processes",
+						"improved efficiency",
+						"cost savings",
+						"expense reduction",
+						"profit maximization",
+						"margin improvement",
+						"working capital optimization"
+					],
+					"leadership_management": [
+						"led team",
+						"managed department",
+						"supervised staff",
+						"mentored juniors",
+						"headed finance",
+						"directed operations",
+						"coordinated teams",
+						"cross-functional leadership",
+						"stakeholder management",
+						"board reporting"
+					],
+					"taxation_gst": [
+						"filed returns",
+						"calculated tds",
+						"gst compliance",
+						"tax planning",
+						"advance tax",
+						"input credit",
+						"gst reconciliation",
+						"tds deduction",
+						"tax audit",
+						"it compliance"
+					],
+					"accounting_operations": [
+						"posted entries",
+						"month end close",
+						"year end close",
+						"ledger maintenance",
+						"invoice processing",
+						"vendor payments",
+						"bank reconciliation",
+						"fixed assets",
+						"depreciation posting",
+						"accruals management"
+					],
+					"payroll_hr_finance": [
+						"processed payroll",
+						"pf esi compliance",
+						"salary computation",
+						"gratuity calculation",
+						"leave encashment",
+						"bonus processing",
+						"statutory deductions",
+						"payslip generation",
+						"payroll reconciliation"
+					],
+					"software_erp": [
+						"implemented tally",
+						"configured sap",
+						"migrated quickbooks",
+						"erp implementation",
+						"data migration",
+						"user training",
+						"system customization",
+						"integration setup",
+						"report customization",
+						"master data management"
+					],
+					"process_improvement": [
+						"automated processes",
+						"implemented controls",
+						"standardized procedures",
+						"workflow optimization",
+						"digitized operations",
+						"paperless accounting",
+						"rpa implementation",
+						"process reengineering",
+						"sops creation"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 168,
 			"atsParamId": "ATS-168",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, poor sentence construction, and noisy text that affects ATS parsing in Finance & Accounting resumes",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"experiance",
+						"acheive",
+						"maintainance",
+						"responsiblity",
+						"mangement",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"implimentation",
+						"funtionality",
+						"statment",
+						"paramter",
+						"arguement",
+						"modul",
+						"architechture",
+						"databse",
+						"perfromance",
+						"optimzation",
+						"documantation",
+						"authintication",
+						"avaliable",
+						"compatiblity",
+						"continous",
+						"calender",
+						"defination",
+						"desciption",
+						"occurance",
+						"sucess",
+						"sucessful",
+						"tecnical",
+						"thier",
+						"wierd",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"seperated",
+						"improvment",
+						"profesional",
+						"organised",
+						"enviroment",
+						"recieve"
+					],
+					"technical_spelling_errors": [
+						"finanacial",
+						"finacial",
+						"accouting",
+						"acconting",
+						"auditting",
+						"budjet",
+						"budgets",
+						"reveneu",
+						"revenew",
+						"expens",
+						"expences",
+						"depreciaion",
+						"depreceation",
+						"amortizationn",
+						"reconcilation",
+						"reconcilliation",
+						"audittrail",
+						"audittrial",
+						"tax dedution",
+						"tax deducction",
+						"gst returnn",
+						"tds complience",
+						"gaap",
+						"ifrs",
+						"tally erp",
+						"quickbooks",
+						"sap fico",
+						"acruel",
+						"principle",
+						"insure",
+						"loose",
+						"accept",
+						"finanace",
+						"accountant",
+						"chartered accountant",
+						"cpa",
+						"accrual",
+						"ledger",
+						"balance sheet",
+						"profit and loss",
+						"p and l",
+						"cash flow",
+						"taxation",
+						"gstin",
+						"tds",
+						"pf",
+						"esi",
+						"erp",
+						"tallyprime",
+						"sapfico",
+						"quickbook",
+						"xero",
+						"zoho books",
+						"financal",
+						"acounting",
+						"bookkeepping"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on project",
+						"responsible to develop",
+						"handled the project",
+						"good knowledge of",
+						"basic knowledge of",
+						"worked in team",
+						"involved in development",
+						"doing development",
+						"helped to develop",
+						"worked as developer",
+						"learning new technologies",
+						"my role was",
+						"i was involved",
+						"my responsibility includes",
+						"worked under guidance",
+						"familiar with technologies",
+						"knowledge about",
+						"hands on experience on",
+						"exposure to technologies",
+						"managed financials",
+						"prepared statements",
+						"handled accounts",
+						"good in tally",
+						"basic excel knowledge"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without action verbs"
+					],
+					"capitalization_errors": [
+						"finance manager",
+						"accounting manager",
+						"chartered accountant",
+						"cost accountant",
+						"financial analyst",
+						"tax consultant",
+						"audit manager",
+						"accounts payable",
+						"accounts receivable",
+						"internal auditor",
+						"cfo",
+						"finance controller",
+						"treasury manager",
+						"fund accountant",
+						"compliance officer",
+						"risk analyst",
+						"bookkeeper"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"passionate developer",
+						"enthusiastic learner",
+						"dynamic professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to learn",
+						"dedicated professional",
+						"excellent communication skills",
+						"strong problem solving skills",
+						"detail oriented",
+						"meticulous",
+						"proactive",
+						"versatile"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 169,
 			"atsParamId": "ATS-169",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, progress bars, emojis, or graphical elements that reduce ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"skill chart",
+						"rating chart",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 170,
 			"atsParamId": "ATS-170",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Avoidance of placing critical information inside headers or footers which may not be parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"candidate name",
+						"resume of",
+						"curriculum vitae",
+						"cv"
+					],
+					"job_and_role_information": [
+						"financial analyst",
+						"accountant",
+						"chartered accountant",
+						"ca",
+						"finance manager",
+						"financial controller",
+						"auditor",
+						"tax consultant",
+						"accounts payable",
+						"accounts receivable",
+						"cfo",
+						"finance director",
+						"designation",
+						"current role",
+						"job title"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"india",
+						"bangalore",
+						"hyderabad",
+						"pune",
+						"chennai",
+						"mumbai",
+						"delhi",
+						"kolkata",
+						"ahmedabad"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]
