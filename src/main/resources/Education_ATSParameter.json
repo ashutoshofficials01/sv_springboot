@@ -4,140 +4,1539 @@
 			"atsGeneralId": 121,
 			"atsParamId": "ATS-121",
 			"logic_description": {
-				
+				"type": "CORE_DEV_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine education/academia professional profile",
+				"keywords": [
+					"teaching",
+					"education",
+					"pedagogy",
+					"curriculum",
+					"syllabus",
+					"lesson planning",
+					"lesson plan",
+					"classroom management",
+					"assessment",
+					"evaluation",
+					"student assessment",
+					"instruction",
+					"instructional design",
+					"differentiated instruction",
+					"learning outcomes",
+					"student engagement",
+					"student-centered learning",
+					"cooperative learning",
+					"active learning",
+					"mentoring",
+					"tutoring",
+					"academic advising",
+					"professional development",
+					"teacher training",
+					"educational technology",
+					"edtech",
+					"learning management system",
+					"lms",
+					"special education",
+					"iep",
+					"individualized education program",
+					"parent-teacher",
+					"parent involvement",
+					"behavior management",
+					"discipline strategies",
+					"rubric development",
+					"formative assessment",
+					"summative assessment"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 2,
+					"minimum_keyword_match_for_full_score": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 122,
 			"atsParamId": "ATS-122",
 			"logic_description": {
-				
+				"type": "TECH_SKILL_BREADTH",
+				"purpose": "Breadth of educational skills covering teaching methods, curriculum design, assessment, mentoring, and student engagement",
+				"skill_categories": {
+					"teaching_methods": [
+						"lesson planning",
+						"differentiated instruction",
+						"active learning",
+						"instructional design",
+						"flipped classroom"
+					],
+					"curriculum_design": [
+						"curriculum development",
+						"syllabus design",
+						"unit planning",
+						"standards alignment"
+					],
+					"assessment": [
+						"formative assessment",
+						"summative assessment",
+						"rubric development",
+						"student evaluation"
+					],
+					"mentoring": [
+						"student mentoring",
+						"academic advising",
+						"career counseling",
+						"tutoring"
+					],
+					"student_engagement": [
+						"classroom management",
+						"student engagement",
+						"behavior management",
+						"motivational techniques"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 3,
+					"minimum_category_match_for_full_score": 6
+				}
 			}
 		},
 		{
 			"atsGeneralId": 123,
 			"atsParamId": "ATS-123",
 			"logic_description": {
-				
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate education terms and abbreviations",
+				"keyword_variations": {
+					"teacher": [
+						"teacher",
+						"instructor",
+						"educator"
+					],
+					"curriculum": [
+						"curriculum",
+						"syllabus"
+					],
+					"assessment": [
+						"assessment",
+						"evaluation"
+					],
+					"classroom_management": [
+						"classroom management",
+						"behavior management"
+					],
+					"lesson_planning": [
+						"lesson planning",
+						"lesson plan"
+					],
+					"professional_development": [
+						"professional development",
+						"pd",
+						"teacher training"
+					],
+					"student_assessment": [
+						"student assessment",
+						"student evaluation"
+					],
+					"instructional_design": [
+						"instructional design",
+						"curriculum development"
+					],
+					"special_education": [
+						"special education",
+						"special ed"
+					],
+					"parent_teacher": [
+						"parent-teacher",
+						"ptc",
+						"parent involvement"
+					],
+					"differentiated_instruction": [
+						"differentiated instruction",
+						"di"
+					],
+					"learning_management_system": [
+						"learning management system",
+						"lms"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 124,
 			"atsParamId": "ATS-124",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 125,
 			"atsParamId": "ATS-125",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Clean layout avoiding excessive tables, graphics, or multi-column structures that reduce ATS readability",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\\t",
+						"----",
+						"____",
+						"<table",
+						"</table>"
+					],
+					"column_indicators": [
+						"  ",
+						"\\u00A0\\u00A0",
+						"||",
+						"column break"
+					],
+					"visual_separators": [
+						"•",
+						"▪",
+						"■"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 126,
 			"atsParamId": "ATS-126",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Use of standard, readable fonts suitable for ATS parsing",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"georgia",
+						"tahoma",
+						"verdana",
+						"cambria",
+						"garamond"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"lucida handwriting",
+						"chiller",
+						"script",
+						"handwriting"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 127,
 			"atsParamId": "ATS-127",
 			"logic_description": {
-				
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Presence of standard education resume sections such as Summary, Teaching Experience, Education, Certifications, and Skills",
+				"sections": [
+					"summary",
+					"professional summary",
+					"profile",
+					"teaching summary",
+					"academic summary",
+					"teaching experience",
+					"teaching and mentoring experience",
+					"academic experience",
+					"work experience",
+					"experience",
+					"education",
+					"academic qualifications",
+					"educational background",
+					"skills",
+					"teaching skills",
+					"academic skills",
+					"technical skills",
+					"certifications",
+					"teaching certifications",
+					"licenses and certifications"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 128,
 			"atsParamId": "ATS-128",
 			"logic_description": {
-				
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of sections commonly used in education-focused resumes",
+				"accepted_formats": {
+					"summary": [
+						"summary",
+						"professional summary",
+						"profile",
+						"teaching summary",
+						"academic summary"
+					],
+					"education": [
+						"education",
+						"academic qualifications",
+						"educational background",
+						"academic background"
+					],
+					"teaching_experience": [
+						"teaching experience",
+						"academic experience",
+						"teaching and mentoring experience",
+						"classroom experience"
+					],
+					"research_experience": [
+						"research experience",
+						"research and publications",
+						"academic research",
+						"research projects"
+					],
+					"skills": [
+						"skills",
+						"teaching skills",
+						"academic skills",
+						"technical skills"
+					],
+					"certifications": [
+						"certifications",
+						"licenses and certifications",
+						"teaching certifications",
+						"professional certifications"
+					],
+					"awards": [
+						"awards and honors",
+						"honors and awards",
+						"scholarships and awards",
+						"academic achievements"
+					],
+					"activities": [
+						"professional activities",
+						"professional memberships",
+						"associations and memberships",
+						"extracurricular activities"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 129,
 			"atsParamId": "ATS-129",
 			"logic_description": {
-				
+				"type": "EDUCATION_EXPERIENCE",
+				"purpose": "Detect presence of teaching, training, mentoring, or academic experience in schools, colleges, or institutions",
+				"experience_indicators": {
+					"job_titles": [
+						"teacher",
+						"lecturer",
+						"professor",
+						"trainer",
+						"instructor",
+						"academic coordinator",
+						"tutor",
+						"educator",
+						"faculty",
+						"research associate",
+						"teaching assistant",
+						"principal"
+					],
+					"internship_keywords": [
+						"intern",
+						"internship",
+						"trainee",
+						"apprentice"
+					],
+					"project_keywords": [
+						"project",
+						"curriculum design",
+						"lesson plan",
+						"research",
+						"workshop",
+						"seminar",
+						"developed course",
+						"organized training",
+						"conducted classes"
+					],
+					"experience_verbs": [
+						"taught",
+						"mentored",
+						"trained",
+						"instructed",
+						"guided",
+						"coordinated",
+						"developed",
+						"designed",
+						"organized",
+						"facilitated"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 130,
 			"atsParamId": "ATS-130",
 			"logic_description": {
-				
+				"type": "EDUCATION_JOB_TITLES",
+				"purpose": "Detect use of common education and academia job titles",
+				"recognized_titles": [
+					"teacher",
+					"lecturer",
+					"professor",
+					"trainer",
+					"instructor",
+					"academic coordinator",
+					"tutor",
+					"educator",
+					"faculty",
+					"research associate",
+					"teaching assistant",
+					"principal"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 131,
 			"atsParamId": "ATS-131",
 			"logic_description": {
-				
+				"type": "ACADEMIC_EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear, consistent, and chronological date formats representing academic roles, teaching experience, research positions, and education history",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present",
+					"Academic Year yyyy - yyyy",
+					"AY yyyy - yyyy"
+				],
+				"education_context_keywords": [
+					"lecturer",
+					"assistant professor",
+					"associate professor",
+					"professor",
+					"teacher",
+					"faculty",
+					"research assistant",
+					"research fellow",
+					"phd scholar",
+					"doctoral researcher",
+					"postdoctoral fellow",
+					"visiting faculty",
+					"adjunct faculty",
+					"teaching assistant",
+					"school",
+					"college",
+					"university",
+					"institute"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				},
+				"scoring_guidelines": {
+					"full_score_condition": "Academic or teaching roles display clear start and end dates in consistent formats showing progression over time",
+					"partial_score_condition": "Dates are present but formats are inconsistent or roles lack clear chronological ordering",
+					"penalty_condition": "Experience or education sections lack dates, use vague time references, or show overlapping or unclear timelines"
+				}
 			}
 		},
 		{
 			"atsGeneralId": 132,
 			"atsParamId": "ATS-132",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_TEACHING_IMPACT",
+				"purpose": "Detect quantified teaching outcomes using numbers, percentages, performance improvements, academic results, or student engagement metrics in education and academic resumes",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"percentage",
+						"pass rate",
+						"success rate",
+						"completion rate",
+						"attendance rate"
+					],
+					"student_outcome_metrics": [
+						"student performance",
+						"exam results",
+						"test scores",
+						"grades",
+						"learning outcomes",
+						"academic improvement",
+						"rank improvement"
+					],
+					"scale_metrics": [
+						"students",
+						"learners",
+						"classes",
+						"batches",
+						"sections",
+						"courses",
+						"subjects",
+						"departments"
+					],
+					"engagement_metrics": [
+						"engagement",
+						"participation",
+						"retention",
+						"dropout reduction",
+						"feedback score",
+						"course rating"
+					],
+					"efficiency_metrics": [
+						"improved",
+						"increased",
+						"reduced",
+						"enhanced",
+						"boosted",
+						"achieved",
+						"resulted in"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				},
+				"scoring_guidelines": {
+					"full_score_condition": "Clear quantified outcomes such as percentage improvement in results, pass rates, student engagement, or academic performance supported by numerical evidence",
+					"partial_score_condition": "Some numerical indicators present but impact is weakly connected to teaching outcomes",
+					"penalty_condition": "Generic statements like 'improved student performance' without numbers, scale, or measurable outcomes"
+				}
 			}
 		},
 		{
 			"atsGeneralId": 133,
 			"atsParamId": "ATS-133",
 			"logic_description": {
-				
+				"type": "TEACHING_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of teaching skills, subject expertise, instructional methodologies, and educational technologies in academic resumes",
+				"skill_groups": {
+					"subject_expertise": [
+						"mathematics",
+						"physics",
+						"chemistry",
+						"biology",
+						"computer science",
+						"information technology",
+						"engineering",
+						"mechanical engineering",
+						"civil engineering",
+						"electrical engineering",
+						"electronics",
+						"commerce",
+						"accounting",
+						"economics",
+						"business studies",
+						"management",
+						"history",
+						"geography",
+						"political science",
+						"sociology",
+						"psychology",
+						"english",
+						"literature",
+						"linguistics",
+						"education",
+						"pedagogy"
+					],
+					"teaching_methods": [
+						"lecture-based teaching",
+						"experiential learning",
+						"project-based learning",
+						"problem-based learning",
+						"inquiry-based learning",
+						"blended learning",
+						"flipped classroom",
+						"online teaching",
+						"hybrid teaching",
+						"student-centered learning",
+						"outcome-based education",
+						"competency-based education",
+						"curriculum design",
+						"lesson planning",
+						"assessment design",
+						"exam preparation"
+					],
+					"instructional_tools": [
+						"blackboard",
+						"whiteboard",
+						"smart board",
+						"projector",
+						"powerpoint",
+						"google slides",
+						"microsoft word",
+						"microsoft excel",
+						"learning management system",
+						"lms",
+						"moodle",
+						"blackboard lms",
+						"canvas lms",
+						"google classroom"
+					],
+					"learning_technologies": [
+						"e-learning",
+						"online assessment tools",
+						"virtual classroom",
+						"zoom",
+						"google meet",
+						"microsoft teams",
+						"educational software",
+						"digital content creation",
+						"video lectures",
+						"screen recording",
+						"quiz platforms",
+						"kahoot",
+						"mentimeter",
+						"coursera",
+						"udemy",
+						"nptel",
+						"swayam"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				},
+				"scoring_guidelines": {
+					"full_score_condition": "Clear and structured listing of teaching skills across subject expertise, teaching methods, instructional tools, and learning technologies",
+					"partial_score_condition": "Skills mentioned but limited to fewer groups or mixed within paragraphs without clarity",
+					"penalty_condition": "Vague statements such as 'good teaching skills' without specific subjects, tools, or methodologies"
+				}
 			}
 		},
 		{
 			"atsGeneralId": 134,
 			"atsParamId": "ATS-134",
 			"logic_description": {
-				
+				"type": "PEDAGOGICAL_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard pedagogical, instructional, and academic teaching practices",
+				"practice_groups": {
+					"lesson_planning_and_instruction": [
+						"lesson planning",
+						"lesson plan",
+						"instructional planning",
+						"curriculum planning",
+						"scheme of work",
+						"unit planning",
+						"learning objectives",
+						"learning outcomes",
+						"bloom's taxonomy",
+						"instructional strategies",
+						"classroom instruction",
+						"teaching methodology"
+					],
+					"assessment_and_evaluation": [
+						"assessment",
+						"formative assessment",
+						"summative assessment",
+						"continuous evaluation",
+						"rubrics",
+						"grading",
+						"exam setting",
+						"question paper design",
+						"student evaluation",
+						"learning assessment",
+						"outcome based education",
+						"obe",
+						"internal assessment",
+						"academic evaluation"
+					],
+					"student_engagement_and_mentoring": [
+						"student mentoring",
+						"academic mentoring",
+						"student guidance",
+						"counselling",
+						"academic advising",
+						"one on one mentoring",
+						"student engagement",
+						"learner engagement",
+						"classroom interaction",
+						"student support",
+						"remedial teaching"
+					],
+					"classroom_management": [
+						"classroom management",
+						"classroom discipline",
+						"student behavior management",
+						"inclusive classroom",
+						"diverse learners",
+						"special needs students",
+						"inclusive education practices",
+						"learning environment",
+						"classroom facilitation"
+					],
+					"curriculum_and_syllabus_design": [
+						"curriculum development",
+						"syllabus design",
+						"course design",
+						"course planning",
+						"academic curriculum",
+						"learning framework",
+						"credit based system",
+						"choice based credit system",
+						"cbcs",
+						"academic framework"
+					],
+					"teaching_methods_and_tools": [
+						"lecture method",
+						"discussion method",
+						"project based learning",
+						"problem based learning",
+						"experiential learning",
+						"blended learning",
+						"flipped classroom",
+						"active learning",
+						"collaborative learning",
+						"case study method"
+					],
+					"educational_technology_and_tools": [
+						"learning management system",
+						"lms",
+						"moodle",
+						"google classroom",
+						"blackboard",
+						"canvas lms",
+						"online teaching",
+						"virtual classroom",
+						"e learning",
+						"digital pedagogy",
+						"educational technology",
+						"smart classroom"
+					],
+					"academic_quality_and_compliance": [
+						"academic standards",
+						"quality assurance",
+						"naac",
+						"nba accreditation",
+						"ugc guidelines",
+						"outcome based education",
+						"obe framework",
+						"academic audit",
+						"teaching effectiveness",
+						"continuous improvement"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 135,
 			"atsParamId": "ATS-135",
 			"logic_description": {
-				
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant academic degrees, diplomas, and teaching certifications aligned with education, teaching, research, and academic roles",
+				"education_groups": {
+					"formal_academic_degrees": [
+						"bachelor of education",
+						"b.ed",
+						"master of education",
+						"m.ed",
+						"doctor of philosophy",
+						"phd",
+						"m.phil",
+						"bachelor of arts",
+						"b.a",
+						"master of arts",
+						"m.a",
+						"bachelor of science",
+						"b.sc",
+						"master of science",
+						"m.sc",
+						"bachelor of commerce",
+						"b.com",
+						"master of commerce",
+						"m.com",
+						"integrated b.ed",
+						"four year integrated degree",
+						"honours degree"
+					],
+					"teaching_and_professional_certifications": [
+						"teacher eligibility test",
+						"tet",
+						"ctet",
+						"ugc net",
+						"csir net",
+						"set",
+						"state eligibility test",
+						"d.el.ed",
+						"diploma in elementary education",
+						"nursery teacher training",
+						"ntt",
+						"special education certification",
+						"inclusive education certification",
+						"pedagogy certification",
+						"educational leadership certification"
+					],
+					"research_and_academic_credentials": [
+						"research scholar",
+						"doctoral research",
+						"post doctoral fellowship",
+						"postdoc",
+						"research methodology",
+						"academic research",
+						"peer reviewed publication",
+						"journal publication",
+						"conference paper",
+						"thesis",
+						"dissertation",
+						"research project"
+					],
+					"teacher_training_and_professional_development": [
+						"faculty development program",
+						"fdp",
+						"orientation program",
+						"refresher course",
+						"in service teacher training",
+						"continuous professional development",
+						"teacher training workshop",
+						"curriculum development training",
+						"assessment training",
+						"learning outcomes framework training"
+					],
+					"academic_coursework_and_specialization": [
+						"education",
+						"pedagogy",
+						"curriculum studies",
+						"educational psychology",
+						"child development",
+						"learning sciences",
+						"instructional design",
+						"assessment and evaluation",
+						"inclusive education",
+						"special education",
+						"educational administration",
+						"higher education studies"
+					],
+					"academic_keywords": [
+						"education",
+						"academic qualification",
+						"degree",
+						"diploma",
+						"certification",
+						"coursework",
+						"specialization",
+						"major",
+						"minor",
+						"cgpa",
+						"gpa",
+						"percentage",
+						"academic distinction"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 136,
 			"atsParamId": "ATS-136",
 			"logic_description": {
-				
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear and explicit naming of universities, colleges, education boards, and recognized certification institutions in academic resumes",
+				"clarity_groups": {
+					"universities_and_colleges_india": [
+						"indian institute of technology",
+						"iit",
+						"national institute of technology",
+						"nit",
+						"indian institute of science",
+						"iisc",
+						"central university",
+						"state university",
+						"deemed university",
+						"private university",
+						"government college",
+						"autonomous college",
+						"engineering college",
+						"arts and science college",
+						"teacher training college",
+						"college of education",
+						"delhi university",
+						"mumbai university",
+						"anna university",
+						"osmania university",
+						"savitribai phule pune university",
+						"calcutta university",
+						"madras university",
+						"banaras hindu university",
+						"aligarh muslim university",
+						"jamia millia islamia",
+						"jadavpur university",
+						"christ university",
+						"symbiosis",
+						"amity university",
+						"manipal university",
+						"vit university",
+						"srm university",
+						"university",
+						"college",
+						"institute",
+						"school of education"
+					],
+					"global_universities_and_institutions": [
+						"harvard university",
+						"stanford university",
+						"massachusetts institute of technology",
+						"mit",
+						"university of oxford",
+						"university of cambridge",
+						"imperial college london",
+						"university college london",
+						"ucla",
+						"uc berkeley",
+						"columbia university",
+						"princeton university",
+						"yale university",
+						"cornell university",
+						"carnegie mellon university",
+						"eth zurich",
+						"national university of singapore",
+						"nus",
+						"nanyang technological university",
+						"ntu",
+						"university of toronto",
+						"university of melbourne",
+						"university of sydney",
+						"technical university of munich"
+					],
+					"school_boards_and_councils": [
+						"cbse",
+						"central board of secondary education",
+						"icse",
+						"isc",
+						"council for the indian school certificate examinations",
+						"state board",
+						"state education board",
+						"higher secondary board",
+						"secondary education board",
+						"matriculation board",
+						"open schooling board",
+						"nios",
+						"national institute of open schooling"
+					],
+					"education_certification_and_training_bodies": [
+						"ugc",
+						"university grants commission",
+						"aicte",
+						"all india council for technical education",
+						"ncte",
+						"national council for teacher education",
+						"aiu",
+						"association of indian universities",
+						"ministry of education",
+						"government of india",
+						"state education department",
+						"directorate of education",
+						"teacher eligibility test",
+						"tet",
+						"ctet",
+						"net",
+						"ugc net",
+						"csir net",
+						"set"
+					],
+					"academic_certifications_and_diplomas": [
+						"bachelor of education",
+						"b.ed",
+						"master of education",
+						"m.ed",
+						"phd",
+						"doctor of philosophy",
+						"postgraduate diploma in education",
+						"d.el.ed",
+						"diploma in elementary education",
+						"integrated b.ed",
+						"teacher training certification",
+						"special education certification"
+					],
+					"online_and_distance_learning_institutions": [
+						"indira gandhi national open university",
+						"ignou",
+						"open university",
+						"distance education university",
+						"school of open learning",
+						"coursera",
+						"edx",
+						"nptel",
+						"swayam",
+						"futurelearn",
+						"khan academy",
+						"online teacher training program"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 137,
 			"atsParamId": "ATS-137",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe teaching, mentoring, research, and academic responsibilities",
+				"action_verb_groups": {
+					"teaching_and_instruction": [
+						"taught",
+						"instructed",
+						"delivered lectures",
+						"conducted classes",
+						"facilitated learning",
+						"trained students",
+						"guided classroom sessions",
+						"handled curriculum delivery",
+						"designed lesson plans",
+						"executed teaching plans"
+					],
+					"curriculum_and_academic_design": [
+						"designed curriculum",
+						"developed syllabus",
+						"structured course content",
+						"updated academic modules",
+						"aligned curriculum with standards",
+						"mapped learning outcomes",
+						"created instructional material",
+						"prepared academic framework",
+						"revised course structure"
+					],
+					"student_mentoring_and_guidance": [
+						"mentored students",
+						"guided learners",
+						"advised students",
+						"supervised projects",
+						"supported academic growth",
+						"counseled students",
+						"monitored student progress",
+						"provided academic guidance",
+						"facilitated career guidance"
+					],
+					"assessment_and_evaluation": [
+						"assessed students",
+						"evaluated performance",
+						"conducted examinations",
+						"graded assignments",
+						"reviewed academic work",
+						"measured learning outcomes",
+						"designed assessments",
+						"moderated evaluations",
+						"analyzed student results"
+					],
+					"research_and_academic_contribution": [
+						"conducted research",
+						"published papers",
+						"authored publications",
+						"presented research",
+						"contributed to journals",
+						"reviewed research work",
+						"participated in conferences",
+						"collaborated on research",
+						"developed research proposals"
+					],
+					"administration_and_coordination": [
+						"coordinated academic activities",
+						"managed academic records",
+						"organized schedules",
+						"handled departmental tasks",
+						"administered examinations",
+						"maintained documentation",
+						"coordinated faculty activities",
+						"supported institutional operations"
+					],
+					"leadership_and_responsibility": [
+						"led academic initiatives",
+						"headed department activities",
+						"chaired committees",
+						"supervised faculty",
+						"managed academic teams",
+						"took ownership of programs",
+						"driven academic improvements",
+						"handled institutional responsibilities"
+					],
+					"training_and_faculty_development": [
+						"conducted workshops",
+						"trained faculty",
+						"organized seminars",
+						"facilitated training programs",
+						"delivered faculty development sessions",
+						"led academic workshops",
+						"coordinated training initiatives"
+					],
+					"quality_and_accreditation": [
+						"ensured academic quality",
+						"maintained accreditation standards",
+						"prepared compliance reports",
+						"aligned with regulatory norms",
+						"supported accreditation processes",
+						"documented quality metrics",
+						"implemented academic standards"
+					],
+					"community_and_engagement": [
+						"engaged with parents",
+						"collaborated with institutions",
+						"coordinated outreach programs",
+						"organized academic events",
+						"participated in community initiatives",
+						"represented institution",
+						"facilitated industry-academia interaction"
+					],
+					"documentation_and_reporting": [
+						"documented academic processes",
+						"prepared reports",
+						"maintained academic records",
+						"authored institutional documents",
+						"compiled student data",
+						"created academic documentation",
+						"submitted compliance reports"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 138,
 			"atsParamId": "ATS-138",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, and academic writing issues that affect ATS parsing and academic credibility",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"teh",
+						"recieve",
+						"definately",
+						"seperate",
+						"occured",
+						"enviroment",
+						"acheive",
+						"maintainance",
+						"responsiblity",
+						"managment",
+						"langauge",
+						"comming",
+						"dependancy",
+						"intial",
+						"requrement",
+						"implimentation",
+						"statment",
+						"paramter",
+						"arguement",
+						"documantation",
+						"avaliable",
+						"compatiblity",
+						"continous",
+						"calender",
+						"defination",
+						"desciption",
+						"occurance",
+						"sucess",
+						"sucessful",
+						"thier",
+						"wierd",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"seperated",
+						"improvment"
+					],
+					"academic_spelling_errors": [
+						"curriculam",
+						"syllabusss",
+						"pedagogyical",
+						"methodolgy",
+						"assesment",
+						"assesed",
+						"assesing",
+						"ciriculam",
+						"acadamic",
+						"educaton",
+						"qualificaton",
+						"certificaton",
+						"dissertaion",
+						"thesisis",
+						"reseach",
+						"researchs",
+						"publicaton",
+						"referance",
+						"bibliograpy",
+						"citataion",
+						"evaluaton",
+						"supervison",
+						"mentership"
+					],
+					"grammar_red_flags": [
+						"i am responsible for teaching",
+						"worked as a teacher",
+						"handled classes",
+						"good knowledge of subjects",
+						"basic knowledge of teaching",
+						"worked in college",
+						"involved in teaching",
+						"helped students",
+						"my role was teaching",
+						"i was involved in academics",
+						"my responsibility includes teaching",
+						"worked under senior faculty",
+						"familiar with syllabus",
+						"knowledge about subjects",
+						"hands on experience on teaching"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without action verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward academic phrasing",
+						"sentence ending without punctuation",
+						"paragraph with single sentence",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without academic action verbs"
+					],
+					"capitalization_errors": [
+						"assistant professor",
+						"associate professor",
+						"lecturer",
+						"faculty member",
+						"head of department",
+						"phd scholar",
+						"research assistant",
+						"teaching assistant",
+						"academic coordinator",
+						"education consultant"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"paragraph copied text",
+						"informal tone",
+						"chat-like sentences",
+						"sms language",
+						"use of all caps",
+						"inconsistent font usage",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"dedicated teacher",
+						"passionate educator",
+						"student friendly",
+						"positive attitude",
+						"result oriented",
+						"enthusiastic mentor",
+						"dynamic academic",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to learn",
+						"excellent communication skills",
+						"strong teaching skills"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 1,
+					"max_allowed_errors_for_partial_score": 4,
+					"zero_score_if_errors_above": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 139,
 			"atsParamId": "ATS-139",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, tables, emojis, or graphical elements in education and academic resumes that reduce ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"passport photo",
+						"photograph",
+						"headshot",
+						"institution logo",
+						"college logo",
+						"university logo",
+						"school logo",
+						"department logo",
+						"icon image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🎓",
+						"📚",
+						"🧠",
+						"📖",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"academic chart",
+						"research chart",
+						"grade chart",
+						"cgpa chart",
+						"performance graph",
+						"visual graph"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"competency bar",
+						"knowledge meter",
+						"proficiency meter"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span",
+						"table layout",
+						"grid layout"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 140,
 			"atsParamId": "ATS-140",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Detect placement of critical education and academic resume information inside headers or footers which may not be reliably parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"google scholar",
+						"researchgate",
+						"orcid",
+						"portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"student name",
+						"candidate name",
+						"researcher name",
+						"faculty name",
+						"resume of",
+						"curriculum vitae",
+						"cv",
+						"academic cv"
+					],
+					"education_and_academic_information": [
+						"degree",
+						"course",
+						"program",
+						"bachelor",
+						"master",
+						"phd",
+						"doctoral",
+						"postdoctoral",
+						"diploma",
+						"certification",
+						"specialization",
+						"major",
+						"minor",
+						"roll number",
+						"registration number",
+						"enrollment number",
+						"student id",
+						"university",
+						"college",
+						"institution",
+						"school",
+						"department",
+						"faculty",
+						"research area"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"india",
+						"bangalore",
+						"hyderabad",
+						"pune",
+						"chennai",
+						"mumbai",
+						"new delhi",
+						"kolkata"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"running header",
+					"running footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]

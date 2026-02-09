@@ -4,140 +4,1420 @@
 			"atsGeneralId": 91,
 			"atsParamId": "ATS-091",
 			"logic_description": {
-				
+				"type": "CORE_DESIGN_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine creative or design professional profile",
+				"keywords": [
+					"graphic design",
+					"graphic designer",
+					"visual design",
+					"visual designer",
+					"ui",
+					"ux",
+					"ui/ux",
+					"user interface",
+					"user experience",
+					"interaction design",
+					"product design",
+					"web design",
+					"mobile design",
+					"responsive design",
+					"layout",
+					"grid system",
+					"composition",
+					"typography",
+					"font",
+					"color theory",
+					"color palette",
+					"branding",
+					"brand identity",
+					"logo design",
+					"illustration",
+					"iconography",
+					"wireframe",
+					"wireframing",
+					"mockup",
+					"prototype",
+					"prototyping",
+					"design system",
+					"style guide",
+					"creative direction",
+					"art direction",
+					"adobe photoshop",
+					"photoshop",
+					"adobe illustrator",
+					"illustrator",
+					"adobe indesign",
+					"indesign",
+					"figma",
+					"sketch",
+					"adobe xd",
+					"canva",
+					"after effects",
+					"motion design",
+					"visual storytelling",
+					"design thinking",
+					"usability",
+					"accessibility",
+					"a/b testing",
+					"user research"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 3,
+					"minimum_keyword_match_for_full_score": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 92,
 			"atsParamId": "ATS-092",
 			"logic_description": {
-				
+				"type": "DESIGN_SKILL_BREADTH",
+				"purpose": "Measure breadth of design skills across UI/UX, graphic design, branding, typography, illustration, and motion",
+				"skill_categories": {
+					"ui_ux_design": [
+						"ui",
+						"ux",
+						"ui/ux",
+						"user interface",
+						"user experience",
+						"interaction design",
+						"usability",
+						"accessibility",
+						"wireframe",
+						"wireframing",
+						"prototype",
+						"prototyping",
+						"user research",
+						"design thinking"
+					],
+					"graphic_design": [
+						"graphic design",
+						"visual design",
+						"layout",
+						"composition",
+						"grid system",
+						"print design",
+						"digital design",
+						"creative design"
+					],
+					"branding": [
+						"branding",
+						"brand identity",
+						"brand guidelines",
+						"logo design",
+						"visual identity",
+						"brand strategy",
+						"rebranding"
+					],
+					"typography": [
+						"typography",
+						"font selection",
+						"type hierarchy",
+						"kerning",
+						"leading",
+						"readability"
+					],
+					"illustration_and_iconography": [
+						"illustration",
+						"iconography",
+						"custom icons",
+						"vector illustration",
+						"sketching"
+					],
+					"motion_and_interactive_design": [
+						"motion design",
+						"animation",
+						"micro-interactions",
+						"after effects",
+						"lottie",
+						"interactive design"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 2,
+					"minimum_category_match_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 93,
 			"atsParamId": "ATS-093",
 			"logic_description": {
-				
+				"type": "DESIGN_KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate names, abbreviations, and synonymous terms commonly used in creative and design resumes",
+				"keyword_variations": {
+					"ui": [
+						"ui",
+						"user interface",
+						"interface design"
+					],
+					"ux": [
+						"ux",
+						"user experience",
+						"experience design"
+					],
+					"ui_ux": [
+						"ui/ux",
+						"ux/ui",
+						"user interface and user experience"
+					],
+					"graphic_design": [
+						"graphic design",
+						"visual design",
+						"visual communication"
+					],
+					"product_design": [
+						"product design",
+						"digital product design",
+						"design for products"
+					],
+					"branding": [
+						"branding",
+						"brand design",
+						"brand identity"
+					],
+					"logo_design": [
+						"logo design",
+						"logo creation",
+						"logotype"
+					],
+					"typography": [
+						"typography",
+						"type design",
+						"font design"
+					],
+					"wireframing": [
+						"wireframe",
+						"wireframing",
+						"low fidelity wireframes",
+						"lo-fi wireframes"
+					],
+					"prototyping": [
+						"prototype",
+						"prototyping",
+						"interactive prototype",
+						"hi-fi prototype"
+					],
+					"interaction_design": [
+						"interaction design",
+						"ixd",
+						"interaction designer"
+					],
+					"motion_design": [
+						"motion design",
+						"motion graphics",
+						"animation design"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 0,
+					"minimum_variation_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 94,
 			"atsParamId": "ATS-094",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if resume is uploaded in ATS-readable format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 95,
 			"atsParamId": "ATS-095",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex or visually heavy resume layouts such as multi-column designs, tables, graphics, and decorative elements that reduce ATS readability in creative and design resumes",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____",
+						"+---+"
+					],
+					"column_indicators": [
+						"  ",
+						"\u00A0\u00A0",
+						"||",
+						"two column",
+						"three column",
+						"left column",
+						"right column"
+					],
+					"graphic_elements": [
+						"icon",
+						"icons",
+						"infographic",
+						"illustration",
+						"visual chart",
+						"progress bar",
+						"skill bar",
+						"rating bar"
+					],
+					"visual_separators": [
+						"•",
+						"▪",
+						"■",
+						"◆",
+						"●"
+					],
+					"decorative_elements": [
+						"background image",
+						"overlay",
+						"watermark",
+						"shape",
+						"design element",
+						"decorative line"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 96,
 			"atsParamId": "ATS-096",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Ensure the resume uses readable, ATS-friendly fonts and avoids excessive decorative or script typography that may reduce machine readability in creative and design resumes",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new",
+						"inter",
+						"roboto",
+						"open sans",
+						"lato",
+						"montserrat"
+					],
+					"decorative_or_script_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller",
+						"lobster",
+						"pacifico",
+						"playfair display",
+						"dancing script",
+						"great vibes"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_decorative_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 97,
 			"atsParamId": "ATS-097",
 			"logic_description": {
-				
+				"type": "STANDARD_DESIGN_SECTIONS",
+				"purpose": "Check presence of essential sections commonly expected in Creative & Design resumes for ATS parsing",
+				"sections": [
+					"summary",
+					"professional summary",
+					"design summary",
+					"experience",
+					"work experience",
+					"design experience",
+					"skills",
+					"design skills",
+					"tools",
+					"portfolio",
+					"portfolio link",
+					"projects",
+					"design projects",
+					"education",
+					"certifications",
+					"awards",
+					"achievements"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 2,
+					"minimum_sections_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 98,
 			"atsParamId": "ATS-098",
 			"logic_description": {
-				
+				"type": "DESIGN_SECTION_ORDERING",
+				"purpose": "Check logical and ATS-friendly ordering of sections commonly used in creative and design resumes",
+				"accepted_formats": {
+					"summary": [
+						"summary",
+						"professional summary",
+						"design summary"
+					],
+					"skills": [
+						"skills",
+						"design skills",
+						"tools",
+						"technical skills"
+					],
+					"experience": [
+						"experience",
+						"work experience",
+						"design experience"
+					],
+					"portfolio": [
+						"portfolio",
+						"portfolio link",
+						"selected works"
+					],
+					"projects": [
+						"projects",
+						"design projects",
+						"case studies"
+					],
+					"education": [
+						"education",
+						"educational qualification"
+					],
+					"certifications": [
+						"certifications",
+						"courses",
+						"design certifications"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 99,
 			"atsParamId": "ATS-099",
 			"logic_description": {
-				
+				"type": "HANDS_ON_DESIGN_EXPERIENCE",
+				"purpose": "Detect presence of hands-on design experience through professional roles, freelance work, internships, or portfolio-based projects",
+				"experience_indicators": {
+					"design_job_titles": [
+						"graphic designer",
+						"visual designer",
+						"ui designer",
+						"ux designer",
+						"ui/ux designer",
+						"product designer",
+						"interaction designer",
+						"brand designer",
+						"motion designer",
+						"illustrator",
+						"creative designer",
+						"design lead",
+						"art director"
+					],
+					"freelance_and_contract_keywords": [
+						"freelance",
+						"freelancer",
+						"contract",
+						"contractual",
+						"consultant",
+						"independent designer",
+						"self-employed"
+					],
+					"internship_keywords": [
+						"design intern",
+						"intern",
+						"internship",
+						"trainee",
+						"apprentice"
+					],
+					"portfolio_and_project_keywords": [
+						"portfolio",
+						"case study",
+						"case studies",
+						"design project",
+						"projects",
+						"selected works",
+						"behance",
+						"dribbble",
+						"figma",
+						"adobe xd",
+						"prototype",
+						"wireframe",
+						"mockup"
+					],
+					"experience_verbs": [
+						"designed",
+						"created",
+						"conceptualized",
+						"illustrated",
+						"visualized",
+						"prototyped",
+						"wireframed",
+						"mocked up",
+						"executed",
+						"delivered",
+						"developed design systems",
+						"led design",
+						"collaborated with stakeholders",
+						"translated requirements into designs"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 100,
 			"atsParamId": "ATS-100",
 			"logic_description": {
-				
+				"type": "DESIGN_JOB_TITLES",
+				"purpose": "Detect use of recognized creative and design-related job titles",
+				"recognized_titles": [
+					"graphic designer",
+					"ui designer",
+					"ux designer",
+					"ui/ux designer",
+					"visual designer",
+					"product designer",
+					"interaction designer",
+					"motion designer",
+					"creative designer",
+					"creative lead",
+					"art director",
+					"design lead",
+					"brand designer",
+					"web designer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 101,
 			"atsParamId": "ATS-101",
 			"logic_description": {
-				
+				"type": "DESIGN_EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent project or employment timelines showing design career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present",
+					"Project: MMM yyyy - MMM yyyy",
+					"Freelance: yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 102,
 			"atsParamId": "ATS-102",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_DESIGN_IMPACT",
+				"purpose": "Detect quantified or outcome-based design impact such as engagement increase, conversion improvement, usability gains, or brand performance metrics",
+				"impact_indicators": {
+					"percentage_metrics": [
+						"%",
+						"percent",
+						"percentage"
+					],
+					"engagement_metrics": [
+						"engagement",
+						"click-through",
+						"CTR",
+						"bounce rate",
+						"retention",
+						"session duration",
+						"time on page"
+					],
+					"conversion_metrics": [
+						"conversion",
+						"conversion rate",
+						"sign-ups",
+						"leads",
+						"sales",
+						"revenue"
+					],
+					"usability_metrics": [
+						"usability",
+						"accessibility",
+						"task success",
+						"error rate",
+						"user satisfaction",
+						"CSAT"
+					],
+					"efficiency_outcomes": [
+						"reduced",
+						"improved",
+						"optimized",
+						"increased",
+						"decreased",
+						"streamlined",
+						"simplified"
+					],
+					"brand_metrics": [
+						"brand recall",
+						"brand awareness",
+						"visual consistency",
+						"design system adoption"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 103,
 			"atsParamId": "ATS-103",
 			"logic_description": {
-				
+				"type": "DESIGN_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of design tools, visual skills, UX methods, and prototyping capabilities",
+				"skill_groups": {
+					"design_tools": [
+						"figma",
+						"adobe photoshop",
+						"photoshop",
+						"adobe illustrator",
+						"illustrator",
+						"adobe xd",
+						"xd",
+						"sketch",
+						"invision",
+						"zeplin",
+						"canva",
+						"affinity designer",
+						"affinity photo"
+					],
+					"ux_ui_methods": [
+						"wireframing",
+						"prototyping",
+						"user research",
+						"usability testing",
+						"user flows",
+						"journey mapping",
+						"information architecture",
+						"interaction design",
+						"persona creation"
+					],
+					"visual_design_skills": [
+						"typography",
+						"color theory",
+						"layout design",
+						"grid systems",
+						"branding",
+						"visual identity",
+						"iconography",
+						"illustration"
+					],
+					"design_systems": [
+						"design systems",
+						"style guides",
+						"component libraries",
+						"atomic design",
+						"responsive design",
+						"mobile-first design"
+					],
+					"collaboration_and_handoff": [
+						"design handoff",
+						"developer handoff",
+						"design documentation",
+						"collaboration",
+						"stakeholder feedback",
+						"design reviews"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 104,
 			"atsParamId": "ATS-104",
 			"logic_description": {
-				
+				"type": "DESIGN_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and application of standard creative and design practices used in professional design workflows",
+				"practice_groups": {
+					"user_research": [
+						"user research",
+						"ux research",
+						"user interviews",
+						"stakeholder interviews",
+						"surveys",
+						"questionnaires",
+						"contextual inquiry",
+						"field studies",
+						"research synthesis",
+						"insights generation"
+					],
+					"usability_testing": [
+						"usability testing",
+						"user testing",
+						"a/b testing",
+						"heuristic evaluation",
+						"accessibility testing",
+						"task-based testing",
+						"prototype testing",
+						"feedback analysis",
+						"iteration based on feedback"
+					],
+					"design_systems": [
+						"design systems",
+						"style guides",
+						"component libraries",
+						"atomic design",
+						"pattern libraries",
+						"design tokens",
+						"visual consistency",
+						"scalable design"
+					],
+					"accessibility_and_inclusion": [
+						"accessibility",
+						"inclusive design",
+						"wcag",
+						"wcag 2.0",
+						"wcag 2.1",
+						"color contrast",
+						"keyboard navigation",
+						"screen reader support",
+						"aria labels",
+						"accessible typography"
+					],
+					"collaborative_design_practices": [
+						"design critiques",
+						"design reviews",
+						"cross-functional collaboration",
+						"stakeholder alignment",
+						"developer collaboration",
+						"handoff documentation",
+						"feedback loops",
+						"iteration cycles"
+					],
+					"design_process_frameworks": [
+						"design thinking",
+						"double diamond",
+						"human-centered design",
+						"lean ux",
+						"agile ux",
+						"sprint design",
+						"problem framing",
+						"solution ideation"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 1,
+					"minimum_practice_group_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 105,
 			"atsParamId": "ATS-105",
 			"logic_description": {
-				
+				"type": "DESIGN_EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, diploma, certification, or formal education aligned with creative, visual, or design disciplines",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of design",
+						"b.des",
+						"bdes",
+						"bachelor of fine arts",
+						"bfa",
+						"bachelor of visual arts",
+						"bachelor of arts",
+						"ba",
+						"master of design",
+						"m.des",
+						"mdes",
+						"master of fine arts",
+						"mfa",
+						"master of visual arts",
+						"visual communication",
+						"communication design",
+						"graphic design",
+						"interaction design",
+						"industrial design",
+						"product design",
+						"fashion design",
+						"interior design",
+						"animation",
+						"multimedia design",
+						"digital design"
+					],
+					"certifications": [
+						"certification",
+						"certified",
+						"adobe certified",
+						"adobe certified professional",
+						"figma certification",
+						"ux certification",
+						"ui certification",
+						"google ux certificate",
+						"interaction design foundation",
+						"nielsen norman group",
+						"coursera certificate",
+						"udemy certificate"
+					],
+					"online_courses": [
+						"coursera",
+						"udemy",
+						"udacity",
+						"edx",
+						"skillshare",
+						"linkedin learning",
+						"domestika",
+						"interaction design foundation",
+						"futurelearn",
+						"designlab"
+					],
+					"bootcamps_and_training": [
+						"design bootcamp",
+						"ux bootcamp",
+						"ui bootcamp",
+						"product design bootcamp",
+						"visual design training",
+						"multimedia training",
+						"creative workshop",
+						"professional design training"
+					],
+					"academic_keywords": [
+						"education",
+						"academic project",
+						"design project",
+						"final year project",
+						"thesis",
+						"portfolio project",
+						"coursework",
+						"major",
+						"minor",
+						"specialization",
+						"cgpa",
+						"gpa"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 106,
 			"atsParamId": "ATS-106",
 			"logic_description": {
-				
+				"type": "DESIGN_INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of recognized design schools, institutions, online learning platforms, and design certification bodies",
+				"clarity_groups": {
+					"design_schools_and_colleges": [
+						"national institute of design",
+						"nid",
+						"national institute of fashion technology",
+						"nift",
+						"srishti institute of art design and technology",
+						"srishti",
+						"mit institute of design",
+						"mitid",
+						"symbiosis institute of design",
+						"sid pune",
+						"pearl academy",
+						"arena animation",
+						"maac",
+						"jd institute of fashion technology",
+						"inifd",
+						"cept university",
+						"school of planning and architecture",
+						"spa",
+						"sir j j school of art",
+						"jj school of art",
+						"college of fine arts",
+						"school of visual arts",
+						"art and design college",
+						"design institute",
+						"design school",
+						"fine arts college",
+						"visual communication college",
+						"multimedia institute"
+					],
+					"global_design_universities": [
+						"parsons school of design",
+						"rhode island school of design",
+						"risd",
+						"school of visual arts",
+						"sva",
+						"royal college of art",
+						"central saint martins",
+						"university of the arts london",
+						"pratt institute",
+						"calarts",
+						"california institute of the arts",
+						"savannah college of art and design",
+						"scad",
+						"aaltouniversity",
+						"a university of the arts helsinki",
+						"domus academy",
+						"politecnico di milano",
+						"tongji university design",
+						"hong kong polytechnic university"
+					],
+					"design_certification_bodies": [
+						"adobe",
+						"adobe certified",
+						"adobe certified professional",
+						"figma",
+						"figma certification",
+						"google ux certificate",
+						"google design",
+						"interaction design foundation",
+						"ixdf",
+						"nielsen norman group",
+						"nng",
+						"ux certification",
+						"ui certification",
+						"product design certification",
+						"accessibility certification",
+						"wcag certification"
+					],
+					"online_learning_platforms": [
+						"coursera",
+						"udemy",
+						"udacity",
+						"edx",
+						"skillshare",
+						"linkedin learning",
+						"domestika",
+						"interaction design foundation",
+						"futurelearn",
+						"designlab",
+						"springboard",
+						"uxcel",
+						"careerfoundry",
+						"calarts online"
+					],
+					"training_and_bootcamps": [
+						"design bootcamp",
+						"ux bootcamp",
+						"ui bootcamp",
+						"product design bootcamp",
+						"graphic design training",
+						"visual design training",
+						"multimedia training",
+						"creative workshop",
+						"portfolio development program",
+						"professional design training",
+						"industry design program"
+					],
+					"recognized_and_government_bodies": [
+						"ugc",
+						"aicte",
+						"ministry of education",
+						"government of india",
+						"national skill development corporation",
+						"nsdc",
+						"skill india",
+						"state board of technical education"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 107,
 			"atsParamId": "ATS-107",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe creative, design, and visual communication work",
+				"action_verb_groups": {
+					"creative_execution": [
+						"designed",
+						"created",
+						"conceptualized",
+						"crafted",
+						"illustrated",
+						"visualized",
+						"developed visuals",
+						"produced designs",
+						"executed concepts",
+						"translated ideas into visuals"
+					],
+					"ui_ux_and_product_design": [
+						"designed interfaces",
+						"created wireframes",
+						"built prototypes",
+						"developed user flows",
+						"designed interactions",
+						"improved usability",
+						"enhanced user experience",
+						"conducted usability testing",
+						"iterated designs",
+						"designed responsive layouts"
+					],
+					"branding_and_identity": [
+						"defined brand identity",
+						"developed branding",
+						"created brand guidelines",
+						"designed logos",
+						"established visual language",
+						"maintained brand consistency",
+						"refreshed brand visuals",
+						"rebranded",
+						"aligned visuals with brand strategy"
+					],
+					"marketing_and_communication_design": [
+						"designed marketing collateral",
+						"created campaigns",
+						"developed creatives",
+						"designed advertisements",
+						"produced social media creatives",
+						"created promotional assets",
+						"designed pitch decks",
+						"visual storytelling",
+						"campaign execution"
+					],
+					"collaboration_and_stakeholder_work": [
+						"collaborated",
+						"worked closely with",
+						"partnered with",
+						"coordinated with teams",
+						"aligned with stakeholders",
+						"presented design concepts",
+						"incorporated feedback",
+						"worked cross-functionally"
+					],
+					"leadership_and_ownership": [
+						"led design initiatives",
+						"owned design projects",
+						"mentored junior designers",
+						"guided creative direction",
+						"reviewed designs",
+						"managed design deliverables",
+						"art directed",
+						"oversaw creative execution"
+					],
+					"problem_solving_and_iteration": [
+						"analyzed design problems",
+						"identified usability issues",
+						"solved visual challenges",
+						"refined layouts",
+						"iterated based on feedback",
+						"improved design clarity",
+						"optimized visual hierarchy",
+						"enhanced accessibility"
+					],
+					"tools_and_software_usage": [
+						"used figma",
+						"used adobe photoshop",
+						"used adobe illustrator",
+						"used adobe xd",
+						"used indesign",
+						"used after effects",
+						"used sketch",
+						"used canva",
+						"created design systems"
+					],
+					"production_and_delivery": [
+						"delivered final assets",
+						"exported production-ready files",
+						"prepared assets for development",
+						"handoff to developers",
+						"maintained design specs",
+						"ensured design accuracy",
+						"met creative deadlines"
+					],
+					"content_and_visual_quality": [
+						"maintained visual consistency",
+						"ensured design quality",
+						"polished visuals",
+						"refined typography",
+						"improved color harmony",
+						"enhanced layout balance",
+						"ensured aesthetic quality"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 108,
 			"atsParamId": "ATS-108",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, informal language, and formatting issues that negatively impact ATS parsing for creative and design resumes",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"desgin",
+						"creativ",
+						"illustraion",
+						"typogarphy",
+						"visul",
+						"brading",
+						"identiy",
+						"layot",
+						"graphcs",
+						"portoflio",
+						"conceptul",
+						"aesthtic",
+						"compisition",
+						"aligment",
+						"consistancy",
+						"colour",
+						"colur",
+						"fontt",
+						"pallete",
+						"wirefrme",
+						"mockupss",
+						"prototyp",
+						"storybaord",
+						"artwrok",
+						"animaton",
+						"usabilty",
+						"accessiblity"
+					],
+					"design_tool_spelling_errors": [
+						"photoshopr",
+						"photosop",
+						"illustartor",
+						"illustator",
+						"figmma",
+						"skecth",
+						"adob xd",
+						"afterefects",
+						"premier pro",
+						"canvaa",
+						"invisionn",
+						"zeplinn",
+						"framerx",
+						"corelldraw",
+						"blenderd",
+						"cinema4d"
+					],
+					"grammar_red_flags": [
+						"i am a creative designer",
+						"worked on multiple designs",
+						"responsible for designing",
+						"handled design work",
+						"good knowledge of design",
+						"basic knowledge of tools",
+						"worked on creatives",
+						"helped in designing",
+						"learning new design tools",
+						"my role was designer",
+						"i was involved in design",
+						"familiar with adobe tools",
+						"hands on experience in design"
+					],
+					"sentence_structure_issues": [
+						"sentence without action verb",
+						"sentence starting with lowercase",
+						"excessive line breaks",
+						"missing punctuation",
+						"bullet points without verbs",
+						"incomplete creative descriptions",
+						"run-on sentences",
+						"repeated adjectives",
+						"very long descriptive sentences",
+						"mix of past and present tense",
+						"portfolio links without context"
+					],
+					"capitalization_errors": [
+						"graphic designer",
+						"ui ux designer",
+						"visual designer",
+						"product designer",
+						"interaction designer",
+						"motion designer",
+						"brand designer",
+						"illustration artist",
+						"creative lead"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"many creatives",
+						"various designs",
+						"different styles",
+						"lots of visuals",
+						"very creative",
+						"highly aesthetic",
+						"best designs",
+						"many concepts"
+					],
+					"formatting_quality_issues": [
+						"emoji usage",
+						"excessive decorative symbols",
+						"text inside images only",
+						"inconsistent font usage",
+						"multiple font sizes",
+						"overdesigned layouts",
+						"decorative icons instead of bullets",
+						"misaligned sections",
+						"poor spacing",
+						"heavy color backgrounds affecting readability",
+						"non-selectable text"
+					],
+					"resume_filler_phrases": [
+						"creative thinker",
+						"design enthusiast",
+						"passionate designer",
+						"art lover",
+						"design is my passion",
+						"out of the box thinker",
+						"detail oriented creative",
+						"visual storyteller",
+						"design driven mindset",
+						"highly artistic"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 1,
+					"max_allowed_errors_for_partial_score": 4,
+					"zero_score_if_errors_above": 8
+				}
 			}
 		},
 		{
 			"atsGeneralId": 109,
 			"atsParamId": "ATS-109",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect excessive usage of images, icons, visual skill indicators, and decorative graphics commonly used in creative and design resumes that negatively impact ATS readability",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"headshot",
+						"portfolio thumbnail",
+						"project image",
+						"mockup image",
+						"design preview",
+						"visual sample",
+						"branding image",
+						"company logo",
+						"tool logo"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"➤",
+						"➔",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"⬤",
+						"◼",
+						"◻"
+					],
+					"emoji_indicators": [
+						"🎨",
+						"🖌",
+						"✏",
+						"📐",
+						"🖥",
+						"📱",
+						"🧠",
+						"💡",
+						"🔥",
+						"🚀",
+						"✨",
+						"🎯",
+						"✅",
+						"❌"
+					],
+					"graph_and_chart_indicators": [
+						"skill chart",
+						"design chart",
+						"visual chart",
+						"bar chart",
+						"pie chart",
+						"radial chart",
+						"donut chart",
+						"rating chart",
+						"competency chart"
+					],
+					"graphical_skill_bars": [
+						"skill bar",
+						"progress bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"competency meter",
+						"design proficiency bar",
+						"tool proficiency bar"
+					],
+					"decorative_layout_elements": [
+						"<table",
+						"</table>",
+						"grid layout",
+						"two column layout",
+						"multi column design",
+						"text over image",
+						"background shapes",
+						"decorative dividers",
+						"visual separators"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 110,
 			"atsParamId": "ATS-110",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Detect placement of critical creative and design resume information inside headers or footers which may not be reliably parsed by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"behance",
+						"dribbble",
+						"portfolio",
+						"design portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"designer",
+						"resume of",
+						"curriculum vitae",
+						"cv",
+						"creative resume",
+						"design resume"
+					],
+					"role_and_specialization_information": [
+						"graphic designer",
+						"ui designer",
+						"ux designer",
+						"ui/ux designer",
+						"product designer",
+						"visual designer",
+						"interaction designer",
+						"motion designer",
+						"creative designer",
+						"design lead",
+						"art director",
+						"current role",
+						"designation",
+						"job title"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"remote",
+						"hybrid",
+						"india",
+						"bangalore",
+						"hyderabad",
+						"pune",
+						"chennai",
+						"mumbai"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer",
+					"running header",
+					"running footer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]

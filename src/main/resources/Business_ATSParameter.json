@@ -4,140 +4,1497 @@
 			"atsGeneralId": 31,
 			"atsParamId": "ATS-0031",
 			"logic_description": {
-				
+				"type": "CORE_BUSINESS_KEYWORDS",
+				"purpose": "Identify whether the resume represents a genuine business or management professional profile",
+				"keywords": [
+					"business strategy",
+					"strategic planning",
+					"business development",
+					"operations",
+					"operations management",
+					"process improvement",
+					"process optimization",
+					"finance",
+					"financial analysis",
+					"budgeting",
+					"forecasting",
+					"p&l management",
+					"cost optimization",
+					"marketing",
+					"digital marketing",
+					"brand management",
+					"market research",
+					"go-to-market",
+					"sales strategy",
+					"revenue growth",
+					"crm",
+					"customer relationship management",
+					"stakeholder management",
+					"leadership",
+					"team management",
+					"people management",
+					"cross-functional collaboration",
+					"project management",
+					"program management",
+					"risk management",
+					"compliance",
+					"governance",
+					"supply chain",
+					"logistics",
+					"procurement",
+					"vendor management",
+					"negotiation",
+					"kpi",
+					"metrics",
+					"performance management",
+					"business analysis",
+					"business analyst",
+					"requirements gathering",
+					"process mapping",
+					"six sigma",
+					"lean",
+					"change management",
+					"organizational development",
+					"corporate strategy",
+					"management consulting",
+					"mba"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_keyword_match_for_partial_score": 3,
+					"minimum_keyword_match_for_full_score": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 32,
 			"atsParamId": "ATS-0032",
 			"logic_description": {
-				
+				"type": "BUSINESS_SKILL_BREADTH",
+				"purpose": "Measure breadth of business and management skills across strategy, operations, finance, sales, marketing, and analytics",
+				"skill_categories": {
+					"strategy": [
+						"business strategy",
+						"strategic planning",
+						"corporate strategy",
+						"growth strategy",
+						"go-to-market",
+						"competitive analysis",
+						"market entry"
+					],
+					"operations": [
+						"operations management",
+						"process improvement",
+						"process optimization",
+						"supply chain",
+						"logistics",
+						"procurement",
+						"vendor management",
+						"capacity planning"
+					],
+					"finance": [
+						"financial analysis",
+						"budgeting",
+						"forecasting",
+						"p&l management",
+						"cost optimization",
+						"financial reporting",
+						"variance analysis"
+					],
+					"sales": [
+						"sales strategy",
+						"business development",
+						"revenue growth",
+						"account management",
+						"crm",
+						"client acquisition",
+						"pipeline management"
+					],
+					"marketing": [
+						"marketing strategy",
+						"digital marketing",
+						"brand management",
+						"market research",
+						"customer segmentation",
+						"campaign management",
+						"product marketing"
+					],
+					"analytics": [
+						"business analytics",
+						"data analysis",
+						"kpi",
+						"metrics",
+						"performance tracking",
+						"dashboarding",
+						"excel",
+						"power bi",
+						"tableau"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_category_match_for_partial_score": 2,
+					"minimum_category_match_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 33,
 			"atsParamId": "ATS-0033",
 			"logic_description": {
-				
+				"type": "KEYWORD_VARIATIONS",
+				"purpose": "Identify usage of alternate business and management terms, acronyms, and abbreviations commonly used in business resumes",
+				"keyword_variations": {
+					"key_performance_indicators": [
+						"kpi",
+						"key performance indicator",
+						"key performance indicators"
+					],
+					"profit_and_loss": [
+						"p&l",
+						"profit and loss"
+					],
+					"return_on_investment": [
+						"roi",
+						"return on investment"
+					],
+					"business_to_business": [
+						"b2b",
+						"business to business"
+					],
+					"business_to_consumer": [
+						"b2c",
+						"business to consumer"
+					],
+					"customer_relationship_management": [
+						"crm",
+						"customer relationship management"
+					],
+					"enterprise_resource_planning": [
+						"erp",
+						"enterprise resource planning"
+					],
+					"supply_chain_management": [
+						"scm",
+						"supply chain management"
+					],
+					"human_resources": [
+						"hr",
+						"human resources"
+					],
+					"standard_operating_procedures": [
+						"sop",
+						"standard operating procedure",
+						"standard operating procedures"
+					],
+					"gross_margin": [
+						"gm",
+						"gross margin"
+					],
+					"operating_margin": [
+						"operating margin",
+						"op margin"
+					],
+					"cost_benefit_analysis": [
+						"cba",
+						"cost benefit analysis"
+					],
+					"market_research": [
+						"market research",
+						"market analysis"
+					],
+					"stakeholder_management": [
+						"stakeholder management",
+						"stakeholder coordination"
+					],
+					"project_management": [
+						"project management",
+						"pm"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_variation_match_for_partial_score": 1,
+					"minimum_variation_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 34,
 			"atsParamId": "ATS-0034",
 			"logic_description": {
-				
+				"type": "RESUME_FORMAT",
+				"purpose": "Check if business or management resume is uploaded in an ATS-readable file format",
+				"accepted_formats": {
+					"full_score": [
+						"docx",
+						"txt"
+					],
+					"partial_score": [
+						"pdf",
+						"doc"
+					]
+				}
 			}
 		},
 		{
 			"atsGeneralId": 35,
 			"atsParamId": "ATS-0035",
 			"logic_description": {
-				
+				"type": "LAYOUT_STRUCTURE",
+				"purpose": "Detect complex resume layouts such as tables, multi-column designs, and visual separators that reduce ATS readability in business and management resumes",
+				"layout_indicators": {
+					"table_indicators": [
+						"|",
+						"\t",
+						"----",
+						"____"
+					],
+					"column_indicators": [
+						"  ",
+						"\u00A0\u00A0",
+						"||"
+					],
+					"visual_separators": [
+						"•",
+						"▪",
+						"■"
+					]
+				},
+				"matching_rules": {
+					"max_allowed_layout_violations_for_full_score": 0,
+					"max_allowed_layout_violations_for_partial_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 36,
 			"atsParamId": "ATS-0036",
 			"logic_description": {
-				
+				"type": "FONT_READABILITY",
+				"purpose": "Evaluate whether the business or management resume uses standard, machine-readable fonts and avoids decorative fonts that reduce ATS readability",
+				"font_rules": {
+					"standard_fonts": [
+						"arial",
+						"calibri",
+						"times new roman",
+						"helvetica",
+						"verdana",
+						"tahoma",
+						"georgia",
+						"courier new"
+					],
+					"non_standard_fonts": [
+						"comic sans",
+						"papyrus",
+						"curlz mt",
+						"jokerman",
+						"brush script",
+						"impact",
+						"lucida handwriting",
+						"chiller"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"full_score_if_only_standard_fonts": true,
+					"partial_score_if_mixed_fonts": true,
+					"zero_score_if_only_non_standard_fonts": true
+				}
 			}
 		},
 		{
 			"atsGeneralId": 37,
 			"atsParamId": "ATS-0037",
 			"logic_description": {
-				
+				"type": "STANDARD_SECTIONS",
+				"purpose": "Verify the presence of commonly expected business and management resume sections",
+				"sections": [
+					"summary",
+					"professional summary",
+					"profile",
+					"experience",
+					"work experience",
+					"professional experience",
+					"skills",
+					"core competencies",
+					"business skills",
+					"education",
+					"achievements",
+					"key achievements",
+					"certifications"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_sections_for_partial_score": 3,
+					"minimum_sections_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 38,
 			"atsParamId": "ATS-0038",
 			"logic_description": {
-				
+				"type": "SECTION_ORDERING",
+				"purpose": "Check logical ordering of sections commonly used in business and management resumes",
+				"accepted_formats": {
+					"summary": [
+						"summary",
+						"professional summary",
+						"profile"
+					],
+					"skills": [
+						"skills",
+						"core competencies",
+						"business skills",
+						"key skills"
+					],
+					"experience": [
+						"experience",
+						"work experience",
+						"professional experience"
+					],
+					"achievements": [
+						"achievements",
+						"key achievements",
+						"professional achievements"
+					],
+					"education": [
+						"education",
+						"educational qualification",
+						"academic background"
+					],
+					"certifications": [
+						"certifications",
+						"certifications and accomplishments",
+						"professional certifications"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_order_violations_for_full_score": 0,
+					"max_order_violations_for_partial_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 39,
 			"atsParamId": "ATS-0039",
 			"logic_description": {
-				
+				"type": "HANDS_ON_BUSINESS_EXPERIENCE",
+				"purpose": "Detect presence of hands-on business and management experience through roles in operations, management, consulting, sales, or analysis",
+				"experience_indicators": {
+					"job_titles": [
+						"business analyst",
+						"management trainee",
+						"operations executive",
+						"operations manager",
+						"project manager",
+						"product manager",
+						"program manager",
+						"management consultant",
+						"strategy analyst",
+						"sales executive",
+						"account manager",
+						"relationship manager",
+						"marketing executive",
+						"brand manager"
+					],
+					"internship_keywords": [
+						"intern",
+						"internship",
+						"management trainee",
+						"graduate trainee",
+						"business trainee"
+					],
+					"project_keywords": [
+						"project",
+						"projects",
+						"case study",
+						"business case",
+						"market study",
+						"process improvement",
+						"go-to-market",
+						"financial analysis"
+					],
+					"experience_verbs": [
+						"managed",
+						"led",
+						"coordinated",
+						"analyzed",
+						"executed",
+						"implemented",
+						"optimized",
+						"streamlined",
+						"improved",
+						"delivered",
+						"supported",
+						"monitored"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 2,
+					"minimum_matches_for_full_score": 5
+				}
 			}
 		},
 		{
 			"atsGeneralId": 40,
 			"atsParamId": "ATS-040",
 			"logic_description": {
-				
+				"type": "BUSINESS_JOB_TITLES",
+				"purpose": "Detect use of recognized business and management job titles commonly used across corporate roles",
+				"recognized_titles": [
+					"business analyst",
+					"senior business analyst",
+					"management consultant",
+					"strategy consultant",
+					"operations manager",
+					"operations executive",
+					"project manager",
+					"program manager",
+					"product manager",
+					"account manager",
+					"relationship manager",
+					"sales manager",
+					"marketing manager",
+					"brand manager",
+					"growth manager",
+					"operations lead",
+					"team lead",
+					"assistant manager",
+					"manager"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_title_match_for_partial_score": 1,
+					"minimum_title_match_for_full_score": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 41,
 			"atsParamId": "ATS-041",
 			"logic_description": {
-				
+				"type": "EXPERIENCE_TIMELINE_CLARITY",
+				"purpose": "Detect clear and consistent employment or project timelines that demonstrate business or management career progression",
+				"date_patterns": [
+					"MMM yyyy",
+					"MMMM yyyy",
+					"MM/yyyy",
+					"yyyy-MM",
+					"yyyy",
+					"MMM yyyy - MMM yyyy",
+					"MMM yyyy - Present",
+					"yyyy - yyyy",
+					"yyyy - Present"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_date_matches_for_score": 1
+				}
 			}
 		},
 		{
 			"atsGeneralId": 42,
 			"atsParamId": "ATS-042",
 			"logic_description": {
-				
+				"type": "QUANTIFIED_BUSINESS_IMPACT",
+				"purpose": "Detect quantified business impact using revenue, growth, cost, targets, efficiency, or KPI-based metrics",
+				"impact_indicators": {
+					"financial_metrics": [
+						"revenue",
+						"profit",
+						"loss",
+						"p&l",
+						"margin",
+						"budget",
+						"cost",
+						"cost savings",
+						"expenses"
+					],
+					"growth_metrics": [
+						"%",
+						"percent",
+						"percentage",
+						"growth",
+						"increase",
+						"decrease",
+						"yoy",
+						"qoq"
+					],
+					"kpi_metrics": [
+						"kpi",
+						"kpis",
+						"targets",
+						"sla",
+						"okr",
+						"roi"
+					],
+					"scale_metrics": [
+						"clients",
+						"customers",
+						"accounts",
+						"markets",
+						"regions",
+						"teams"
+					],
+					"efficiency_metrics": [
+						"reduced",
+						"improved",
+						"optimized",
+						"streamlined",
+						"accelerated",
+						"saved"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_matches_for_partial_score": 1,
+					"minimum_matches_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 43,
 			"atsParamId": "ATS-043",
 			"logic_description": {
-				
+				"type": "BUSINESS_SKILLS_CLARITY",
+				"purpose": "Detect clear and explicit listing of core business, management, analytical, financial, and operational skills",
+				"skill_groups": {
+					"strategy_and_management": [
+						"business strategy",
+						"strategic planning",
+						"business planning",
+						"corporate strategy",
+						"roadmap planning",
+						"decision making",
+						"leadership",
+						"people management",
+						"stakeholder management"
+					],
+					"operations_and_process": [
+						"operations management",
+						"process improvement",
+						"process optimization",
+						"supply chain",
+						"logistics",
+						"vendor management",
+						"procurement",
+						"quality management",
+						"six sigma",
+						"lean"
+					],
+					"finance_and_commercial": [
+						"financial analysis",
+						"budgeting",
+						"forecasting",
+						"p&l management",
+						"cost control",
+						"pricing strategy",
+						"revenue management",
+						"profitability analysis"
+					],
+					"sales_and_marketing": [
+						"sales",
+						"business development",
+						"account management",
+						"client acquisition",
+						"market research",
+						"marketing strategy",
+						"brand management",
+						"digital marketing",
+						"crm"
+					],
+					"analytics_and_tools": [
+						"data analysis",
+						"business analytics",
+						"kpi tracking",
+						"dashboarding",
+						"excel",
+						"power bi",
+						"tableau",
+						"sql",
+						"presentation",
+						"reporting"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 44,
 			"atsParamId": "ATS-044",
 			"logic_description": {
-				
+				"type": "BUSINESS_PRACTICES_AWARENESS",
+				"purpose": "Detect awareness and usage of standard business and management practices",
+				"practice_groups": {
+					"stakeholder_management": [
+						"stakeholder management",
+						"stakeholder engagement",
+						"stakeholder communication",
+						"client management",
+						"vendor management",
+						"partner management",
+						"relationship management",
+						"cross-functional stakeholders",
+						"executive stakeholders",
+						"internal stakeholders",
+						"external stakeholders"
+					],
+					"business_reporting": [
+						"business reporting",
+						"management reporting",
+						"executive reporting",
+						"monthly reports",
+						"quarterly reports",
+						"kpi reporting",
+						"dashboard",
+						"performance metrics",
+						"status reports",
+						"variance analysis"
+					],
+					"financial_planning_forecasting": [
+						"forecasting",
+						"financial forecasting",
+						"budgeting",
+						"budget planning",
+						"financial planning",
+						"revenue forecasting",
+						"cost analysis",
+						"profitability analysis",
+						"p&l",
+						"expense management"
+					],
+					"compliance_risk_governance": [
+						"compliance",
+						"regulatory compliance",
+						"risk management",
+						"governance",
+						"internal controls",
+						"audit",
+						"statutory compliance",
+						"policy adherence",
+						"sox compliance",
+						"gdpr",
+						"regulatory requirements"
+					],
+					"process_improvement": [
+						"process improvement",
+						"process optimization",
+						"business process",
+						"process mapping",
+						"six sigma",
+						"lean",
+						"continuous improvement",
+						"operational excellence",
+						"standard operating procedures",
+						"sop"
+					],
+					"strategy_planning_execution": [
+						"business strategy",
+						"strategic planning",
+						"strategic execution",
+						"roadmap",
+						"business planning",
+						"growth strategy",
+						"market expansion",
+						"go-to-market strategy",
+						"competitive analysis",
+						"market analysis"
+					],
+					"project_program_management": [
+						"project management",
+						"program management",
+						"portfolio management",
+						"project planning",
+						"resource planning",
+						"risk mitigation",
+						"milestone tracking",
+						"delivery management",
+						"project lifecycle",
+						"pmo"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_practice_group_for_partial_score": 2,
+					"minimum_practice_group_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 45,
 			"atsParamId": "ATS-045",
 			"logic_description": {
-				
+				"type": "EDUCATIONAL_BACKGROUND_RELEVANCE",
+				"purpose": "Detect relevant degree, diploma, certification, or formal education aligned with business, management, finance, or economics",
+				"education_groups": {
+					"formal_degrees": [
+						"bachelor of business administration",
+						"bba",
+						"bachelor of management studies",
+						"bms",
+						"bachelor of commerce",
+						"b.com",
+						"bachelor of economics",
+						"master of business administration",
+						"mba",
+						"executive mba",
+						"master of commerce",
+						"m.com",
+						"master of management studies",
+						"mms",
+						"master of economics",
+						"finance",
+						"marketing",
+						"human resources",
+						"operations management",
+						"supply chain management",
+						"international business",
+						"business analytics"
+					],
+					"certifications": [
+						"certification",
+						"certified",
+						"pmp",
+						"prince2",
+						"six sigma",
+						"lean six sigma",
+						"cfa",
+						"frm",
+						"cpa",
+						"acca",
+						"cia",
+						"scrum master",
+						"product owner",
+						"itil",
+						"business analyst certification",
+						"cbap"
+					],
+					"online_courses": [
+						"coursera",
+						"udemy",
+						"edx",
+						"linkedin learning",
+						"great learning",
+						"upgrad",
+						"simplilearn",
+						"nptel",
+						"harvard online",
+						"wharton online"
+					],
+					"diplomas_and_training": [
+						"post graduate diploma",
+						"pgdm",
+						"diploma in management",
+						"diploma in finance",
+						"diploma in marketing",
+						"executive program",
+						"management training program",
+						"leadership program",
+						"corporate training"
+					],
+					"academic_keywords": [
+						"education",
+						"academic project",
+						"capstone project",
+						"business case study",
+						"internship",
+						"major",
+						"minor",
+						"specialization",
+						"cgpa",
+						"gpa",
+						"honors"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 46,
 			"atsParamId": "ATS-046",
 			"logic_description": {
-				
+				"type": "INSTITUTION_AND_CERTIFICATION_CLARITY",
+				"purpose": "Detect clear naming of business schools, management institutions, professional bodies, and business certifications",
+				"clarity_groups": {
+					"indian_business_schools": [
+						"iim",
+						"indian institute of management",
+						"iim ahmedabad",
+						"iim bangalore",
+						"iim calcutta",
+						"xlri",
+						"xavier school of management",
+						"fms delhi",
+						"faculty of management studies",
+						"mdi gurgaon",
+						"management development institute",
+						"sp jain",
+						"spjimr",
+						"nmims",
+						"symbiosis institute of business management",
+						"sibm",
+						"tiss",
+						"tata institute of social sciences",
+						"isb",
+						"indian school of business",
+						"great lakes institute of management",
+						"imt ghaziabad",
+						"jbims",
+						"jamnalal bajaj institute of management studies",
+						"narsee monjee institute of management studies",
+						"amity business school",
+						"christ university business school"
+					],
+					"global_business_schools": [
+						"harvard business school",
+						"hbs",
+						"wharton",
+						"wharton school",
+						"stanford graduate school of business",
+						"insead",
+						"london business school",
+						"lbs",
+						"mit sloan",
+						"booth school of business",
+						"chicago booth",
+						"kellogg school of management",
+						"columbia business school",
+						"yale school of management",
+						"haas school of business",
+						"uc berkeley haas",
+						"nyu stern",
+						"stern school of business",
+						"duke fuqua",
+						"fuqua school of business"
+					],
+					"professional_certifications": [
+						"pmp",
+						"project management professional",
+						"prince2",
+						"six sigma",
+						"lean six sigma",
+						"green belt",
+						"black belt",
+						"cfa",
+						"chartered financial analyst",
+						"frm",
+						"financial risk manager",
+						"cpa",
+						"certified public accountant",
+						"cma",
+						"certified management accountant",
+						"acca",
+						"certified scrum master",
+						"csm",
+						"safe agilist",
+						"product management certification",
+						"digital marketing certification",
+						"google digital marketing",
+						"meta marketing certification",
+						"hubspot certification"
+					],
+					"professional_bodies_and_associations": [
+						"pmi",
+						"project management institute",
+						"aicpa",
+						"association of chartered certified accountants",
+						"acca global",
+						"cfa institute",
+						"scrum alliance",
+						"international institute of business analysis",
+						"iiba",
+						"chartered institute of marketing",
+						"cim",
+						"american marketing association",
+						"ama"
+					],
+					"online_learning_platforms": [
+						"coursera",
+						"edx",
+						"udemy",
+						"udemy business",
+						"linkedin learning",
+						"great learning",
+						"upgrad",
+						"simplilearn",
+						"harvard online",
+						"wharton online",
+						"isb online",
+						"emerging markets institute",
+						"nptel",
+						"futurelearn"
+					],
+					"government_and_recognized_bodies": [
+						"ugc",
+						"aicte",
+						"aiu",
+						"ministry of education",
+						"govt of india",
+						"nsdc",
+						"skill india",
+						"state university",
+						"central university",
+						"deemed university",
+						"private university"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 1,
+					"minimum_group_match_for_full_score": 3
+				}
 			}
 		},
 		{
 			"atsGeneralId": 47,
 			"atsParamId": "ATS-047",
 			"logic_description": {
-				
+				"type": "ACTION_ORIENTED_DESCRIPTIONS",
+				"purpose": "Detect use of strong action verbs to describe business, management, leadership, and strategic work",
+				"action_verb_groups": {
+					"strategy_and_planning": [
+						"defined strategy",
+						"formulated strategy",
+						"developed business strategy",
+						"strategic planning",
+						"roadmap planning",
+						"business planning",
+						"go-to-market strategy",
+						"market entry strategy",
+						"growth strategy",
+						"expansion planning"
+					],
+					"leadership_and_people_management": [
+						"led",
+						"managed",
+						"supervised",
+						"mentored",
+						"coached",
+						"guided",
+						"built teams",
+						"team leadership",
+						"people management",
+						"performance management",
+						"conducted reviews",
+						"resource allocation",
+						"stakeholder leadership"
+					],
+					"operations_and_execution": [
+						"executed",
+						"implemented",
+						"delivered",
+						"drove execution",
+						"operationalized",
+						"streamlined operations",
+						"improved processes",
+						"process optimization",
+						"standardized workflows",
+						"operational efficiency",
+						"handled operations",
+						"day-to-day management"
+					],
+					"sales_and_business_development": [
+						"generated revenue",
+						"increased sales",
+						"closed deals",
+						"business development",
+						"client acquisition",
+						"account management",
+						"pipeline management",
+						"negotiated contracts",
+						"partnership development",
+						"key account handling",
+						"revenue growth"
+					],
+					"marketing_and_branding": [
+						"launched campaigns",
+						"executed marketing strategy",
+						"brand positioning",
+						"marketed products",
+						"customer acquisition",
+						"growth marketing",
+						"digital marketing",
+						"campaign optimization",
+						"demand generation",
+						"lead generation",
+						"brand awareness"
+					],
+					"finance_and_budgeting": [
+						"managed budget",
+						"financial planning",
+						"forecasted revenue",
+						"cost optimization",
+						"reduced costs",
+						"profitability analysis",
+						"pnl management",
+						"financial analysis",
+						"controlled expenses",
+						"budget allocation"
+					],
+					"analysis_and_decision_making": [
+						"analyzed",
+						"evaluated",
+						"assessed",
+						"identified opportunities",
+						"identified risks",
+						"business analysis",
+						"market analysis",
+						"competitive analysis",
+						"data-driven decisions",
+						"insight generation"
+					],
+					"stakeholder_and_client_management": [
+						"managed stakeholders",
+						"engaged stakeholders",
+						"client communication",
+						"client relationship management",
+						"handled client interactions",
+						"cross-functional coordination",
+						"vendor management",
+						"partner coordination"
+					],
+					"process_improvement_and_optimization": [
+						"optimized processes",
+						"improved efficiency",
+						"reduced turnaround time",
+						"enhanced productivity",
+						"process reengineering",
+						"continuous improvement",
+						"operational excellence",
+						"lean implementation"
+					],
+					"project_and_program_management": [
+						"managed projects",
+						"project execution",
+						"program management",
+						"delivered projects",
+						"met deadlines",
+						"managed timelines",
+						"managed risks",
+						"project planning",
+						"resource planning"
+					],
+					"compliance_and_governance": [
+						"ensured compliance",
+						"policy implementation",
+						"regulatory adherence",
+						"risk management",
+						"audit coordination",
+						"governance framework",
+						"process compliance"
+					],
+					"training_and_capability_building": [
+						"trained teams",
+						"conducted workshops",
+						"capability building",
+						"skill development",
+						"knowledge transfer",
+						"onboarding programs",
+						"learning initiatives"
+					],
+					"documentation_and_reporting": [
+						"prepared reports",
+						"created dashboards",
+						"management reporting",
+						"executive reporting",
+						"business documentation",
+						"presented insights",
+						"stakeholder presentations"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"minimum_group_match_for_partial_score": 2,
+					"minimum_group_match_for_full_score": 4
+				}
 			}
 		},
 		{
 			"atsGeneralId": 48,
 			"atsParamId": "ATS-048",
 			"logic_description": {
-				
+				"type": "CONTENT_QUALITY_GRAMMAR",
+				"purpose": "Detect spelling mistakes, grammatical errors, weak business phrasing, and noisy text that affects ATS parsing",
+				"error_detection_rules": {
+					"common_spelling_errors": [
+						"managment",
+						"mangement",
+						"responsiblity",
+						"resposibility",
+						"enviroment",
+						"enviornment",
+						"acheive",
+						"acheived",
+						"improvment",
+						"improvments",
+						"occurence",
+						"occured",
+						"definately",
+						"seperate",
+						"sucess",
+						"sucessful",
+						"comming",
+						"dependancy",
+						"requrement",
+						"implimentation",
+						"statment",
+						"desciption",
+						"defination",
+						"calender",
+						"untill",
+						"alot",
+						"becuase",
+						"refered",
+						"thier",
+						"wierd",
+						"intial"
+					],
+					"business_and_domain_spelling_errors": [
+						"stakehoder",
+						"stakeholderss",
+						"reveneu",
+						"revinue",
+						"profitablity",
+						"profitibility",
+						"finanace",
+						"finacial",
+						"accouting",
+						"budjet",
+						"forcasting",
+						"operatoins",
+						"operationaly",
+						"stratergy",
+						"stratigy",
+						"maneger",
+						"managment role",
+						"sales targt",
+						"customar",
+						"custmer",
+						"clinet",
+						"markting",
+						"brandng",
+						"comunication",
+						"negotation",
+						"collabaration"
+					],
+					"grammar_red_flags": [
+						"i am responsible for",
+						"worked on business",
+						"handled operations",
+						"good knowledge of",
+						"basic knowledge of",
+						"worked in team",
+						"involved in management",
+						"doing sales activities",
+						"helped to manage",
+						"worked as manager",
+						"learning business skills",
+						"my role was",
+						"i was involved",
+						"my responsibility includes",
+						"worked under guidance",
+						"familiar with business tools",
+						"knowledge about management",
+						"hands on experience on",
+						"exposure to business processes"
+					],
+					"sentence_structure_issues": [
+						"sentence without verb",
+						"sentence starting with lowercase",
+						"random line breaks",
+						"excessive commas",
+						"missing punctuation",
+						"bullet points without action verbs",
+						"incomplete sentences",
+						"run-on sentences",
+						"multiple spaces between words",
+						"repeated words",
+						"awkward phrasing",
+						"sentence ending without punctuation",
+						"very long sentences",
+						"improper tense usage",
+						"mix of past and present tense",
+						"list without outcomes"
+					],
+					"capitalization_errors": [
+						"business manager",
+						"operations manager",
+						"sales manager",
+						"marketing manager",
+						"finance manager",
+						"project manager",
+						"account manager",
+						"hr manager",
+						"business analyst",
+						"management trainee"
+					],
+					"repeated_noise_patterns": [
+						"etc etc",
+						"and etc",
+						"like wise",
+						"as well as also",
+						"many more",
+						"various kinds of",
+						"different types of",
+						"lots of",
+						"very much",
+						"too much",
+						"etc...",
+						"and many others",
+						"so on and so forth",
+						"kind of",
+						"sort of",
+						"basically",
+						"actually"
+					],
+					"formatting_quality_issues": [
+						"excessive symbols",
+						"random special characters",
+						"emoji usage",
+						"mixed bullet styles",
+						"inconsistent tense",
+						"chat-like sentences",
+						"informal tone",
+						"sms language",
+						"use of all caps",
+						"random capitalization",
+						"multiple font sizes",
+						"text alignment issues",
+						"irregular spacing",
+						"copy paste artifacts"
+					],
+					"resume_filler_phrases": [
+						"hard working",
+						"self motivated",
+						"quick learner",
+						"team player",
+						"positive attitude",
+						"result oriented",
+						"dynamic professional",
+						"goal oriented",
+						"career focused",
+						"highly motivated",
+						"eager to learn",
+						"dedicated professional",
+						"excellent communication skills",
+						"strong interpersonal skills",
+						"leadership qualities"
+					]
+				},
+				"scoring_rules": {
+					"max_allowed_errors_for_full_score": 2,
+					"max_allowed_errors_for_partial_score": 6,
+					"zero_score_if_errors_above": 10
+				}
 			}
 		},
 		{
 			"atsGeneralId": 49,
 			"atsParamId": "ATS-049",
 			"logic_description": {
-				
+				"type": "NON_TEXT_ELEMENTS_USAGE",
+				"purpose": "Detect usage of images, icons, charts, dashboards, progress indicators, emojis, or graphical elements that reduce ATS readability in business and management resumes",
+				"non_text_indicators": {
+					"image_indicators": [
+						"<img",
+						"image:",
+						"profile photo",
+						"profile picture",
+						"photograph",
+						"headshot",
+						"logo",
+						"company logo",
+						"organization logo",
+						"brand logo",
+						"watermark",
+						"background image"
+					],
+					"icon_and_symbol_indicators": [
+						"★",
+						"☆",
+						"✓",
+						"✔",
+						"✘",
+						"✗",
+						"●",
+						"○",
+						"◆",
+						"▶",
+						"→",
+						"←",
+						"↑",
+						"↓",
+						"➤",
+						"➔",
+						"■",
+						"▪",
+						"▫"
+					],
+					"emoji_indicators": [
+						"😀",
+						"😃",
+						"😄",
+						"😁",
+						"🔥",
+						"🚀",
+						"💡",
+						"📌",
+						"📊",
+						"📈",
+						"📉",
+						"🎯",
+						"✅",
+						"❌",
+						"💼",
+						"🏆",
+						"📋"
+					],
+					"graph_and_chart_indicators": [
+						"chart",
+						"graph",
+						"bar graph",
+						"pie chart",
+						"line chart",
+						"kpi chart",
+						"performance chart",
+						"sales chart",
+						"revenue chart",
+						"growth chart",
+						"dashboard",
+						"analytics dashboard",
+						"performance dashboard",
+						"visual analytics"
+					],
+					"graphical_skill_bars": [
+						"progress bar",
+						"skill bar",
+						"rating bar",
+						"percentage bar",
+						"visual rating",
+						"graphical rating",
+						"skill meter",
+						"competency bar",
+						"proficiency bar"
+					],
+					"table_and_layout_graphics": [
+						"<table",
+						"</table>",
+						"|---",
+						"| --- |",
+						"cell padding",
+						"row span",
+						"column span",
+						"grid layout",
+						"multi-column layout",
+						"two column resume"
+					]
+				},
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_non_text_elements_for_full_score": 0,
+					"max_allowed_non_text_elements_for_partial_score": 1,
+					"zero_score_if_non_text_elements_above": 2
+				}
 			}
 		},
 		{
 			"atsGeneralId": 50,
 			"atsParamId": "ATS-050",
 			"logic_description": {
-				
+				"type": "HEADER_FOOTER_CONTENT_PLACEMENT",
+				"purpose": "Detect placement of critical business resume information inside headers or footers which may not be parsed correctly by ATS systems",
+				"critical_information_indicators": {
+					"contact_information": [
+						"email",
+						"e-mail",
+						"@gmail.com",
+						"@yahoo.com",
+						"@outlook.com",
+						"@hotmail.com",
+						"phone",
+						"mobile",
+						"contact",
+						"contact number",
+						"phone number",
+						"linkedin",
+						"portfolio",
+						"website",
+						"www."
+					],
+					"identity_information": [
+						"name",
+						"full name",
+						"candidate name",
+						"resume of",
+						"curriculum vitae",
+						"cv",
+						"profile"
+					],
+					"job_and_role_information": [
+						"business analyst",
+						"management consultant",
+						"project manager",
+						"product manager",
+						"operations manager",
+						"program manager",
+						"account manager",
+						"sales manager",
+						"marketing manager",
+						"finance manager",
+						"strategy consultant",
+						"designation",
+						"current role",
+						"job title"
+					],
+					"location_information": [
+						"location",
+						"address",
+						"city",
+						"state",
+						"country",
+						"india",
+						"bangalore",
+						"bengaluru",
+						"hyderabad",
+						"pune",
+						"chennai",
+						"mumbai",
+						"delhi",
+						"gurgaon",
+						"noida"
+					]
+				},
+				"header_footer_indicators": [
+					"header",
+					"footer",
+					"page header",
+					"page footer",
+					"top margin",
+					"bottom margin",
+					"page number",
+					"confidential",
+					"document footer",
+					"running header",
+					"running footer"
+				],
+				"matching_rules": {
+					"case_sensitive": false,
+					"max_allowed_header_footer_violations_for_full_score": 0,
+					"max_allowed_header_footer_violations_for_partial_score": 1,
+					"zero_score_if_violations_above": 2
+				}
 			}
 		}
 	]
