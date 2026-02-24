@@ -2796,6 +2796,8 @@ public class GeneralATSUtil {
 				+ ats_156_score + ats_157_score + ats_158_score + ats_159_score + ats_160_score + ats_161_score
 				+ ats_162_score + ats_163_score + ats_164_score + ats_165_score + ats_166_score + ats_167_score
 				+ ats_168_score + ats_169_score + ats_170_score;
+		
+		System.out.println(" ATS Combined Score :: "+ ats_Combined_Score);
 
 //		combinedDto = new AtsListDto();
 //		combinedGenDto = new AtsGenParamDto();

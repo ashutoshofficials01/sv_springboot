@@ -26,6 +26,7 @@ import com.app.sv_springboot.entities.Res_Score_Entity;
 import com.app.sv_springboot.services.ScoreService;
 import com.app.sv_springboot.util.GeneralATSUtil;
 
+import ch.qos.logback.classic.Logger;
 import jakarta.annotation.PostConstruct;
 import tools.jackson.databind.ObjectMapper;
 
@@ -312,7 +313,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateEducation_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 141) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -412,8 +413,10 @@ public class ScoreServiceImpl implements ScoreService {
 //			atsScore = genATSUtil.calculateATSScore(fileName, file);
 			recievedRes = genATSUtil.calculateFinance_ATSScore(fileName, file);
 
+			System.out.println("recievedRes => " + recievedRes);
+
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 171) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -514,7 +517,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateBusiness_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 51) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -615,7 +618,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateTourism_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 291) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -716,7 +719,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateHealthcare_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 231) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -817,7 +820,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateLegal_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 261) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -918,7 +921,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateGovernment_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 201) {
 					atsScore = rev.getAtsScore();
 				}
 			}
@@ -1019,7 +1022,7 @@ public class ScoreServiceImpl implements ScoreService {
 			recievedRes = genATSUtil.calculateDesign_ATSScore(fileName, file);
 
 			for (AtsListDto rev : recievedRes) {
-				if (rev.getAtsGeneralId() == 21) {
+				if (rev.getAtsGeneralId() == 111) {
 					atsScore = rev.getAtsScore();
 				}
 			}
