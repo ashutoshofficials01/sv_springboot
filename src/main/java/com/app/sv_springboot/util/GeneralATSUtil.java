@@ -5683,7 +5683,7 @@ public class GeneralATSUtil {
 		long ats_099_score = 0;
 		long ats_100_score = 0;
 		long ats_101_score = 0;
-		long ats_111_score = 0;
+		long ats_102_score = 0;
 		long ats_103_score = 0;
 		long ats_104_score = 0;
 		long ats_105_score = 0;
@@ -5973,25 +5973,25 @@ public class GeneralATSUtil {
 						}
 						break;
 
-					case "ATS-111":
+					case "ATS-102":
 						if (atsParamId.equalsIgnoreCase(genATSParamId)) {
 
 							long generalATSId = agp.getAtsGeneralId();
 
-							AtsListDto ats_111_obj = designAtsUtil.calculateATS111(atsParamId, generalATSId, fileName,
+							AtsListDto ats_102_obj = designAtsUtil.calculateATS102(atsParamId, generalATSId, fileName,
 									file);
 
-							if (ats_111_obj != null) {
-								ats_111_score = ats_111_obj.getAtsScore();
-								storeJSONs.add(ats_111_obj);
+							if (ats_102_obj != null) {
+								ats_102_score = ats_102_obj.getAtsScore();
+								storeJSONs.add(ats_102_obj);
 							}
-//						ats_111_score = calculateATS111(atsParamId, generalATSId, fileName, file);
+//						ats_102_score = calculateATS102(atsParamId, generalATSId, fileName, file);
 //
-//						JSONObject ats_111_obj = calculateATS111(atsParamId, generalATSId, fileName, file);
+//						JSONObject ats_102_obj = calculateATS102(atsParamId, generalATSId, fileName, file);
 //
-//						ats_111_score = ats_111_obj.getLong("ats111_points");
+//						ats_102_score = ats_102_obj.getLong("ats102_points");
 //
-//						storeJSONs.add(ats_111_obj);
+//						storeJSONs.add(ats_102_obj);
 
 						}
 
@@ -6198,13 +6198,13 @@ public class GeneralATSUtil {
 				+ "\nATS-093 => " + ats_093_score + "\nATS-094 => " + ats_094_score + "\nATS-095 => " + ats_095_score
 				+ "\nATS-096 => " + ats_096_score + "\nATS-097 => " + ats_097_score + "\nATS-098 => " + ats_098_score
 				+ "\nATS-099 => " + ats_099_score + "\nATS-100 => " + ats_100_score + "\nATS-101 => " + ats_101_score
-				+ "\nATS-111 => " + ats_111_score + "\nATS-103 => " + ats_103_score + "\nATS-104 => " + ats_104_score
+				+ "\nATS-102 => " + ats_102_score + "\nATS-103 => " + ats_103_score + "\nATS-104 => " + ats_104_score
 				+ "\nATS-105 => " + ats_105_score + "\nATS-106 => " + ats_106_score + "\nATS-107 => " + ats_107_score
 				+ "\nATS-108 => " + ats_108_score + "\nATS-109 => " + ats_109_score + "\nATS-110 => " + ats_110_score);
 
 		ats_Combined_Score = ats_091_score + ats_092_score + ats_093_score + ats_094_score + ats_095_score
 				+ ats_096_score + ats_097_score + ats_098_score + ats_099_score + ats_100_score + ats_101_score
-				+ ats_111_score + ats_103_score + ats_104_score + ats_105_score + ats_106_score + ats_107_score
+				+ ats_102_score + ats_103_score + ats_104_score + ats_105_score + ats_106_score + ats_107_score
 				+ ats_108_score + ats_109_score + ats_110_score;
 
 //		combinedDto = new AtsListDto();

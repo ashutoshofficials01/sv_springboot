@@ -615,7 +615,7 @@ public class DesignAtsUtil {
 
 			List<String> standardFonts = (List<String>) fontRules.get("standard_fonts");
 
-			List<String> nonStandardFonts = (List<String>) fontRules.get("non_standard_fonts");
+			List<String> nonStandardFonts = (List<String>) fontRules.get("decorative_or_script_fonts");
 
 			// 4 Extract matching_rules
 			Map<String, Object> matchingRules = (Map<String, Object>) logicDescription.get("matching_rules");
@@ -626,7 +626,7 @@ public class DesignAtsUtil {
 
 			boolean partialScoreIfMixed = (boolean) matchingRules.get("partial_score_if_mixed_fonts");
 
-			boolean zeroScoreIfNonStandard = (boolean) matchingRules.get("zero_score_if_only_non_standard_fonts");
+			boolean zeroScoreIfNonStandard = (boolean) matchingRules.get("zero_score_if_only_decorative_fonts");
 
 			long fullScore = genATSParamData.getMax_points();
 			long partialScore = genATSParamData.getPenalty_points();
@@ -1248,15 +1248,15 @@ public class DesignAtsUtil {
 		}
 	}
 
-	public AtsListDto calculateATS111(String atsParamId, long atsGeneralId, String fileName, MultipartFile file) {
-		AtsListDto calAts111 = new AtsListDto();
-		AtsGenParamDto calAtsGen111 = new AtsGenParamDto();
-		long ats111_points = 0;
+	public AtsListDto calculateATS102(String atsParamId, long atsGeneralId, String fileName, MultipartFile file) {
+		AtsListDto calAts102 = new AtsListDto();
+		AtsGenParamDto calAtsGen102 = new AtsGenParamDto();
+		long ats102_points = 0;
 		try {
 			// 1️ Fetch JSON config
-			Map<String, Object> ats111ParamData = getGeneralDesignATSParam(atsGeneralId, atsParamId);
+			Map<String, Object> ats102ParamData = getGeneralDesignATSParam(atsGeneralId, atsParamId);
 
-			if (ats111ParamData == null) {
+			if (ats102ParamData == null) {
 				return null;
 			}
 
@@ -1268,7 +1268,7 @@ public class DesignAtsUtil {
 			}
 
 			// 3 Extract logic_description
-			Map<String, Object> logicDescription = (Map<String, Object>) ats111ParamData.get("logic_description");
+			Map<String, Object> logicDescription = (Map<String, Object>) ats102ParamData.get("logic_description");
 
 			Map<String, List<String>> impactIndicators = (Map<String, List<String>>) logicDescription
 					.get("impact_indicators");
@@ -1298,7 +1298,7 @@ public class DesignAtsUtil {
 					String key = caseSensitive ? indicator : indicator.toLowerCase();
 
 					if (resumeText.contains(key)) {
-						System.out.println("ATS-111 :: " + key);
+						System.out.println("ATS-102 :: " + key);
 						impactMatchCount++;
 					}
 				}
@@ -1313,11 +1313,11 @@ public class DesignAtsUtil {
 
 			// 7 Scoring
 			if (impactMatchCount >= minFull) {
-				ats111_points = genATSParamData.getMax_points();
+				ats102_points = genATSParamData.getMax_points();
 			} else if (impactMatchCount >= minPartial && impactMatchCount < minFull) {
-				ats111_points = genATSParamData.getMax_points() - genATSParamData.getPenalty_points();
+				ats102_points = genATSParamData.getMax_points() - genATSParamData.getPenalty_points();
 			} else if (impactMatchCount < minPartial) {
-				ats111_points = 0;
+				ats102_points = 0;
 			}
 
 			// 7 Storing Data
@@ -1325,34 +1325,34 @@ public class DesignAtsUtil {
 			long partial = genATSParamData.getMax_points() - genATSParamData.getPenalty_points();
 			String paramType = "";
 
-			if (ats111_points == max) {
+			if (ats102_points == max) {
 				paramType = "positive";
-			} else if (ats111_points == partial) {
+			} else if (ats102_points == partial) {
 				paramType = "partial";
-			} else if (ats111_points == 0) {
+			} else if (ats102_points == 0) {
 				paramType = "negative";
 			}
 
-			calAtsGen111.setAtsGeneralId(genATSParamData.getAtsGeneralId());
-			calAtsGen111.setAtsParamId(genATSParamData.getAtsParamId());
-			calAtsGen111.setCategory(genATSParamData.getCategory());
-			calAtsGen111.setDescription(genATSParamData.getDescription());
-			calAtsGen111.setMax_points(genATSParamData.getMax_points());
-			calAtsGen111.setParameter(genATSParamData.getParameter());
-			calAtsGen111.setPenalty_points(genATSParamData.getPenalty_points());
-			calAtsGen111.setTotal_points(genATSParamData.getTotal_points());
+			calAtsGen102.setAtsGeneralId(genATSParamData.getAtsGeneralId());
+			calAtsGen102.setAtsParamId(genATSParamData.getAtsParamId());
+			calAtsGen102.setCategory(genATSParamData.getCategory());
+			calAtsGen102.setDescription(genATSParamData.getDescription());
+			calAtsGen102.setMax_points(genATSParamData.getMax_points());
+			calAtsGen102.setParameter(genATSParamData.getParameter());
+			calAtsGen102.setPenalty_points(genATSParamData.getPenalty_points());
+			calAtsGen102.setTotal_points(genATSParamData.getTotal_points());
 
-			calAts111.setAtsGeneralId(atsGeneralId);
-			calAts111.setAtsGeneralParamDto(calAtsGen111);
-			calAts111.setAtsParamData(ats111ParamData);
-			calAts111.setAtsParamId(atsParamId);
-			calAts111.setAtsParamType(paramType);
-			calAts111.setAtsScore(ats111_points);
+			calAts102.setAtsGeneralId(atsGeneralId);
+			calAts102.setAtsGeneralParamDto(calAtsGen102);
+			calAts102.setAtsParamData(ats102ParamData);
+			calAts102.setAtsParamId(atsParamId);
+			calAts102.setAtsParamType(paramType);
+			calAts102.setAtsScore(ats102_points);
 
-			return calAts111;
+			return calAts102;
 		} catch (Exception e) {
 			e.printStackTrace();
-			return calAts111;
+			return calAts102;
 		}
 	}
 
