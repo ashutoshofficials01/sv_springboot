@@ -28,7 +28,7 @@ public class LoginController {
 		try {
 			return loginService.checkLogin(role, emailId, password);
 		} catch (Exception e) {
-			logger.error("An error has occurred while gfetching Login Status {} ", e.getMessage(), e);
+			logger.error("An error has occurred while fetching Login Status {} ", e.getMessage(), e);
 			return null;
 		}
 	}
@@ -38,7 +38,7 @@ public class LoginController {
 		try {
 			return loginService.registerUser(regSet);
 		} catch (Exception e) {
-			logger.error("An error has occurred while gfetching Login Status {} ", e.getMessage(), e);
+			logger.error("An error has occurred while fetching Login Status {} ", e.getMessage(), e);
 			return null;
 		}
 	}

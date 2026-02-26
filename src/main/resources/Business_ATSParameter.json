@@ -2,7 +2,7 @@
 	"Business_ATSParameter": [
 		{
 			"atsGeneralId": 31,
-			"atsParamId": "ATS-0031",
+			"atsParamId": "ATS-031",
 			"logic_description": {
 				"type": "CORE_BUSINESS_KEYWORDS",
 				"purpose": "Identify whether the resume represents a genuine business or management professional profile",
@@ -68,7 +68,7 @@
 		},
 		{
 			"atsGeneralId": 32,
-			"atsParamId": "ATS-0032",
+			"atsParamId": "ATS-032",
 			"logic_description": {
 				"type": "BUSINESS_SKILL_BREADTH",
 				"purpose": "Measure breadth of business and management skills across strategy, operations, finance, sales, marketing, and analytics",
@@ -140,7 +140,7 @@
 		},
 		{
 			"atsGeneralId": 33,
-			"atsParamId": "ATS-0033",
+			"atsParamId": "ATS-033",
 			"logic_description": {
 				"type": "KEYWORD_VARIATIONS",
 				"purpose": "Identify usage of alternate business and management terms, acronyms, and abbreviations commonly used in business resumes",
@@ -221,7 +221,7 @@
 		},
 		{
 			"atsGeneralId": 34,
-			"atsParamId": "ATS-0034",
+			"atsParamId": "ATS-034",
 			"logic_description": {
 				"type": "RESUME_FORMAT",
 				"purpose": "Check if business or management resume is uploaded in an ATS-readable file format",
@@ -239,7 +239,7 @@
 		},
 		{
 			"atsGeneralId": 35,
-			"atsParamId": "ATS-0035",
+			"atsParamId": "ATS-035",
 			"logic_description": {
 				"type": "LAYOUT_STRUCTURE",
 				"purpose": "Detect complex resume layouts such as tables, multi-column designs, and visual separators that reduce ATS readability in business and management resumes",
@@ -269,7 +269,7 @@
 		},
 		{
 			"atsGeneralId": 36,
-			"atsParamId": "ATS-0036",
+			"atsParamId": "ATS-036",
 			"logic_description": {
 				"type": "FONT_READABILITY",
 				"purpose": "Evaluate whether the business or management resume uses standard, machine-readable fonts and avoids decorative fonts that reduce ATS readability",
@@ -305,7 +305,7 @@
 		},
 		{
 			"atsGeneralId": 37,
-			"atsParamId": "ATS-0037",
+			"atsParamId": "ATS-037",
 			"logic_description": {
 				"type": "STANDARD_SECTIONS",
 				"purpose": "Verify the presence of commonly expected business and management resume sections",
@@ -333,7 +333,7 @@
 		},
 		{
 			"atsGeneralId": 38,
-			"atsParamId": "ATS-0038",
+			"atsParamId": "ATS-038",
 			"logic_description": {
 				"type": "SECTION_ORDERING",
 				"purpose": "Check logical ordering of sections commonly used in business and management resumes",
@@ -379,7 +379,7 @@
 		},
 		{
 			"atsGeneralId": 39,
-			"atsParamId": "ATS-0039",
+			"atsParamId": "ATS-039",
 			"logic_description": {
 				"type": "HANDS_ON_BUSINESS_EXPERIENCE",
 				"purpose": "Detect presence of hands-on business and management experience through roles in operations, management, consulting, sales, or analysis",
